@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ProjetoIntegradorReal
 {
-    public partial class Form1: Form
+    public partial class CadastroDoacao: Form
     {
-        public Form1()
+        public CadastroDoacao()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CadastroDoacao_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
