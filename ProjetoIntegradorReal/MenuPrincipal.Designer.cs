@@ -28,83 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnCadastroDoacao = new System.Windows.Forms.Button();
+            this.btnCadastroPedido = new System.Windows.Forms.Button();
+            this.btnEditarDoacao = new System.Windows.Forms.Button();
+            this.btnSelecionar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.cbxPedidoDoacao = new System.Windows.Forms.ComboBox();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lstBusca = new System.Windows.Forms.ListView();
+            this.lstEspera = new System.Windows.Forms.ListView();
+            this.btnCadastrarPessoa = new System.Windows.Forms.Button();
+            this.lblPedidosDoacao = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnCadastroDoacao
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 60);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Cadastro de Doação";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCadastroDoacao.Location = new System.Drawing.Point(12, 12);
+            this.btnCadastroDoacao.Name = "btnCadastroDoacao";
+            this.btnCadastroDoacao.Size = new System.Drawing.Size(169, 60);
+            this.btnCadastroDoacao.TabIndex = 0;
+            this.btnCadastroDoacao.Text = "Cadastro de Doação";
+            this.btnCadastroDoacao.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCadastroPedido
             // 
-            this.button2.Location = new System.Drawing.Point(187, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(169, 60);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Cadastro de Pedido";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCadastroPedido.Location = new System.Drawing.Point(187, 12);
+            this.btnCadastroPedido.Name = "btnCadastroPedido";
+            this.btnCadastroPedido.Size = new System.Drawing.Size(169, 60);
+            this.btnCadastroPedido.TabIndex = 1;
+            this.btnCadastroPedido.Text = "Cadastro de Pedido";
+            this.btnCadastroPedido.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnEditarDoacao
             // 
-            this.button3.Location = new System.Drawing.Point(12, 78);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(169, 60);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Editar Doação";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEditarDoacao.Location = new System.Drawing.Point(12, 78);
+            this.btnEditarDoacao.Name = "btnEditarDoacao";
+            this.btnEditarDoacao.Size = new System.Drawing.Size(169, 60);
+            this.btnEditarDoacao.TabIndex = 2;
+            this.btnEditarDoacao.Text = "Editar Doação";
+            this.btnEditarDoacao.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnSelecionar
             // 
-            this.button4.Location = new System.Drawing.Point(628, 32);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(121, 21);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Selecionar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSelecionar.Location = new System.Drawing.Point(628, 32);
+            this.btnSelecionar.Name = "btnSelecionar";
+            this.btnSelecionar.Size = new System.Drawing.Size(121, 21);
+            this.btnSelecionar.TabIndex = 3;
+            this.btnSelecionar.Text = "Selecionar";
+            this.btnSelecionar.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnPesquisar
             // 
-            this.button5.Location = new System.Drawing.Point(628, 59);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(121, 21);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Pesquisar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Location = new System.Drawing.Point(628, 59);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(121, 21);
+            this.btnPesquisar.TabIndex = 4;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbxPedidoDoacao
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(501, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cbxPedidoDoacao.FormattingEnabled = true;
+            this.cbxPedidoDoacao.Location = new System.Drawing.Point(501, 32);
+            this.cbxPedidoDoacao.Name = "cbxPedidoDoacao";
+            this.cbxPedidoDoacao.Size = new System.Drawing.Size(121, 21);
+            this.cbxPedidoDoacao.TabIndex = 5;
             // 
-            // comboBox2
+            // cbxCategoria
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(501, 60);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 6;
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Location = new System.Drawing.Point(501, 60);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cbxCategoria.TabIndex = 6;
             // 
             // comboBox3
             // 
@@ -130,71 +130,71 @@
             this.comboBox5.Size = new System.Drawing.Size(121, 21);
             this.comboBox5.TabIndex = 9;
             // 
-            // listView1
+            // lstBusca
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(374, 159);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(382, 272);
-            this.listView1.TabIndex = 10;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lstBusca.HideSelection = false;
+            this.lstBusca.Location = new System.Drawing.Point(374, 159);
+            this.lstBusca.Name = "lstBusca";
+            this.lstBusca.Size = new System.Drawing.Size(382, 272);
+            this.lstBusca.TabIndex = 10;
+            this.lstBusca.UseCompatibleStateImageBehavior = false;
             // 
-            // listView2
+            // lstEspera
             // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(66, 159);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(248, 272);
-            this.listView2.TabIndex = 11;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.lstEspera.HideSelection = false;
+            this.lstEspera.Location = new System.Drawing.Point(66, 159);
+            this.lstEspera.Name = "lstEspera";
+            this.lstEspera.Size = new System.Drawing.Size(248, 272);
+            this.lstEspera.TabIndex = 11;
+            this.lstEspera.UseCompatibleStateImageBehavior = false;
             // 
-            // button6
+            // btnCadastrarPessoa
             // 
-            this.button6.Location = new System.Drawing.Point(187, 78);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(169, 60);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "Cadastrar Pessoa";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnCadastrarPessoa.Location = new System.Drawing.Point(187, 78);
+            this.btnCadastrarPessoa.Name = "btnCadastrarPessoa";
+            this.btnCadastrarPessoa.Size = new System.Drawing.Size(169, 60);
+            this.btnCadastrarPessoa.TabIndex = 12;
+            this.btnCadastrarPessoa.Text = "Cadastrar Pessoa";
+            this.btnCadastrarPessoa.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblPedidosDoacao
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(407, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Pedidos/Doação";
+            this.lblPedidosDoacao.AutoSize = true;
+            this.lblPedidosDoacao.Location = new System.Drawing.Point(407, 36);
+            this.lblPedidosDoacao.Name = "lblPedidosDoacao";
+            this.lblPedidosDoacao.Size = new System.Drawing.Size(88, 13);
+            this.lblPedidosDoacao.TabIndex = 13;
+            this.lblPedidosDoacao.Text = "Pedidos/Doação";
             // 
-            // label2
+            // lblCategoria
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(388, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Categoria do Produto";
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(388, 63);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(107, 13);
+            this.lblCategoria.TabIndex = 14;
+            this.lblCategoria.Text = "Categoria do Produto";
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.listView2);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lblCategoria);
+            this.Controls.Add(this.lblPedidosDoacao);
+            this.Controls.Add(this.btnCadastrarPessoa);
+            this.Controls.Add(this.lstEspera);
+            this.Controls.Add(this.lstBusca);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cbxCategoria);
+            this.Controls.Add(this.cbxPedidoDoacao);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.btnSelecionar);
+            this.Controls.Add(this.btnEditarDoacao);
+            this.Controls.Add(this.btnCadastroPedido);
+            this.Controls.Add(this.btnCadastroDoacao);
             this.Name = "MenuPrincipal";
             this.Text = "MenuPrincipal";
             this.ResumeLayout(false);
@@ -204,20 +204,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnCadastroDoacao;
+        private System.Windows.Forms.Button btnCadastroPedido;
+        private System.Windows.Forms.Button btnEditarDoacao;
+        private System.Windows.Forms.Button btnSelecionar;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.ComboBox cbxPedidoDoacao;
+        private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListView lstBusca;
+        private System.Windows.Forms.ListView lstEspera;
+        private System.Windows.Forms.Button btnCadastrarPessoa;
+        private System.Windows.Forms.Label lblPedidosDoacao;
+        private System.Windows.Forms.Label lblCategoria;
     }
 }

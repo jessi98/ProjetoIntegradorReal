@@ -28,45 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.lblRegistro = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.grbStatus = new System.Windows.Forms.GroupBox();
+            this.rdbInativo = new System.Windows.Forms.RadioButton();
+            this.rdbAtivo = new System.Windows.Forms.RadioButton();
+            this.rdbAguardando = new System.Windows.Forms.RadioButton();
+            this.txtRegistro = new System.Windows.Forms.TextBox();
+            this.txtCPFDoador = new System.Windows.Forms.TextBox();
+            this.txtCPFRecebedor = new System.Windows.Forms.TextBox();
+            this.lblCPFDoador = new System.Windows.Forms.Label();
+            this.lblCPFRecebedor = new System.Windows.Forms.Label();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.grbStatus.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnPesquisar
             // 
-            this.button1.Location = new System.Drawing.Point(271, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Pesquisar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Location = new System.Drawing.Point(271, 57);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(104, 23);
+            this.btnPesquisar.TabIndex = 0;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblRegistro
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Numero do Registro";
+            this.lblRegistro.AutoSize = true;
+            this.lblRegistro.Location = new System.Drawing.Point(48, 41);
+            this.lblRegistro.Name = "lblRegistro";
+            this.lblRegistro.Size = new System.Drawing.Size(101, 13);
+            this.lblRegistro.TabIndex = 2;
+            this.lblRegistro.Text = "Numero do Registro";
             // 
             // label4
             // 
@@ -119,133 +121,153 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "SubCategoria 1";
             // 
-            // label5
+            // lblDescricao
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 231);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 13);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Descrição do Produto";
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Location = new System.Drawing.Point(48, 231);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(110, 13);
+            this.lblDescricao.TabIndex = 35;
+            this.lblDescricao.Text = "Descrição do Produto";
             // 
-            // textBox1
+            // txtDescricao
             // 
-            this.textBox1.Location = new System.Drawing.Point(51, 247);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(324, 99);
-            this.textBox1.TabIndex = 34;
+            this.txtDescricao.Location = new System.Drawing.Point(51, 247);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(324, 99);
+            this.txtDescricao.TabIndex = 34;
             // 
-            // groupBox1
+            // grbStatus
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Location = new System.Drawing.Point(51, 98);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(324, 59);
-            this.groupBox1.TabIndex = 36;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Status do Pedido";
+            this.grbStatus.Controls.Add(this.rdbInativo);
+            this.grbStatus.Controls.Add(this.rdbAtivo);
+            this.grbStatus.Controls.Add(this.rdbAguardando);
+            this.grbStatus.Location = new System.Drawing.Point(51, 98);
+            this.grbStatus.Name = "grbStatus";
+            this.grbStatus.Size = new System.Drawing.Size(324, 59);
+            this.grbStatus.TabIndex = 36;
+            this.grbStatus.TabStop = false;
+            this.grbStatus.Text = "Status do Pedido";
             // 
-            // radioButton1
+            // rdbInativo
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(119, 25);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(57, 17);
-            this.radioButton1.TabIndex = 37;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Inativo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdbInativo.AutoSize = true;
+            this.rdbInativo.Location = new System.Drawing.Point(119, 25);
+            this.rdbInativo.Name = "rdbInativo";
+            this.rdbInativo.Size = new System.Drawing.Size(57, 17);
+            this.rdbInativo.TabIndex = 37;
+            this.rdbInativo.TabStop = true;
+            this.rdbInativo.Text = "Inativo";
+            this.rdbInativo.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdbAtivo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(13, 25);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(49, 17);
-            this.radioButton2.TabIndex = 38;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Ativo";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdbAtivo.AutoSize = true;
+            this.rdbAtivo.Location = new System.Drawing.Point(13, 25);
+            this.rdbAtivo.Name = "rdbAtivo";
+            this.rdbAtivo.Size = new System.Drawing.Size(49, 17);
+            this.rdbAtivo.TabIndex = 38;
+            this.rdbAtivo.TabStop = true;
+            this.rdbAtivo.Text = "Ativo";
+            this.rdbAtivo.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rdbAguardando
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(233, 25);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(83, 17);
-            this.radioButton3.TabIndex = 39;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Aguardando";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.rdbAguardando.AutoSize = true;
+            this.rdbAguardando.Location = new System.Drawing.Point(233, 25);
+            this.rdbAguardando.Name = "rdbAguardando";
+            this.rdbAguardando.Size = new System.Drawing.Size(83, 17);
+            this.rdbAguardando.TabIndex = 39;
+            this.rdbAguardando.TabStop = true;
+            this.rdbAguardando.Text = "Aguardando";
+            this.rdbAguardando.UseVisualStyleBackColor = true;
+            this.rdbAguardando.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
-            // textBox2
+            // txtRegistro
             // 
-            this.textBox2.Location = new System.Drawing.Point(51, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 20);
-            this.textBox2.TabIndex = 37;
+            this.txtRegistro.Location = new System.Drawing.Point(51, 57);
+            this.txtRegistro.Name = "txtRegistro";
+            this.txtRegistro.Size = new System.Drawing.Size(145, 20);
+            this.txtRegistro.TabIndex = 37;
             // 
-            // textBox3
+            // txtCPFDoador
             // 
-            this.textBox3.Location = new System.Drawing.Point(51, 379);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(145, 20);
-            this.textBox3.TabIndex = 38;
+            this.txtCPFDoador.Location = new System.Drawing.Point(51, 379);
+            this.txtCPFDoador.Name = "txtCPFDoador";
+            this.txtCPFDoador.Size = new System.Drawing.Size(145, 20);
+            this.txtCPFDoador.TabIndex = 38;
             // 
-            // textBox4
+            // txtCPFRecebedor
             // 
-            this.textBox4.Location = new System.Drawing.Point(230, 379);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(145, 20);
-            this.textBox4.TabIndex = 39;
+            this.txtCPFRecebedor.Location = new System.Drawing.Point(230, 379);
+            this.txtCPFRecebedor.Name = "txtCPFRecebedor";
+            this.txtCPFRecebedor.Size = new System.Drawing.Size(145, 20);
+            this.txtCPFRecebedor.TabIndex = 39;
             // 
-            // label6
+            // lblCPFDoador
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(48, 363);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 13);
-            this.label6.TabIndex = 40;
-            this.label6.Text = "CPF do Doador";
+            this.lblCPFDoador.AutoSize = true;
+            this.lblCPFDoador.Location = new System.Drawing.Point(48, 363);
+            this.lblCPFDoador.Name = "lblCPFDoador";
+            this.lblCPFDoador.Size = new System.Drawing.Size(80, 13);
+            this.lblCPFDoador.TabIndex = 40;
+            this.lblCPFDoador.Text = "CPF do Doador";
             // 
-            // label7
+            // lblCPFRecebedor
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(227, 363);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 13);
-            this.label7.TabIndex = 41;
-            this.label7.Text = "CPF do Recebedor ";
+            this.lblCPFRecebedor.AutoSize = true;
+            this.lblCPFRecebedor.Location = new System.Drawing.Point(227, 363);
+            this.lblCPFRecebedor.Name = "lblCPFRecebedor";
+            this.lblCPFRecebedor.Size = new System.Drawing.Size(101, 13);
+            this.lblCPFRecebedor.TabIndex = 41;
+            this.lblCPFRecebedor.Text = "CPF do Recebedor ";
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(291, 422);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(84, 23);
+            this.btnSalvar.TabIndex = 42;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(51, 422);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(84, 23);
+            this.btnVoltar.TabIndex = 43;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
             // 
             // StatusDoacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 457);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.lblCPFRecebedor);
+            this.Controls.Add(this.lblCPFDoador);
+            this.Controls.Add(this.txtCPFRecebedor);
+            this.Controls.Add(this.txtCPFDoador);
+            this.Controls.Add(this.txtRegistro);
+            this.Controls.Add(this.grbStatus);
+            this.Controls.Add(this.lblDescricao);
+            this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblRegistro);
+            this.Controls.Add(this.btnPesquisar);
             this.Name = "StatusDoacao";
             this.Text = "StatusDoacao";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grbStatus.ResumeLayout(false);
+            this.grbStatus.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,24 +275,26 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Label lblRegistro;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblDescricao;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.GroupBox grbStatus;
+        private System.Windows.Forms.RadioButton rdbInativo;
+        private System.Windows.Forms.RadioButton rdbAtivo;
+        private System.Windows.Forms.RadioButton rdbAguardando;
+        private System.Windows.Forms.TextBox txtRegistro;
+        private System.Windows.Forms.TextBox txtCPFDoador;
+        private System.Windows.Forms.TextBox txtCPFRecebedor;
+        private System.Windows.Forms.Label lblCPFDoador;
+        private System.Windows.Forms.Label lblCPFRecebedor;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

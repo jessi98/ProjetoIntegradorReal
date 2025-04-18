@@ -30,20 +30,20 @@
         {
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtCPF = new System.Windows.Forms.TextBox();
+            this.lblCPF = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cmbProduto = new System.Windows.Forms.ComboBox();
+            this.lblProduto = new System.Windows.Forms.Label();
+            this.btnConfirma = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -67,21 +67,21 @@
             this.button2.Text = "Salvar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtCPF
             // 
-            this.textBox2.Location = new System.Drawing.Point(276, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(104, 20);
-            this.textBox2.TabIndex = 31;
+            this.txtCPF.Location = new System.Drawing.Point(276, 36);
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(104, 20);
+            this.txtCPF.TabIndex = 31;
             // 
-            // label6
+            // lblCPF
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(273, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 13);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Informe o CPF";
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Location = new System.Drawing.Point(273, 20);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(74, 13);
+            this.lblCPF.TabIndex = 30;
+            this.lblCPF.Text = "Informe o CPF";
             // 
             // label4
             // 
@@ -134,38 +134,38 @@
             this.label2.TabIndex = 22;
             this.label2.Text = "SubCategoria 1";
             // 
-            // comboBox1
+            // cmbProduto
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(56, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(128, 21);
-            this.comboBox1.TabIndex = 21;
+            this.cmbProduto.FormattingEnabled = true;
+            this.cmbProduto.Location = new System.Drawing.Point(56, 35);
+            this.cmbProduto.Name = "cmbProduto";
+            this.cmbProduto.Size = new System.Drawing.Size(128, 21);
+            this.cmbProduto.TabIndex = 21;
             // 
-            // label8
+            // lblProduto
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(53, 19);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Categoria do Produto";
+            this.lblProduto.AutoSize = true;
+            this.lblProduto.Location = new System.Drawing.Point(53, 19);
+            this.lblProduto.Name = "lblProduto";
+            this.lblProduto.Size = new System.Drawing.Size(107, 13);
+            this.lblProduto.TabIndex = 20;
+            this.lblProduto.Text = "Categoria do Produto";
             // 
-            // button4
+            // btnConfirma
             // 
-            this.button4.Location = new System.Drawing.Point(190, 35);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 21);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Confirma";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnConfirma.Location = new System.Drawing.Point(190, 35);
+            this.btnConfirma.Name = "btnConfirma";
+            this.btnConfirma.Size = new System.Drawing.Size(75, 21);
+            this.btnConfirma.TabIndex = 19;
+            this.btnConfirma.Text = "Confirma";
+            this.btnConfirma.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(56, 159);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 20);
-            this.textBox1.TabIndex = 36;
+            this.txtNome.Location = new System.Drawing.Point(56, 159);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(187, 20);
+            this.txtNome.TabIndex = 36;
             // 
             // label1
             // 
@@ -176,12 +176,12 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Nome";
             // 
-            // textBox3
+            // txtTelefone
             // 
-            this.textBox3.Location = new System.Drawing.Point(249, 159);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(131, 20);
-            this.textBox3.TabIndex = 37;
+            this.txtTelefone.Location = new System.Drawing.Point(249, 159);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(131, 20);
+            this.txtTelefone.TabIndex = 37;
             // 
             // label5
             // 
@@ -216,22 +216,22 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.cmbProduto);
+            this.Controls.Add(this.lblProduto);
+            this.Controls.Add(this.btnConfirma);
             this.Name = "CadastroPedido";
             this.Text = "CadastroPedido";
             this.ResumeLayout(false);
@@ -243,20 +243,20 @@
 
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtCPF;
+        private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cmbProduto;
+        private System.Windows.Forms.Label lblProduto;
+        private System.Windows.Forms.Button btnConfirma;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
