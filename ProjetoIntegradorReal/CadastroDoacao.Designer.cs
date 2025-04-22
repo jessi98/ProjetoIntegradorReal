@@ -28,184 +28,210 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroDoacao));
+            this.txtDescricaoProduto = new System.Windows.Forms.TextBox();
+            this.lblDescricaoProduto = new System.Windows.Forms.Label();
+            this.txtCPF = new System.Windows.Forms.TextBox();
+            this.lblCPF = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbProduto = new System.Windows.Forms.ComboBox();
+            this.lblProduto = new System.Windows.Forms.Label();
+            this.btnConfirma = new System.Windows.Forms.Button();
+            this.lblLinha = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // txtDescricaoProduto
             // 
-            this.button1.Location = new System.Drawing.Point(176, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 21);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Confirma";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtDescricaoProduto.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtDescricaoProduto.Location = new System.Drawing.Point(29, 214);
+            this.txtDescricaoProduto.Multiline = true;
+            this.txtDescricaoProduto.Name = "txtDescricaoProduto";
+            this.txtDescricaoProduto.Size = new System.Drawing.Size(384, 99);
+            this.txtDescricaoProduto.TabIndex = 11;
             // 
-            // label1
+            // lblDescricaoProduto
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Categoria do Produto";
+            this.lblDescricaoProduto.AutoSize = true;
+            this.lblDescricaoProduto.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblDescricaoProduto.Location = new System.Drawing.Point(25, 192);
+            this.lblDescricaoProduto.Name = "lblDescricaoProduto";
+            this.lblDescricaoProduto.Size = new System.Drawing.Size(155, 19);
+            this.lblDescricaoProduto.TabIndex = 12;
+            this.lblDescricaoProduto.Text = "Descrição do Produto";
             // 
-            // comboBox1
+            // txtCPF
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(42, 75);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(128, 21);
-            this.comboBox1.TabIndex = 3;
+            this.txtCPF.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtCPF.Location = new System.Drawing.Point(308, 58);
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(116, 27);
+            this.txtCPF.TabIndex = 42;
             // 
-            // label6
+            // lblCPF
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(259, 60);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Informe o CPF";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(262, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(104, 20);
-            this.textBox2.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 132);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "SubCategoria 1";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(42, 148);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(104, 21);
-            this.comboBox2.TabIndex = 6;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(262, 148);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(104, 21);
-            this.comboBox3.TabIndex = 7;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(152, 148);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(104, 21);
-            this.comboBox4.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(259, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "SubCategoria 3";
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblCPF.Location = new System.Drawing.Point(308, 35);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(104, 19);
+            this.lblCPF.TabIndex = 41;
+            this.lblCPF.Text = "Informe o CPF";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(149, 132);
+            this.label4.Font = new System.Drawing.Font("Candara", 12F);
+            this.label4.Location = new System.Drawing.Point(160, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
-            this.label4.TabIndex = 10;
+            this.label4.Size = new System.Drawing.Size(111, 19);
+            this.label4.TabIndex = 40;
             this.label4.Text = "SubCategoria 2";
             // 
-            // textBox1
+            // label3
             // 
-            this.textBox1.Location = new System.Drawing.Point(42, 214);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(324, 99);
-            this.textBox1.TabIndex = 11;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Candara", 12F);
+            this.label3.Location = new System.Drawing.Point(293, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 19);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "SubCategoria 3";
             // 
-            // label5
+            // comboBox4
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 198);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Descrição do Produto";
+            this.comboBox4.Font = new System.Drawing.Font("Candara", 12F);
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(164, 129);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(116, 27);
+            this.comboBox4.TabIndex = 38;
             // 
-            // button2
+            // comboBox3
             // 
-            this.button2.Location = new System.Drawing.Point(291, 331);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 33);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Salvar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.comboBox3.Font = new System.Drawing.Font("Candara", 12F);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(297, 129);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(116, 27);
+            this.comboBox3.TabIndex = 37;
             // 
-            // button3
+            // comboBox2
             // 
-            this.button3.Location = new System.Drawing.Point(44, 331);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 33);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Voltar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.comboBox2.Font = new System.Drawing.Font("Candara", 12F);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(29, 129);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(116, 27);
+            this.comboBox2.TabIndex = 36;
             // 
-            // label7
+            // label2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 107);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(376, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "---------------------------------------------------------------------------------" +
-    "------------------------------------------";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Candara", 12F);
+            this.label2.Location = new System.Drawing.Point(25, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 19);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "SubCategoria 1";
+            // 
+            // cmbProduto
+            // 
+            this.cmbProduto.Font = new System.Drawing.Font("Candara", 12F);
+            this.cmbProduto.FormattingEnabled = true;
+            this.cmbProduto.Location = new System.Drawing.Point(20, 58);
+            this.cmbProduto.Name = "cmbProduto";
+            this.cmbProduto.Size = new System.Drawing.Size(152, 27);
+            this.cmbProduto.TabIndex = 34;
+            // 
+            // lblProduto
+            // 
+            this.lblProduto.AutoSize = true;
+            this.lblProduto.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblProduto.Location = new System.Drawing.Point(16, 35);
+            this.lblProduto.Name = "lblProduto";
+            this.lblProduto.Size = new System.Drawing.Size(156, 19);
+            this.lblProduto.TabIndex = 33;
+            this.lblProduto.Text = "Categoria do Produto";
+            // 
+            // btnConfirma
+            // 
+            this.btnConfirma.BackColor = System.Drawing.SystemColors.Window;
+            this.btnConfirma.Font = new System.Drawing.Font("Candara", 12F);
+            this.btnConfirma.Location = new System.Drawing.Point(182, 35);
+            this.btnConfirma.Name = "btnConfirma";
+            this.btnConfirma.Size = new System.Drawing.Size(98, 50);
+            this.btnConfirma.TabIndex = 32;
+            this.btnConfirma.Text = "Confirma";
+            this.btnConfirma.UseVisualStyleBackColor = false;
+            // 
+            // lblLinha
+            // 
+            this.lblLinha.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLinha.Location = new System.Drawing.Point(11, 179);
+            this.lblLinha.Name = "lblLinha";
+            this.lblLinha.Size = new System.Drawing.Size(421, 2);
+            this.lblLinha.TabIndex = 43;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.SystemColors.Window;
+            this.btnVoltar.Font = new System.Drawing.Font("Candara", 12F);
+            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
+            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVoltar.ImageKey = "(nenhum/a)";
+            this.btnVoltar.Location = new System.Drawing.Point(147, 344);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(111, 34);
+            this.btnVoltar.TabIndex = 45;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.SystemColors.Window;
+            this.btnCadastrar.Font = new System.Drawing.Font("Candara", 12F);
+            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
+            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCadastrar.Location = new System.Drawing.Point(301, 344);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(111, 34);
+            this.btnCadastrar.TabIndex = 44;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
             // 
             // CadastroDoacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 407);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(442, 409);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.lblLinha);
+            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cmbProduto);
+            this.Controls.Add(this.lblProduto);
+            this.Controls.Add(this.btnConfirma);
+            this.Controls.Add(this.lblDescricaoProduto);
+            this.Controls.Add(this.txtDescricaoProduto);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastroDoacao";
             this.Text = "CadastroDoacao";
             this.Load += new System.EventHandler(this.CadastroDoacao_Load);
@@ -215,22 +241,21 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtDescricaoProduto;
+        private System.Windows.Forms.Label lblDescricaoProduto;
+        private System.Windows.Forms.TextBox txtCPF;
+        private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbProduto;
+        private System.Windows.Forms.Label lblProduto;
+        private System.Windows.Forms.Button btnConfirma;
+        private System.Windows.Forms.Label lblLinha;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }

@@ -45,6 +45,7 @@
             this.lblPedidosDoacao = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,9 +102,9 @@
             // btnSelecionar
             // 
             this.btnSelecionar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnSelecionar.Location = new System.Drawing.Point(650, 29);
+            this.btnSelecionar.Location = new System.Drawing.Point(631, 20);
             this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(121, 26);
+            this.btnSelecionar.Size = new System.Drawing.Size(121, 27);
             this.btnSelecionar.TabIndex = 3;
             this.btnSelecionar.Text = "Selecionar";
             this.btnSelecionar.UseVisualStyleBackColor = false;
@@ -111,7 +112,7 @@
             // btnPesquisar
             // 
             this.btnPesquisar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnPesquisar.Location = new System.Drawing.Point(650, 61);
+            this.btnPesquisar.Location = new System.Drawing.Point(631, 53);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(121, 27);
             this.btnPesquisar.TabIndex = 4;
@@ -122,7 +123,7 @@
             // 
             this.cbxPedidoDoacao.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxPedidoDoacao.FormattingEnabled = true;
-            this.cbxPedidoDoacao.Location = new System.Drawing.Point(524, 29);
+            this.cbxPedidoDoacao.Location = new System.Drawing.Point(505, 20);
             this.cbxPedidoDoacao.Name = "cbxPedidoDoacao";
             this.cbxPedidoDoacao.Size = new System.Drawing.Size(121, 27);
             this.cbxPedidoDoacao.TabIndex = 5;
@@ -131,7 +132,7 @@
             // 
             this.cbxCategoria.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(524, 61);
+            this.cbxCategoria.Location = new System.Drawing.Point(505, 53);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(121, 27);
             this.cbxCategoria.TabIndex = 6;
@@ -140,7 +141,7 @@
             // 
             this.comboBox3.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(399, 96);
+            this.comboBox3.Location = new System.Drawing.Point(382, 106);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(120, 27);
             this.comboBox3.TabIndex = 7;
@@ -149,7 +150,7 @@
             // 
             this.comboBox4.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(525, 94);
+            this.comboBox4.Location = new System.Drawing.Point(505, 106);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(120, 27);
             this.comboBox4.TabIndex = 8;
@@ -158,7 +159,7 @@
             // 
             this.comboBox5.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(651, 94);
+            this.comboBox5.Location = new System.Drawing.Point(631, 106);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(120, 27);
             this.comboBox5.TabIndex = 9;
@@ -167,7 +168,7 @@
             // 
             this.lstBusca.Font = new System.Drawing.Font("Candara", 12F);
             this.lstBusca.HideSelection = false;
-            this.lstBusca.Location = new System.Drawing.Point(374, 159);
+            this.lstBusca.Location = new System.Drawing.Point(382, 159);
             this.lstBusca.Name = "lstBusca";
             this.lstBusca.Size = new System.Drawing.Size(382, 272);
             this.lstBusca.TabIndex = 10;
@@ -203,7 +204,7 @@
             // 
             this.lblPedidosDoacao.AutoSize = true;
             this.lblPedidosDoacao.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblPedidosDoacao.Location = new System.Drawing.Point(367, 32);
+            this.lblPedidosDoacao.Location = new System.Drawing.Point(386, 28);
             this.lblPedidosDoacao.Name = "lblPedidosDoacao";
             this.lblPedidosDoacao.Size = new System.Drawing.Size(118, 19);
             this.lblPedidosDoacao.TabIndex = 13;
@@ -213,11 +214,12 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblCategoria.Location = new System.Drawing.Point(366, 61);
+            this.lblCategoria.Location = new System.Drawing.Point(424, 61);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(156, 19);
+            this.lblCategoria.Size = new System.Drawing.Size(75, 19);
             this.lblCategoria.TabIndex = 14;
-            this.lblCategoria.Text = "Categoria do Produto";
+            this.lblCategoria.Text = "Categoria";
+            this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -230,12 +232,21 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Location = new System.Drawing.Point(382, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(370, 2);
+            this.label1.TabIndex = 21;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(776, 483);
+            this.ClientSize = new System.Drawing.Size(776, 494);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblPedidosDoacao);
@@ -279,5 +290,6 @@
         private System.Windows.Forms.Label lblPedidosDoacao;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -21,5 +21,10 @@ namespace ProjetoIntegradorReal
         {
 
         }
+
+        private void StatusDoacao_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
