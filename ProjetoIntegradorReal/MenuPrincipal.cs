@@ -16,5 +16,15 @@ namespace ProjetoIntegradorReal
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCadastroDoacao_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

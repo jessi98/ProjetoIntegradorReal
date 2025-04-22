@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.btnCadastroDoacao = new System.Windows.Forms.Button();
             this.btnCadastroPedido = new System.Windows.Forms.Button();
             this.btnEditarDoacao = new System.Windows.Forms.Button();
@@ -43,95 +44,128 @@
             this.btnCadastrarPessoa = new System.Windows.Forms.Button();
             this.lblPedidosDoacao = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCadastroDoacao
             // 
+            this.btnCadastroDoacao.BackColor = System.Drawing.SystemColors.Window;
+            this.btnCadastroDoacao.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCadastroDoacao.FlatAppearance.BorderSize = 2;
+            this.btnCadastroDoacao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastroDoacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastroDoacao.Font = new System.Drawing.Font("Candara", 12F);
+            this.btnCadastroDoacao.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroDoacao.Image")));
+            this.btnCadastroDoacao.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnCadastroDoacao.Location = new System.Drawing.Point(12, 12);
             this.btnCadastroDoacao.Name = "btnCadastroDoacao";
             this.btnCadastroDoacao.Size = new System.Drawing.Size(169, 60);
             this.btnCadastroDoacao.TabIndex = 0;
-            this.btnCadastroDoacao.Text = "Cadastro de Doação";
-            this.btnCadastroDoacao.UseVisualStyleBackColor = true;
+            this.btnCadastroDoacao.Text = "Cadastor de\r\nDoação";
+            this.btnCadastroDoacao.UseVisualStyleBackColor = false;
+            this.btnCadastroDoacao.Click += new System.EventHandler(this.btnCadastroDoacao_Click);
             // 
             // btnCadastroPedido
             // 
+            this.btnCadastroPedido.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCadastroPedido.FlatAppearance.BorderSize = 2;
+            this.btnCadastroPedido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastroPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastroPedido.Font = new System.Drawing.Font("Candara", 12F);
+            this.btnCadastroPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroPedido.Image")));
+            this.btnCadastroPedido.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnCadastroPedido.Location = new System.Drawing.Point(187, 12);
             this.btnCadastroPedido.Name = "btnCadastroPedido";
             this.btnCadastroPedido.Size = new System.Drawing.Size(169, 60);
             this.btnCadastroPedido.TabIndex = 1;
-            this.btnCadastroPedido.Text = "Cadastro de Pedido";
-            this.btnCadastroPedido.UseVisualStyleBackColor = true;
+            this.btnCadastroPedido.Text = "Cadastro de\r\nPedido";
+            this.btnCadastroPedido.UseVisualStyleBackColor = false;
             // 
             // btnEditarDoacao
             // 
-            this.btnEditarDoacao.Location = new System.Drawing.Point(12, 78);
+            this.btnEditarDoacao.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEditarDoacao.FlatAppearance.BorderSize = 2;
+            this.btnEditarDoacao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnEditarDoacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEditarDoacao.Font = new System.Drawing.Font("Candara", 12F);
+            this.btnEditarDoacao.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarDoacao.Image")));
+            this.btnEditarDoacao.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnEditarDoacao.Location = new System.Drawing.Point(11, 78);
             this.btnEditarDoacao.Name = "btnEditarDoacao";
             this.btnEditarDoacao.Size = new System.Drawing.Size(169, 60);
             this.btnEditarDoacao.TabIndex = 2;
-            this.btnEditarDoacao.Text = "Editar Doação";
-            this.btnEditarDoacao.UseVisualStyleBackColor = true;
+            this.btnEditarDoacao.Text = "Editar\r\nDoação";
+            this.btnEditarDoacao.UseVisualStyleBackColor = false;
             // 
             // btnSelecionar
             // 
-            this.btnSelecionar.Location = new System.Drawing.Point(628, 32);
+            this.btnSelecionar.Font = new System.Drawing.Font("Candara", 12F);
+            this.btnSelecionar.Location = new System.Drawing.Point(650, 29);
             this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(121, 21);
+            this.btnSelecionar.Size = new System.Drawing.Size(121, 26);
             this.btnSelecionar.TabIndex = 3;
             this.btnSelecionar.Text = "Selecionar";
-            this.btnSelecionar.UseVisualStyleBackColor = true;
+            this.btnSelecionar.UseVisualStyleBackColor = false;
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(628, 59);
+            this.btnPesquisar.Font = new System.Drawing.Font("Candara", 12F);
+            this.btnPesquisar.Location = new System.Drawing.Point(650, 61);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(121, 21);
+            this.btnPesquisar.Size = new System.Drawing.Size(121, 27);
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
             // 
             // cbxPedidoDoacao
             // 
+            this.cbxPedidoDoacao.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxPedidoDoacao.FormattingEnabled = true;
-            this.cbxPedidoDoacao.Location = new System.Drawing.Point(501, 32);
+            this.cbxPedidoDoacao.Location = new System.Drawing.Point(524, 29);
             this.cbxPedidoDoacao.Name = "cbxPedidoDoacao";
-            this.cbxPedidoDoacao.Size = new System.Drawing.Size(121, 21);
+            this.cbxPedidoDoacao.Size = new System.Drawing.Size(121, 27);
             this.cbxPedidoDoacao.TabIndex = 5;
             // 
             // cbxCategoria
             // 
+            this.cbxCategoria.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(501, 60);
+            this.cbxCategoria.Location = new System.Drawing.Point(524, 61);
             this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cbxCategoria.Size = new System.Drawing.Size(121, 27);
             this.cbxCategoria.TabIndex = 6;
             // 
             // comboBox3
             // 
+            this.comboBox3.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(374, 87);
+            this.comboBox3.Location = new System.Drawing.Point(399, 96);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.Size = new System.Drawing.Size(120, 27);
             this.comboBox3.TabIndex = 7;
             // 
             // comboBox4
             // 
+            this.comboBox4.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(501, 87);
+            this.comboBox4.Location = new System.Drawing.Point(525, 94);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
+            this.comboBox4.Size = new System.Drawing.Size(120, 27);
             this.comboBox4.TabIndex = 8;
             // 
             // comboBox5
             // 
+            this.comboBox5.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(628, 87);
+            this.comboBox5.Location = new System.Drawing.Point(651, 94);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
+            this.comboBox5.Size = new System.Drawing.Size(120, 27);
             this.comboBox5.TabIndex = 9;
             // 
             // lstBusca
             // 
+            this.lstBusca.Font = new System.Drawing.Font("Candara", 12F);
             this.lstBusca.HideSelection = false;
             this.lstBusca.Location = new System.Drawing.Point(374, 159);
             this.lstBusca.Name = "lstBusca";
@@ -141,45 +175,68 @@
             // 
             // lstEspera
             // 
+            this.lstEspera.Font = new System.Drawing.Font("Candara", 12F);
             this.lstEspera.HideSelection = false;
-            this.lstEspera.Location = new System.Drawing.Point(66, 159);
+            this.lstEspera.Location = new System.Drawing.Point(12, 159);
             this.lstEspera.Name = "lstEspera";
-            this.lstEspera.Size = new System.Drawing.Size(248, 272);
+            this.lstEspera.Size = new System.Drawing.Size(344, 156);
             this.lstEspera.TabIndex = 11;
             this.lstEspera.UseCompatibleStateImageBehavior = false;
             // 
             // btnCadastrarPessoa
             // 
-            this.btnCadastrarPessoa.Location = new System.Drawing.Point(187, 78);
+            this.btnCadastrarPessoa.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCadastrarPessoa.FlatAppearance.BorderSize = 2;
+            this.btnCadastrarPessoa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnCadastrarPessoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarPessoa.Font = new System.Drawing.Font("Candara", 12F);
+            this.btnCadastrarPessoa.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarPessoa.Image")));
+            this.btnCadastrarPessoa.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnCadastrarPessoa.Location = new System.Drawing.Point(186, 78);
             this.btnCadastrarPessoa.Name = "btnCadastrarPessoa";
             this.btnCadastrarPessoa.Size = new System.Drawing.Size(169, 60);
             this.btnCadastrarPessoa.TabIndex = 12;
-            this.btnCadastrarPessoa.Text = "Cadastrar Pessoa";
-            this.btnCadastrarPessoa.UseVisualStyleBackColor = true;
+            this.btnCadastrarPessoa.Text = "Cadastrar\r\nPessoa";
+            this.btnCadastrarPessoa.UseVisualStyleBackColor = false;
             // 
             // lblPedidosDoacao
             // 
             this.lblPedidosDoacao.AutoSize = true;
-            this.lblPedidosDoacao.Location = new System.Drawing.Point(407, 36);
+            this.lblPedidosDoacao.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblPedidosDoacao.Location = new System.Drawing.Point(367, 32);
             this.lblPedidosDoacao.Name = "lblPedidosDoacao";
-            this.lblPedidosDoacao.Size = new System.Drawing.Size(88, 13);
+            this.lblPedidosDoacao.Size = new System.Drawing.Size(118, 19);
             this.lblPedidosDoacao.TabIndex = 13;
             this.lblPedidosDoacao.Text = "Pedidos/Doação";
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(388, 63);
+            this.lblCategoria.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblCategoria.Location = new System.Drawing.Point(366, 61);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(107, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(156, 19);
             this.lblCategoria.TabIndex = 14;
             this.lblCategoria.Text = "Categoria do Produto";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 321);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(344, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 450);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(776, 483);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblPedidosDoacao);
             this.Controls.Add(this.btnCadastrarPessoa);
@@ -195,8 +252,10 @@
             this.Controls.Add(this.btnEditarDoacao);
             this.Controls.Add(this.btnCadastroPedido);
             this.Controls.Add(this.btnCadastroDoacao);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuPrincipal";
             this.Text = "MenuPrincipal";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +278,6 @@
         private System.Windows.Forms.Button btnCadastrarPessoa;
         private System.Windows.Forms.Label lblPedidosDoacao;
         private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
