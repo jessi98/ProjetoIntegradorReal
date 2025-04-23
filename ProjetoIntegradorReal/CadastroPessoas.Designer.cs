@@ -53,13 +53,14 @@
             // 
             // btnPesquisar
             // 
+            this.btnPesquisar.BackColor = System.Drawing.SystemColors.Window;
             this.btnPesquisar.Font = new System.Drawing.Font("Candara", 12F);
             this.btnPesquisar.Location = new System.Drawing.Point(24, 87);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(137, 33);
             this.btnPesquisar.TabIndex = 0;
             this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
             // 
             // txtBusca
             // 
