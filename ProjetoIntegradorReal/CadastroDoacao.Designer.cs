@@ -50,37 +50,41 @@
             // txtDescricaoProduto
             // 
             this.txtDescricaoProduto.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtDescricaoProduto.Location = new System.Drawing.Point(29, 214);
+            this.txtDescricaoProduto.Location = new System.Drawing.Point(39, 263);
+            this.txtDescricaoProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescricaoProduto.Multiline = true;
             this.txtDescricaoProduto.Name = "txtDescricaoProduto";
-            this.txtDescricaoProduto.Size = new System.Drawing.Size(384, 99);
+            this.txtDescricaoProduto.Size = new System.Drawing.Size(511, 121);
             this.txtDescricaoProduto.TabIndex = 11;
             // 
             // lblDescricaoProduto
             // 
             this.lblDescricaoProduto.AutoSize = true;
             this.lblDescricaoProduto.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblDescricaoProduto.Location = new System.Drawing.Point(25, 192);
+            this.lblDescricaoProduto.Location = new System.Drawing.Point(33, 236);
+            this.lblDescricaoProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescricaoProduto.Name = "lblDescricaoProduto";
-            this.lblDescricaoProduto.Size = new System.Drawing.Size(155, 19);
+            this.lblDescricaoProduto.Size = new System.Drawing.Size(190, 24);
             this.lblDescricaoProduto.TabIndex = 12;
             this.lblDescricaoProduto.Text = "Descrição do Produto";
             // 
             // txtCPF
             // 
             this.txtCPF.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtCPF.Location = new System.Drawing.Point(308, 58);
+            this.txtCPF.Location = new System.Drawing.Point(411, 71);
+            this.txtCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(116, 27);
+            this.txtCPF.Size = new System.Drawing.Size(153, 32);
             this.txtCPF.TabIndex = 42;
             // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
             this.lblCPF.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblCPF.Location = new System.Drawing.Point(308, 35);
+            this.lblCPF.Location = new System.Drawing.Point(411, 43);
+            this.lblCPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(104, 19);
+            this.lblCPF.Size = new System.Drawing.Size(129, 24);
             this.lblCPF.TabIndex = 41;
             this.lblCPF.Text = "Informe o CPF";
             // 
@@ -88,9 +92,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Candara", 12F);
-            this.label4.Location = new System.Drawing.Point(160, 107);
+            this.label4.Location = new System.Drawing.Point(213, 132);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 19);
+            this.label4.Size = new System.Drawing.Size(136, 24);
             this.label4.TabIndex = 40;
             this.label4.Text = "SubCategoria 2";
             // 
@@ -98,9 +103,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Candara", 12F);
-            this.label3.Location = new System.Drawing.Point(293, 107);
+            this.label3.Location = new System.Drawing.Point(391, 132);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 19);
+            this.label3.Size = new System.Drawing.Size(137, 24);
             this.label3.TabIndex = 39;
             this.label3.Text = "SubCategoria 3";
             // 
@@ -108,36 +114,40 @@
             // 
             this.comboBox4.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(164, 129);
+            this.comboBox4.Location = new System.Drawing.Point(219, 159);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(116, 27);
+            this.comboBox4.Size = new System.Drawing.Size(153, 32);
             this.comboBox4.TabIndex = 38;
             // 
             // comboBox3
             // 
             this.comboBox3.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(297, 129);
+            this.comboBox3.Location = new System.Drawing.Point(396, 159);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(116, 27);
+            this.comboBox3.Size = new System.Drawing.Size(153, 32);
             this.comboBox3.TabIndex = 37;
             // 
             // comboBox2
             // 
             this.comboBox2.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(29, 129);
+            this.comboBox2.Location = new System.Drawing.Point(39, 159);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(116, 27);
+            this.comboBox2.Size = new System.Drawing.Size(153, 32);
             this.comboBox2.TabIndex = 36;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 12F);
-            this.label2.Location = new System.Drawing.Point(25, 107);
+            this.label2.Location = new System.Drawing.Point(33, 132);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 19);
+            this.label2.Size = new System.Drawing.Size(134, 24);
             this.label2.TabIndex = 35;
             this.label2.Text = "SubCategoria 1";
             // 
@@ -145,18 +155,24 @@
             // 
             this.cmbProduto.Font = new System.Drawing.Font("Candara", 12F);
             this.cmbProduto.FormattingEnabled = true;
-            this.cmbProduto.Location = new System.Drawing.Point(20, 58);
+            this.cmbProduto.Items.AddRange(new object[] {
+            "Roupas",
+            "Brinquedos",
+            "Livros"});
+            this.cmbProduto.Location = new System.Drawing.Point(27, 71);
+            this.cmbProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbProduto.Name = "cmbProduto";
-            this.cmbProduto.Size = new System.Drawing.Size(152, 27);
+            this.cmbProduto.Size = new System.Drawing.Size(201, 32);
             this.cmbProduto.TabIndex = 34;
             // 
             // lblProduto
             // 
             this.lblProduto.AutoSize = true;
             this.lblProduto.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblProduto.Location = new System.Drawing.Point(16, 35);
+            this.lblProduto.Location = new System.Drawing.Point(21, 43);
+            this.lblProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProduto.Name = "lblProduto";
-            this.lblProduto.Size = new System.Drawing.Size(156, 19);
+            this.lblProduto.Size = new System.Drawing.Size(190, 24);
             this.lblProduto.TabIndex = 33;
             this.lblProduto.Text = "Categoria do Produto";
             // 
@@ -164,9 +180,10 @@
             // 
             this.btnConfirma.BackColor = System.Drawing.SystemColors.Window;
             this.btnConfirma.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnConfirma.Location = new System.Drawing.Point(182, 35);
+            this.btnConfirma.Location = new System.Drawing.Point(243, 43);
+            this.btnConfirma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConfirma.Name = "btnConfirma";
-            this.btnConfirma.Size = new System.Drawing.Size(98, 50);
+            this.btnConfirma.Size = new System.Drawing.Size(131, 62);
             this.btnConfirma.TabIndex = 32;
             this.btnConfirma.Text = "Confirma";
             this.btnConfirma.UseVisualStyleBackColor = false;
@@ -174,21 +191,22 @@
             // lblLinha
             // 
             this.lblLinha.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLinha.Location = new System.Drawing.Point(11, 179);
+            this.lblLinha.Location = new System.Drawing.Point(15, 220);
+            this.lblLinha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLinha.Name = "lblLinha";
-            this.lblLinha.Size = new System.Drawing.Size(421, 2);
+            this.lblLinha.Size = new System.Drawing.Size(561, 2);
             this.lblLinha.TabIndex = 43;
             // 
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.SystemColors.Window;
             this.btnVoltar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
             this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVoltar.ImageKey = "(nenhum/a)";
-            this.btnVoltar.Location = new System.Drawing.Point(147, 344);
+            this.btnVoltar.Location = new System.Drawing.Point(196, 423);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(111, 34);
+            this.btnVoltar.Size = new System.Drawing.Size(148, 42);
             this.btnVoltar.TabIndex = 45;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -201,9 +219,10 @@
             this.btnCadastrar.Font = new System.Drawing.Font("Candara", 12F);
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
             this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCadastrar.Location = new System.Drawing.Point(301, 344);
+            this.btnCadastrar.Location = new System.Drawing.Point(401, 423);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(111, 34);
+            this.btnCadastrar.Size = new System.Drawing.Size(148, 42);
             this.btnCadastrar.TabIndex = 44;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -212,9 +231,9 @@
             // 
             // CadastroDoacao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 409);
+            this.ClientSize = new System.Drawing.Size(589, 503);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.lblLinha);
@@ -232,6 +251,7 @@
             this.Controls.Add(this.lblDescricaoProduto);
             this.Controls.Add(this.txtDescricaoProduto);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CadastroDoacao";
             this.Text = "CadastroDoacao";
             this.Load += new System.EventHandler(this.CadastroDoacao_Load);
