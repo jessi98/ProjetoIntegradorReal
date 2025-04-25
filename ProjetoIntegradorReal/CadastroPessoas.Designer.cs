@@ -218,6 +218,7 @@
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // lblLinha
             // 
