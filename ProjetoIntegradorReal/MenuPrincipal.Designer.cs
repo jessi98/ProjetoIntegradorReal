@@ -46,7 +46,12 @@
             this.lblCategoria = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCadastroDoacao
@@ -59,10 +64,9 @@
             this.btnCadastroDoacao.Font = new System.Drawing.Font("Candara", 12F);
             this.btnCadastroDoacao.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroDoacao.Image")));
             this.btnCadastroDoacao.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnCadastroDoacao.Location = new System.Drawing.Point(16, 15);
-            this.btnCadastroDoacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastroDoacao.Location = new System.Drawing.Point(11, 78);
             this.btnCadastroDoacao.Name = "btnCadastroDoacao";
-            this.btnCadastroDoacao.Size = new System.Drawing.Size(225, 74);
+            this.btnCadastroDoacao.Size = new System.Drawing.Size(169, 60);
             this.btnCadastroDoacao.TabIndex = 0;
             this.btnCadastroDoacao.Text = "Cadastor de\r\nDoação";
             this.btnCadastroDoacao.UseVisualStyleBackColor = false;
@@ -77,10 +81,9 @@
             this.btnCadastroPedido.Font = new System.Drawing.Font("Candara", 12F);
             this.btnCadastroPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroPedido.Image")));
             this.btnCadastroPedido.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnCadastroPedido.Location = new System.Drawing.Point(249, 15);
-            this.btnCadastroPedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastroPedido.Location = new System.Drawing.Point(186, 7);
             this.btnCadastroPedido.Name = "btnCadastroPedido";
-            this.btnCadastroPedido.Size = new System.Drawing.Size(225, 74);
+            this.btnCadastroPedido.Size = new System.Drawing.Size(169, 60);
             this.btnCadastroPedido.TabIndex = 1;
             this.btnCadastroPedido.Text = "Cadastro de\r\nPedido";
             this.btnCadastroPedido.UseVisualStyleBackColor = false;
@@ -95,10 +98,9 @@
             this.btnEditarDoacao.Font = new System.Drawing.Font("Candara", 12F);
             this.btnEditarDoacao.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarDoacao.Image")));
             this.btnEditarDoacao.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnEditarDoacao.Location = new System.Drawing.Point(15, 96);
-            this.btnEditarDoacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarDoacao.Location = new System.Drawing.Point(11, 8);
             this.btnEditarDoacao.Name = "btnEditarDoacao";
-            this.btnEditarDoacao.Size = new System.Drawing.Size(225, 74);
+            this.btnEditarDoacao.Size = new System.Drawing.Size(169, 60);
             this.btnEditarDoacao.TabIndex = 2;
             this.btnEditarDoacao.Text = "Editar\r\nDoação";
             this.btnEditarDoacao.UseVisualStyleBackColor = false;
@@ -107,10 +109,9 @@
             // btnSelecionar
             // 
             this.btnSelecionar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnSelecionar.Location = new System.Drawing.Point(841, 25);
-            this.btnSelecionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelecionar.Location = new System.Drawing.Point(902, 25);
             this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(161, 33);
+            this.btnSelecionar.Size = new System.Drawing.Size(121, 27);
             this.btnSelecionar.TabIndex = 3;
             this.btnSelecionar.Text = "Selecionar";
             this.btnSelecionar.UseVisualStyleBackColor = false;
@@ -118,10 +119,9 @@
             // btnPesquisar
             // 
             this.btnPesquisar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnPesquisar.Location = new System.Drawing.Point(841, 65);
-            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPesquisar.Location = new System.Drawing.Point(902, 58);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(161, 33);
+            this.btnPesquisar.Size = new System.Drawing.Size(121, 27);
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
@@ -130,60 +130,54 @@
             // 
             this.cbxPedidoDoacao.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxPedidoDoacao.FormattingEnabled = true;
-            this.cbxPedidoDoacao.Location = new System.Drawing.Point(673, 25);
-            this.cbxPedidoDoacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxPedidoDoacao.Location = new System.Drawing.Point(776, 25);
             this.cbxPedidoDoacao.Name = "cbxPedidoDoacao";
-            this.cbxPedidoDoacao.Size = new System.Drawing.Size(160, 32);
+            this.cbxPedidoDoacao.Size = new System.Drawing.Size(121, 27);
             this.cbxPedidoDoacao.TabIndex = 5;
             // 
             // cbxCategoria
             // 
             this.cbxCategoria.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Location = new System.Drawing.Point(673, 65);
-            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCategoria.Location = new System.Drawing.Point(776, 58);
             this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(160, 32);
+            this.cbxCategoria.Size = new System.Drawing.Size(121, 27);
             this.cbxCategoria.TabIndex = 6;
             // 
             // comboBox3
             // 
             this.comboBox3.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(509, 130);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox3.Location = new System.Drawing.Point(653, 111);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(159, 32);
+            this.comboBox3.Size = new System.Drawing.Size(120, 27);
             this.comboBox3.TabIndex = 7;
             // 
             // comboBox4
             // 
             this.comboBox4.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(673, 130);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox4.Location = new System.Drawing.Point(776, 111);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(159, 32);
+            this.comboBox4.Size = new System.Drawing.Size(120, 27);
             this.comboBox4.TabIndex = 8;
             // 
             // comboBox5
             // 
             this.comboBox5.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(841, 130);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox5.Location = new System.Drawing.Point(902, 111);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(159, 32);
+            this.comboBox5.Size = new System.Drawing.Size(120, 27);
             this.comboBox5.TabIndex = 9;
             // 
             // lstBusca
             // 
             this.lstBusca.Font = new System.Drawing.Font("Candara", 12F);
             this.lstBusca.HideSelection = false;
-            this.lstBusca.Location = new System.Drawing.Point(509, 196);
-            this.lstBusca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstBusca.Location = new System.Drawing.Point(470, 159);
             this.lstBusca.Name = "lstBusca";
-            this.lstBusca.Size = new System.Drawing.Size(508, 334);
+            this.lstBusca.Size = new System.Drawing.Size(556, 431);
             this.lstBusca.TabIndex = 10;
             this.lstBusca.UseCompatibleStateImageBehavior = false;
             // 
@@ -191,10 +185,9 @@
             // 
             this.lstEspera.Font = new System.Drawing.Font("Candara", 12F);
             this.lstEspera.HideSelection = false;
-            this.lstEspera.Location = new System.Drawing.Point(16, 196);
-            this.lstEspera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstEspera.Location = new System.Drawing.Point(12, 159);
             this.lstEspera.Name = "lstEspera";
-            this.lstEspera.Size = new System.Drawing.Size(457, 191);
+            this.lstEspera.Size = new System.Drawing.Size(452, 361);
             this.lstEspera.TabIndex = 11;
             this.lstEspera.UseCompatibleStateImageBehavior = false;
             // 
@@ -207,10 +200,9 @@
             this.btnCadastrarPessoa.Font = new System.Drawing.Font("Candara", 12F);
             this.btnCadastrarPessoa.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarPessoa.Image")));
             this.btnCadastrarPessoa.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnCadastrarPessoa.Location = new System.Drawing.Point(248, 96);
-            this.btnCadastrarPessoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastrarPessoa.Location = new System.Drawing.Point(186, 78);
             this.btnCadastrarPessoa.Name = "btnCadastrarPessoa";
-            this.btnCadastrarPessoa.Size = new System.Drawing.Size(225, 74);
+            this.btnCadastrarPessoa.Size = new System.Drawing.Size(169, 60);
             this.btnCadastrarPessoa.TabIndex = 12;
             this.btnCadastrarPessoa.Text = "Cadastrar\r\nPessoa";
             this.btnCadastrarPessoa.UseVisualStyleBackColor = false;
@@ -220,10 +212,9 @@
             // 
             this.lblPedidosDoacao.AutoSize = true;
             this.lblPedidosDoacao.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblPedidosDoacao.Location = new System.Drawing.Point(515, 34);
-            this.lblPedidosDoacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPedidosDoacao.Location = new System.Drawing.Point(657, 33);
             this.lblPedidosDoacao.Name = "lblPedidosDoacao";
-            this.lblPedidosDoacao.Size = new System.Drawing.Size(145, 24);
+            this.lblPedidosDoacao.Size = new System.Drawing.Size(118, 19);
             this.lblPedidosDoacao.TabIndex = 13;
             this.lblPedidosDoacao.Text = "Pedidos/Doação";
             // 
@@ -231,10 +222,9 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblCategoria.Location = new System.Drawing.Point(565, 75);
-            this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategoria.Location = new System.Drawing.Point(695, 66);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(91, 24);
+            this.lblCategoria.Size = new System.Drawing.Size(75, 19);
             this.lblCategoria.TabIndex = 14;
             this.lblCategoria.Text = "Categoria";
             this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -242,11 +232,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 395);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(31, 535);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(344, 126);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(169, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -254,18 +243,56 @@
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(509, 110);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(653, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(493, 2);
+            this.label1.Size = new System.Drawing.Size(370, 2);
             this.label1.TabIndex = 21;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(944, 596);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 20);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Sobre";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(281, 547);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(159, 43);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(205, 535);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(70, 55);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1035, 608);
+            this.ClientSize = new System.Drawing.Size(1046, 623);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblCategoria);
@@ -284,10 +311,11 @@
             this.Controls.Add(this.btnCadastroPedido);
             this.Controls.Add(this.btnCadastroDoacao);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MenuPrincipal";
             this.Text = "MenuPrincipal";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +340,8 @@
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

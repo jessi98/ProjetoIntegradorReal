@@ -27,9 +27,7 @@ namespace ProjetoIntegradorReal
                 lblTamanhoBrinq, lblTipoBrinq, lblBrinq,
                 cbxTamanho, cbxGenero, cbxPeca,
                 lblTamanho, lblPeca, lblGenero,
-                lblNome, lblTelefone, lblRegistro,
-                txtNome, txtTelefone, txtRegistro,
-                lblLinha
+                lblInformacoes, lblLinha, lblInformacoes, txtInformacoes
 
             };
             foreach (var controle in controles)
@@ -46,9 +44,7 @@ namespace ProjetoIntegradorReal
             {
                 cbxTamanho, cbxGenero, cbxPeca,
                 lblTamanho, lblPeca, lblGenero,
-                lblNome, lblTelefone, lblRegistro,
-                txtNome, txtTelefone, txtRegistro,
-                lblLinha
+                lblInformacoes, lblLinha, lblInformacoes, txtInformacoes,
 
             };
             foreach(var controle in controles)
@@ -66,9 +62,7 @@ namespace ProjetoIntegradorReal
             {
                 cbxBrinq, cbxTamanhoBrinq, cbxTipoBrinq,
                 lblTamanhoBrinq, lblTipoBrinq, lblBrinq,
-                lblNome, lblTelefone, lblRegistro,
-                txtNome, txtTelefone, txtRegistro,
-                lblLinha
+                lblInformacoes, lblLinha, lblInformacoes, txtInformacoes,
 
             };
             foreach (var controle in controles)
@@ -86,9 +80,7 @@ namespace ProjetoIntegradorReal
             {
                 cbxLivro, cbxEstadoLivro, cbxGeneroLivro,
                 lblLivro, lblEstadoLivro, lblGeneroLivro,
-                lblNome, lblTelefone, lblRegistro,
-                txtNome, txtTelefone, txtRegistro,
-                lblLinha
+                lblInformacoes, lblLinha, lblInformacoes, txtInformacoes,
 
             };
             foreach (var controle in controles)

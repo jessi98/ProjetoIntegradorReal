@@ -34,7 +34,6 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.btnNovoUsuario = new System.Windows.Forms.Button();
             this.chkMostrar = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -92,17 +91,6 @@
             this.txtSenha.Size = new System.Drawing.Size(166, 27);
             this.txtSenha.TabIndex = 3;
             // 
-            // btnNovoUsuario
-            // 
-            this.btnNovoUsuario.BackColor = System.Drawing.SystemColors.Window;
-            this.btnNovoUsuario.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovoUsuario.Location = new System.Drawing.Point(64, 239);
-            this.btnNovoUsuario.Name = "btnNovoUsuario";
-            this.btnNovoUsuario.Size = new System.Drawing.Size(166, 28);
-            this.btnNovoUsuario.TabIndex = 5;
-            this.btnNovoUsuario.Text = "Novo Usuario";
-            this.btnNovoUsuario.UseVisualStyleBackColor = false;
-            // 
             // chkMostrar
             // 
             this.chkMostrar.AutoSize = true;
@@ -137,9 +125,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(23, 292);
+            this.pictureBox3.Location = new System.Drawing.Point(64, 235);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(238, 71);
+            this.pictureBox3.Size = new System.Drawing.Size(166, 43);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
@@ -148,12 +136,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 386);
+            this.ClientSize = new System.Drawing.Size(284, 302);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.chkMostrar);
-            this.Controls.Add(this.btnNovoUsuario);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.lblNome);
@@ -177,7 +164,6 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Button btnNovoUsuario;
         private System.Windows.Forms.CheckBox chkMostrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;

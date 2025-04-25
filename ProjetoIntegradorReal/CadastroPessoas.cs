@@ -76,5 +76,10 @@ namespace ProjetoIntegradorReal
         {
             this.Close();
         }
+
+        private void txtCPF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
