@@ -55,121 +55,150 @@
             // 
             this.btnPesquisar.BackColor = System.Drawing.SystemColors.Window;
             this.btnPesquisar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnPesquisar.Location = new System.Drawing.Point(24, 87);
+            this.btnPesquisar.Location = new System.Drawing.Point(32, 107);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(137, 33);
+            this.btnPesquisar.Size = new System.Drawing.Size(183, 41);
             this.btnPesquisar.TabIndex = 0;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // txtBusca
             // 
             this.txtBusca.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtBusca.Location = new System.Drawing.Point(24, 46);
+            this.txtBusca.Location = new System.Drawing.Point(32, 57);
+            this.txtBusca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(137, 27);
+            this.txtBusca.Size = new System.Drawing.Size(181, 32);
             this.txtBusca.TabIndex = 1;
             // 
             // lblBusca
             // 
             this.lblBusca.AutoSize = true;
             this.lblBusca.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblBusca.Location = new System.Drawing.Point(46, 24);
+            this.lblBusca.Location = new System.Drawing.Point(61, 30);
+            this.lblBusca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBusca.Name = "lblBusca";
-            this.lblBusca.Size = new System.Drawing.Size(104, 19);
+            this.lblBusca.Size = new System.Drawing.Size(129, 24);
             this.lblBusca.TabIndex = 2;
             this.lblBusca.Text = "Informe o CPF";
             // 
             // txtNome
             // 
+            this.txtNome.Enabled = false;
             this.txtNome.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtNome.Location = new System.Drawing.Point(24, 203);
+            this.txtNome.Location = new System.Drawing.Point(32, 250);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(265, 27);
+            this.txtNome.Size = new System.Drawing.Size(352, 32);
             this.txtNome.TabIndex = 3;
+            this.txtNome.Visible = false;
             // 
             // txtEndereco
             // 
+            this.txtEndereco.Enabled = false;
             this.txtEndereco.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtEndereco.Location = new System.Drawing.Point(24, 255);
+            this.txtEndereco.Location = new System.Drawing.Point(32, 314);
+            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(265, 27);
+            this.txtEndereco.Size = new System.Drawing.Size(352, 32);
             this.txtEndereco.TabIndex = 5;
+            this.txtEndereco.Visible = false;
             // 
             // txtCPF
             // 
             this.txtCPF.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtCPF.Location = new System.Drawing.Point(179, 307);
+            this.txtCPF.Location = new System.Drawing.Point(239, 378);
+            this.txtCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(110, 27);
+            this.txtCPF.Size = new System.Drawing.Size(145, 32);
             this.txtCPF.TabIndex = 6;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
+            this.lblNome.Enabled = false;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblNome.Location = new System.Drawing.Point(21, 181);
+            this.lblNome.Location = new System.Drawing.Point(28, 223);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(120, 19);
+            this.lblNome.Size = new System.Drawing.Size(146, 24);
             this.lblNome.TabIndex = 7;
             this.lblNome.Text = "Nome Completo";
+            this.lblNome.Visible = false;
             // 
             // lblEndereco
             // 
             this.lblEndereco.AutoSize = true;
+            this.lblEndereco.Enabled = false;
             this.lblEndereco.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblEndereco.Location = new System.Drawing.Point(21, 233);
+            this.lblEndereco.Location = new System.Drawing.Point(28, 287);
+            this.lblEndereco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(73, 19);
+            this.lblEndereco.Size = new System.Drawing.Size(89, 24);
             this.lblEndereco.TabIndex = 9;
             this.lblEndereco.Text = "Endereço";
+            this.lblEndereco.Visible = false;
             // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
+            this.lblCPF.Enabled = false;
             this.lblCPF.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblCPF.Location = new System.Drawing.Point(175, 285);
+            this.lblCPF.Location = new System.Drawing.Point(233, 351);
+            this.lblCPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(35, 19);
+            this.lblCPF.Size = new System.Drawing.Size(42, 24);
             this.lblCPF.TabIndex = 10;
             this.lblCPF.Text = "CPF";
+            this.lblCPF.Visible = false;
             // 
             // txtTelefone
             // 
+            this.txtTelefone.Enabled = false;
             this.txtTelefone.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtTelefone.Location = new System.Drawing.Point(25, 307);
+            this.txtTelefone.Location = new System.Drawing.Point(33, 378);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(116, 27);
+            this.txtTelefone.Size = new System.Drawing.Size(153, 32);
             this.txtTelefone.TabIndex = 11;
+            this.txtTelefone.Visible = false;
             this.txtTelefone.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
             // 
             // lblTefone
             // 
             this.lblTefone.AutoSize = true;
+            this.lblTefone.Enabled = false;
             this.lblTefone.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblTefone.Location = new System.Drawing.Point(21, 285);
+            this.lblTefone.Location = new System.Drawing.Point(28, 351);
+            this.lblTefone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTefone.Name = "lblTefone";
-            this.lblTefone.Size = new System.Drawing.Size(67, 19);
+            this.lblTefone.Size = new System.Drawing.Size(83, 24);
             this.lblTefone.TabIndex = 14;
             this.lblTefone.Text = "Telefone";
+            this.lblTefone.Visible = false;
             // 
             // grbSelecionar
             // 
             this.grbSelecionar.Controls.Add(this.rdbRecebedor);
             this.grbSelecionar.Controls.Add(this.rdbDoador);
             this.grbSelecionar.Font = new System.Drawing.Font("Candara", 12F);
-            this.grbSelecionar.Location = new System.Drawing.Point(179, 35);
+            this.grbSelecionar.Location = new System.Drawing.Point(239, 43);
+            this.grbSelecionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grbSelecionar.Name = "grbSelecionar";
-            this.grbSelecionar.Size = new System.Drawing.Size(111, 85);
+            this.grbSelecionar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbSelecionar.Size = new System.Drawing.Size(148, 105);
             this.grbSelecionar.TabIndex = 17;
             this.grbSelecionar.TabStop = false;
             // 
             // rdbRecebedor
             // 
             this.rdbRecebedor.AutoSize = true;
-            this.rdbRecebedor.Location = new System.Drawing.Point(6, 52);
+            this.rdbRecebedor.Location = new System.Drawing.Point(8, 64);
+            this.rdbRecebedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbRecebedor.Name = "rdbRecebedor";
-            this.rdbRecebedor.Size = new System.Drawing.Size(90, 23);
+            this.rdbRecebedor.Size = new System.Drawing.Size(108, 28);
             this.rdbRecebedor.TabIndex = 1;
             this.rdbRecebedor.TabStop = true;
             this.rdbRecebedor.Text = "Receptor";
@@ -178,9 +207,10 @@
             // rdbDoador
             // 
             this.rdbDoador.AutoSize = true;
-            this.rdbDoador.Location = new System.Drawing.Point(6, 15);
+            this.rdbDoador.Location = new System.Drawing.Point(8, 18);
+            this.rdbDoador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbDoador.Name = "rdbDoador";
-            this.rdbDoador.Size = new System.Drawing.Size(78, 23);
+            this.rdbDoador.Size = new System.Drawing.Size(94, 28);
             this.rdbDoador.TabIndex = 0;
             this.rdbDoador.TabStop = true;
             this.rdbDoador.Text = "Doador";
@@ -192,9 +222,10 @@
             this.btnCadastrar.Font = new System.Drawing.Font("Candara", 12F);
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
             this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCadastrar.Location = new System.Drawing.Point(178, 360);
+            this.btnCadastrar.Location = new System.Drawing.Point(237, 443);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(111, 34);
+            this.btnCadastrar.Size = new System.Drawing.Size(148, 42);
             this.btnCadastrar.TabIndex = 18;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -204,15 +235,17 @@
             // lblLinha
             // 
             this.lblLinha.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLinha.Location = new System.Drawing.Point(7, 150);
+            this.lblLinha.Location = new System.Drawing.Point(9, 185);
+            this.lblLinha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLinha.Name = "lblLinha";
-            this.lblLinha.Size = new System.Drawing.Size(300, 2);
+            this.lblLinha.Size = new System.Drawing.Size(400, 2);
             this.lblLinha.TabIndex = 19;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 30);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(16, 16);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -223,12 +256,12 @@
             // 
             this.btnVoltar.BackColor = System.Drawing.SystemColors.Window;
             this.btnVoltar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
             this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVoltar.ImageKey = "(nenhum/a)";
-            this.btnVoltar.Location = new System.Drawing.Point(24, 360);
+            this.btnVoltar.Location = new System.Drawing.Point(32, 443);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(111, 34);
+            this.btnVoltar.Size = new System.Drawing.Size(148, 42);
             this.btnVoltar.TabIndex = 21;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -237,9 +270,9 @@
             // 
             // CadastroPessoas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 434);
+            this.ClientSize = new System.Drawing.Size(421, 534);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblLinha);
@@ -257,6 +290,7 @@
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.btnPesquisar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CadastroPessoas";
             this.Text = "CadastroPessoas";
             this.Load += new System.EventHandler(this.CadastroPessoas_Load);

@@ -36,5 +36,40 @@ namespace ProjetoIntegradorReal
         {
 
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            MostrarTudo();
+        }
+
+        private void MostrarTudo()
+        {
+            var controles = new Control[]
+            {
+                lblCPF, lblEndereco, lblLinha, lblNome, lblTefone,
+                txtCPF, txtEndereco, txtNome, txtTelefone
+            };
+            foreach (var controle in controles)
+            {
+                controle.Enabled = true;
+                controle.Visible = true;
+
+            }
+        }
+
+        private void EsconderTudo()
+        {
+            var controles = new Control[]
+            {
+                lblCPF, lblEndereco, lblLinha, lblNome, lblTefone,
+                txtCPF, txtEndereco, txtNome, txtTelefone
+            };
+            foreach (var controle in controles)
+            {
+                controle.Enabled = true;
+                controle.Visible = true;
+
+            }
+        }
     }
 }
