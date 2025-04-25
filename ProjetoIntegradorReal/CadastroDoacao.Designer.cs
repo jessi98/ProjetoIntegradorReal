@@ -253,6 +253,7 @@
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnCadastrar
             // 

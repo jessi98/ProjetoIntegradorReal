@@ -56,7 +56,7 @@
             this.btnPesquisar.BackColor = System.Drawing.SystemColors.Window;
             this.btnPesquisar.Font = new System.Drawing.Font("Candara", 12F);
             this.btnPesquisar.Location = new System.Drawing.Point(32, 107);
-            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(183, 41);
             this.btnPesquisar.TabIndex = 0;
@@ -68,7 +68,7 @@
             // 
             this.txtBusca.Font = new System.Drawing.Font("Candara", 12F);
             this.txtBusca.Location = new System.Drawing.Point(32, 57);
-            this.txtBusca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBusca.Margin = new System.Windows.Forms.Padding(4);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(181, 32);
             this.txtBusca.TabIndex = 1;
@@ -89,7 +89,7 @@
             this.txtNome.Enabled = false;
             this.txtNome.Font = new System.Drawing.Font("Candara", 12F);
             this.txtNome.Location = new System.Drawing.Point(32, 250);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(352, 32);
             this.txtNome.TabIndex = 3;
@@ -100,7 +100,7 @@
             this.txtEndereco.Enabled = false;
             this.txtEndereco.Font = new System.Drawing.Font("Candara", 12F);
             this.txtEndereco.Location = new System.Drawing.Point(32, 314);
-            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEndereco.Margin = new System.Windows.Forms.Padding(4);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(352, 32);
             this.txtEndereco.TabIndex = 5;
@@ -110,7 +110,7 @@
             // 
             this.txtCPF.Font = new System.Drawing.Font("Candara", 12F);
             this.txtCPF.Location = new System.Drawing.Point(239, 378);
-            this.txtCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCPF.Margin = new System.Windows.Forms.Padding(4);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(145, 32);
             this.txtCPF.TabIndex = 6;
@@ -159,7 +159,7 @@
             this.txtTelefone.Enabled = false;
             this.txtTelefone.Font = new System.Drawing.Font("Candara", 12F);
             this.txtTelefone.Location = new System.Drawing.Point(33, 378);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(153, 32);
             this.txtTelefone.TabIndex = 11;
@@ -185,9 +185,9 @@
             this.grbSelecionar.Controls.Add(this.rdbDoador);
             this.grbSelecionar.Font = new System.Drawing.Font("Candara", 12F);
             this.grbSelecionar.Location = new System.Drawing.Point(239, 43);
-            this.grbSelecionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbSelecionar.Margin = new System.Windows.Forms.Padding(4);
             this.grbSelecionar.Name = "grbSelecionar";
-            this.grbSelecionar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbSelecionar.Padding = new System.Windows.Forms.Padding(4);
             this.grbSelecionar.Size = new System.Drawing.Size(148, 105);
             this.grbSelecionar.TabIndex = 17;
             this.grbSelecionar.TabStop = false;
@@ -196,7 +196,7 @@
             // 
             this.rdbRecebedor.AutoSize = true;
             this.rdbRecebedor.Location = new System.Drawing.Point(8, 64);
-            this.rdbRecebedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbRecebedor.Margin = new System.Windows.Forms.Padding(4);
             this.rdbRecebedor.Name = "rdbRecebedor";
             this.rdbRecebedor.Size = new System.Drawing.Size(108, 28);
             this.rdbRecebedor.TabIndex = 1;
@@ -208,7 +208,7 @@
             // 
             this.rdbDoador.AutoSize = true;
             this.rdbDoador.Location = new System.Drawing.Point(8, 18);
-            this.rdbDoador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbDoador.Margin = new System.Windows.Forms.Padding(4);
             this.rdbDoador.Name = "rdbDoador";
             this.rdbDoador.Size = new System.Drawing.Size(94, 28);
             this.rdbDoador.TabIndex = 0;
@@ -223,7 +223,7 @@
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
             this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrar.Location = new System.Drawing.Point(237, 443);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(148, 42);
             this.btnCadastrar.TabIndex = 18;
@@ -245,7 +245,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(32, 30);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(16, 16);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -259,7 +259,7 @@
             this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVoltar.ImageKey = "(nenhum/a)";
             this.btnVoltar.Location = new System.Drawing.Point(32, 443);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(148, 42);
             this.btnVoltar.TabIndex = 21;
@@ -267,6 +267,7 @@
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // CadastroPessoas
             // 
@@ -290,7 +291,7 @@
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.btnPesquisar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadastroPessoas";
             this.Text = "CadastroPessoas";
             this.Load += new System.EventHandler(this.CadastroPessoas_Load);

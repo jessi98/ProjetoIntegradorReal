@@ -59,7 +59,7 @@
             this.btnPesquisar.BackColor = System.Drawing.SystemColors.Window;
             this.btnPesquisar.Font = new System.Drawing.Font("Candara", 12F);
             this.btnPesquisar.Location = new System.Drawing.Point(331, 28);
-            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(139, 60);
             this.btnPesquisar.TabIndex = 0;
@@ -92,7 +92,7 @@
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Candara", 12F);
             this.txtDescricao.Location = new System.Drawing.Point(40, 304);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(483, 121);
@@ -105,9 +105,9 @@
             this.grbStatus.Controls.Add(this.rdbAguardando);
             this.grbStatus.Font = new System.Drawing.Font("Candara", 12F);
             this.grbStatus.Location = new System.Drawing.Point(40, 96);
-            this.grbStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.grbStatus.Name = "grbStatus";
-            this.grbStatus.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grbStatus.Padding = new System.Windows.Forms.Padding(4);
             this.grbStatus.Size = new System.Drawing.Size(484, 76);
             this.grbStatus.TabIndex = 36;
             this.grbStatus.TabStop = false;
@@ -117,7 +117,7 @@
             // 
             this.rdbInativo.AutoSize = true;
             this.rdbInativo.Location = new System.Drawing.Point(159, 31);
-            this.rdbInativo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbInativo.Margin = new System.Windows.Forms.Padding(4);
             this.rdbInativo.Name = "rdbInativo";
             this.rdbInativo.Size = new System.Drawing.Size(90, 28);
             this.rdbInativo.TabIndex = 37;
@@ -129,7 +129,7 @@
             // 
             this.rdbAtivo.AutoSize = true;
             this.rdbAtivo.Location = new System.Drawing.Point(17, 31);
-            this.rdbAtivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbAtivo.Margin = new System.Windows.Forms.Padding(4);
             this.rdbAtivo.Name = "rdbAtivo";
             this.rdbAtivo.Size = new System.Drawing.Size(75, 28);
             this.rdbAtivo.TabIndex = 38;
@@ -141,7 +141,7 @@
             // 
             this.rdbAguardando.AutoSize = true;
             this.rdbAguardando.Location = new System.Drawing.Point(311, 31);
-            this.rdbAguardando.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdbAguardando.Margin = new System.Windows.Forms.Padding(4);
             this.rdbAguardando.Name = "rdbAguardando";
             this.rdbAguardando.Size = new System.Drawing.Size(136, 28);
             this.rdbAguardando.TabIndex = 39;
@@ -154,7 +154,7 @@
             // 
             this.txtRegistro.Font = new System.Drawing.Font("Candara", 12F);
             this.txtRegistro.Location = new System.Drawing.Point(104, 55);
-            this.txtRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRegistro.Margin = new System.Windows.Forms.Padding(4);
             this.txtRegistro.Name = "txtRegistro";
             this.txtRegistro.Size = new System.Drawing.Size(192, 32);
             this.txtRegistro.TabIndex = 37;
@@ -163,7 +163,7 @@
             // 
             this.txtCPFRecebedor.Font = new System.Drawing.Font("Candara", 12F);
             this.txtCPFRecebedor.Location = new System.Drawing.Point(331, 466);
-            this.txtCPFRecebedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCPFRecebedor.Margin = new System.Windows.Forms.Padding(4);
             this.txtCPFRecebedor.Name = "txtCPFRecebedor";
             this.txtCPFRecebedor.Size = new System.Drawing.Size(192, 32);
             this.txtCPFRecebedor.TabIndex = 39;
@@ -206,7 +206,7 @@
             this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVoltar.ImageKey = "(nenhum/a)";
             this.btnVoltar.Location = new System.Drawing.Point(171, 538);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(148, 42);
             this.btnVoltar.TabIndex = 52;
@@ -214,6 +214,7 @@
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnCadastrar
             // 
@@ -222,7 +223,7 @@
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
             this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrar.Location = new System.Drawing.Point(376, 538);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(148, 42);
             this.btnCadastrar.TabIndex = 51;
@@ -327,7 +328,7 @@
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblRegistro);
             this.Controls.Add(this.btnPesquisar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "StatusDoacao";
             this.Text = "StatusDoacao";
             this.Load += new System.EventHandler(this.StatusDoacao_Load);
