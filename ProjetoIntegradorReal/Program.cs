@@ -16,7 +16,7 @@ namespace ProjetoIntegradorReal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CadastroPessoas());
+            Application.Run(new MenuPrincipal());
         }
     }
 }

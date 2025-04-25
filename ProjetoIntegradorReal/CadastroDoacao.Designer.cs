@@ -404,7 +404,7 @@
             this.lblLivro1.AutoSize = true;
             this.lblLivro1.Enabled = false;
             this.lblLivro1.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblLivro1.Location = new System.Drawing.Point(130, 131);
+            this.lblLivro1.Location = new System.Drawing.Point(130, 132);
             this.lblLivro1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLivro1.Name = "lblLivro1";
             this.lblLivro1.Size = new System.Drawing.Size(42, 24);
