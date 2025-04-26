@@ -110,7 +110,6 @@
             this.txtCPF.Size = new System.Drawing.Size(110, 27);
             this.txtCPF.TabIndex = 6;
             this.txtCPF.Visible = false;
-            this.txtCPF.TextChanged += new System.EventHandler(this.txtCPF_TextChanged);
             // 
             // lblNome
             // 
@@ -157,7 +156,6 @@
             this.txtTelefone.Size = new System.Drawing.Size(116, 27);
             this.txtTelefone.TabIndex = 11;
             this.txtTelefone.Visible = false;
-            this.txtTelefone.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
             // 
             // lblTefone
             // 

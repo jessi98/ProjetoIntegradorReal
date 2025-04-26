@@ -9,6 +9,8 @@ CREATE TABLE pessoa_doador(
     endereco VARCHAR(200) NOT NULL,
     telefone VARCHAR(11) NOT NULL
 );
+
+SELECT * FROM pessoa_doador;
  
 CREATE TABLE pessoa_recebedor(
 	cpf_recebedor INT PRIMARY KEY NOT NULL,
@@ -17,6 +19,8 @@ CREATE TABLE pessoa_recebedor(
     telefone VARCHAR(11) NOT NULL
    
 );
+
+SELECT * FROM pessoa_recebedor;
  
 CREATE TABLE cadastro_pedido(
 	registro INT AUTO_INCREMENT PRIMARY KEY,
