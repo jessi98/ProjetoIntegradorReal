@@ -130,6 +130,9 @@
             // 
             this.cbxPedidoDoacao.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxPedidoDoacao.FormattingEnabled = true;
+            this.cbxPedidoDoacao.Items.AddRange(new object[] {
+            "Doação",
+            "Pedido"});
             this.cbxPedidoDoacao.Location = new System.Drawing.Point(776, 25);
             this.cbxPedidoDoacao.Name = "cbxPedidoDoacao";
             this.cbxPedidoDoacao.Size = new System.Drawing.Size(121, 27);
@@ -139,6 +142,12 @@
             // 
             this.cbxCategoria.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Items.AddRange(new object[] {
+            "Brinquedos",
+            "Cesta básica",
+            "Eletrodomésticos",
+            "Livros",
+            "Roupas"});
             this.cbxCategoria.Location = new System.Drawing.Point(776, 58);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(121, 27);
@@ -148,7 +157,7 @@
             // 
             this.comboBox3.Font = new System.Drawing.Font("Candara", 12F);
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(653, 111);
+            this.comboBox3.Location = new System.Drawing.Point(650, 111);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(120, 27);
             this.comboBox3.TabIndex = 7;

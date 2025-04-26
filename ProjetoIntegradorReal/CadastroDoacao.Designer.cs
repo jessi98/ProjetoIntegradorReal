@@ -57,6 +57,12 @@
             this.lblLivro1 = new System.Windows.Forms.Label();
             this.lblLivro2 = new System.Windows.Forms.Label();
             this.lblLivro3 = new System.Windows.Forms.Label();
+            this.cbxEletrodomestico3 = new System.Windows.Forms.ComboBox();
+            this.cbxEletrodomestico2 = new System.Windows.Forms.ComboBox();
+            this.cbxEletrodomestico = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cbxCestaBasica = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtDescricaoProduto
@@ -131,7 +137,17 @@
             this.cbxRoupa2.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxRoupa2.FormattingEnabled = true;
             this.cbxRoupa2.Items.AddRange(new object[] {
-            "Roupa"});
+            "Infantil - RN",
+            "Infantil - 0 a 6 meses",
+            "Infantil - 6 meses a 1 ano",
+            "Infantil - 1 a 5 anos",
+            "infantil - 6 a 12 anos",
+            "PP",
+            "P",
+            "M",
+            "G",
+            "GG",
+            "XG"});
             this.cbxRoupa2.Location = new System.Drawing.Point(164, 129);
             this.cbxRoupa2.Name = "cbxRoupa2";
             this.cbxRoupa2.Size = new System.Drawing.Size(116, 27);
@@ -159,7 +175,10 @@
             this.cbxRoupa1.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxRoupa1.FormattingEnabled = true;
             this.cbxRoupa1.Items.AddRange(new object[] {
-            "Roupa"});
+            "Feminino",
+            "Masculino",
+            "Infantil Feminino",
+            "Infantil Masculino"});
             this.cbxRoupa1.Location = new System.Drawing.Point(29, 129);
             this.cbxRoupa1.Name = "cbxRoupa1";
             this.cbxRoupa1.Size = new System.Drawing.Size(116, 27);
@@ -186,7 +205,9 @@
             this.cmbProduto.Items.AddRange(new object[] {
             "Roupas",
             "Brinquedos",
-            "Livros"});
+            "Livros",
+            "Eletrodomésticos",
+            "Cesta Básica"});
             this.cmbProduto.Location = new System.Drawing.Point(264, 58);
             this.cmbProduto.Name = "cmbProduto";
             this.cmbProduto.Size = new System.Drawing.Size(152, 27);
@@ -286,8 +307,12 @@
             this.cbxBrinq2.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxBrinq2.FormattingEnabled = true;
             this.cbxBrinq2.Items.AddRange(new object[] {
-            "Brinquedo"});
-            this.cbxBrinq2.Location = new System.Drawing.Point(164, 129);
+            "0 - 12 Meses",
+            "1 - 3 Anos",
+            "4 - 6 Anos",
+            "1 - 12 Anos",
+            "13+ Anos"});
+            this.cbxBrinq2.Location = new System.Drawing.Point(163, 167);
             this.cbxBrinq2.Name = "cbxBrinq2";
             this.cbxBrinq2.Size = new System.Drawing.Size(116, 27);
             this.cbxBrinq2.TabIndex = 49;
@@ -301,7 +326,7 @@
             this.cbxBrinq3.FormattingEnabled = true;
             this.cbxBrinq3.Items.AddRange(new object[] {
             "Brinquedo"});
-            this.cbxBrinq3.Location = new System.Drawing.Point(296, 129);
+            this.cbxBrinq3.Location = new System.Drawing.Point(297, 167);
             this.cbxBrinq3.Name = "cbxBrinq3";
             this.cbxBrinq3.Size = new System.Drawing.Size(116, 27);
             this.cbxBrinq3.TabIndex = 48;
@@ -314,8 +339,17 @@
             this.cbxBrinq1.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxBrinq1.FormattingEnabled = true;
             this.cbxBrinq1.Items.AddRange(new object[] {
-            "Brinquedo"});
-            this.cbxBrinq1.Location = new System.Drawing.Point(28, 129);
+            "Bonecos",
+            "Cartas",
+            "Construção",
+            "Criativo",
+            "Educativo",
+            "Eletrônico",
+            "Esporte",
+            "Musical",
+            "Tabuleiro",
+            "Veículos"});
+            this.cbxBrinq1.Location = new System.Drawing.Point(27, 167);
             this.cbxBrinq1.Name = "cbxBrinq1";
             this.cbxBrinq1.Size = new System.Drawing.Size(116, 27);
             this.cbxBrinq1.TabIndex = 47;
@@ -340,8 +374,23 @@
             this.cbxLivro1.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxLivro1.FormattingEnabled = true;
             this.cbxLivro1.Items.AddRange(new object[] {
-            "Livro"});
-            this.cbxLivro1.Location = new System.Drawing.Point(29, 129);
+            "Aventura",
+            "Biografia",
+            "Clássicos",
+            "Contos",
+            "Crônica",
+            "Didático",
+            "Drama",
+            "Fantasia",
+            "Ficção Científica",
+            "Infantil",
+            "Mistério",
+            "Poesia",
+            "Religioso",
+            "Romance",
+            "Suspense",
+            "Terror"});
+            this.cbxLivro1.Location = new System.Drawing.Point(28, 214);
             this.cbxLivro1.Name = "cbxLivro1";
             this.cbxLivro1.Size = new System.Drawing.Size(116, 27);
             this.cbxLivro1.TabIndex = 52;
@@ -354,8 +403,11 @@
             this.cbxLivro2.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxLivro2.FormattingEnabled = true;
             this.cbxLivro2.Items.AddRange(new object[] {
-            "Livro"});
-            this.cbxLivro2.Location = new System.Drawing.Point(164, 129);
+            "Novo",
+            "",
+            "Semi-novo",
+            "Usado"});
+            this.cbxLivro2.Location = new System.Drawing.Point(164, 214);
             this.cbxLivro2.Name = "cbxLivro2";
             this.cbxLivro2.Size = new System.Drawing.Size(116, 27);
             this.cbxLivro2.TabIndex = 53;
@@ -369,7 +421,7 @@
             this.cbxLivro3.FormattingEnabled = true;
             this.cbxLivro3.Items.AddRange(new object[] {
             "Livro"});
-            this.cbxLivro3.Location = new System.Drawing.Point(297, 129);
+            this.cbxLivro3.Location = new System.Drawing.Point(297, 214);
             this.cbxLivro3.Name = "cbxLivro3";
             this.cbxLivro3.Size = new System.Drawing.Size(116, 27);
             this.cbxLivro3.TabIndex = 54;
@@ -411,11 +463,114 @@
             this.lblLivro3.Text = "LVR";
             this.lblLivro3.Visible = false;
             // 
+            // cbxEletrodomestico3
+            // 
+            this.cbxEletrodomestico3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEletrodomestico3.Enabled = false;
+            this.cbxEletrodomestico3.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxEletrodomestico3.FormattingEnabled = true;
+            this.cbxEletrodomestico3.Items.AddRange(new object[] {
+            "Semi-novo",
+            "Usado"});
+            this.cbxEletrodomestico3.Location = new System.Drawing.Point(297, 259);
+            this.cbxEletrodomestico3.Name = "cbxEletrodomestico3";
+            this.cbxEletrodomestico3.Size = new System.Drawing.Size(116, 27);
+            this.cbxEletrodomestico3.TabIndex = 60;
+            this.cbxEletrodomestico3.Visible = false;
+            // 
+            // cbxEletrodomestico2
+            // 
+            this.cbxEletrodomestico2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEletrodomestico2.Enabled = false;
+            this.cbxEletrodomestico2.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxEletrodomestico2.FormattingEnabled = true;
+            this.cbxEletrodomestico2.Items.AddRange(new object[] {
+            "110V",
+            "220V",
+            "Bivolt"});
+            this.cbxEletrodomestico2.Location = new System.Drawing.Point(164, 259);
+            this.cbxEletrodomestico2.Name = "cbxEletrodomestico2";
+            this.cbxEletrodomestico2.Size = new System.Drawing.Size(116, 27);
+            this.cbxEletrodomestico2.TabIndex = 59;
+            this.cbxEletrodomestico2.Visible = false;
+            // 
+            // cbxEletrodomestico
+            // 
+            this.cbxEletrodomestico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEletrodomestico.Enabled = false;
+            this.cbxEletrodomestico.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxEletrodomestico.FormattingEnabled = true;
+            this.cbxEletrodomestico.Items.AddRange(new object[] {
+            "Aspirador",
+            "Batedeira",
+            "Fogão",
+            "Geladeira",
+            "Liquidificador",
+            "Máquina de lavar",
+            "Televisão",
+            "Ventilador"});
+            this.cbxEletrodomestico.Location = new System.Drawing.Point(28, 259);
+            this.cbxEletrodomestico.Name = "cbxEletrodomestico";
+            this.cbxEletrodomestico.Size = new System.Drawing.Size(116, 27);
+            this.cbxEletrodomestico.TabIndex = 58;
+            this.cbxEletrodomestico.Visible = false;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.Enabled = false;
+            this.comboBox4.Font = new System.Drawing.Font("Candara", 12F);
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Livro"});
+            this.comboBox4.Location = new System.Drawing.Point(296, 301);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(116, 27);
+            this.comboBox4.TabIndex = 63;
+            this.comboBox4.Visible = false;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.Enabled = false;
+            this.comboBox5.Font = new System.Drawing.Font("Candara", 12F);
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "Livro"});
+            this.comboBox5.Location = new System.Drawing.Point(163, 301);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(116, 27);
+            this.comboBox5.TabIndex = 62;
+            this.comboBox5.Visible = false;
+            // 
+            // cbxCestaBasica
+            // 
+            this.cbxCestaBasica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCestaBasica.Enabled = false;
+            this.cbxCestaBasica.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxCestaBasica.FormattingEnabled = true;
+            this.cbxCestaBasica.Items.AddRange(new object[] {
+            "Cesta Básica",
+            "Congelados",
+            "Produtos de Limpeza",
+            "Produtos de Higiene"});
+            this.cbxCestaBasica.Location = new System.Drawing.Point(27, 301);
+            this.cbxCestaBasica.Name = "cbxCestaBasica";
+            this.cbxCestaBasica.Size = new System.Drawing.Size(116, 27);
+            this.cbxCestaBasica.TabIndex = 61;
+            this.cbxCestaBasica.Visible = false;
+            // 
             // CadastroDoacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 409);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.cbxCestaBasica);
+            this.Controls.Add(this.cbxEletrodomestico3);
+            this.Controls.Add(this.cbxEletrodomestico2);
+            this.Controls.Add(this.cbxEletrodomestico);
             this.Controls.Add(this.lblLivro3);
             this.Controls.Add(this.lblLivro2);
             this.Controls.Add(this.lblLivro1);
@@ -482,5 +637,11 @@
         private System.Windows.Forms.Label lblLivro1;
         private System.Windows.Forms.Label lblLivro2;
         private System.Windows.Forms.Label lblLivro3;
+        private System.Windows.Forms.ComboBox cbxEletrodomestico3;
+        private System.Windows.Forms.ComboBox cbxEletrodomestico2;
+        private System.Windows.Forms.ComboBox cbxEletrodomestico;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cbxCestaBasica;
     }
 }
