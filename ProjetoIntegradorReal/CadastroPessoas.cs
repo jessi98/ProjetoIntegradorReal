@@ -62,7 +62,23 @@ namespace ProjetoIntegradorReal
                 }
                 else
                 {
-                    MessageBox.Show("Pessoa já cadastrada");
+                    MostrarTudo();
+
+                    string sql2 = "SELECT nome, endereco, telefone, cpf_doador FROM pessoa_doador WHERE cpf_doador = @cpf";
+
+                    MySqlCommand comand = new MySqlCommand(sql2, Conexao);
+
+                    comand.Parameters.AddWithValue("@cpf", Convert.ToInt64(txtBusca.Text));
+
+                    MySqlDataReader reader = comand.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        txtNome.Text = reader.GetString(0);
+                        txtEndereco.Text = reader.GetString(1);
+                        txtTelefone.Text = reader.GetString(2);
+                        txtCPF.Text = reader.GetInt64(3).ToString();
+                    }
                 }
             }
 
@@ -85,7 +101,23 @@ namespace ProjetoIntegradorReal
                 }
                 else
                 {
-                    MessageBox.Show("Pessoa já cadastrada");
+                    MostrarTudo();
+
+                    string sql2 = "SELECT nome, endereco, telefone, cpf_recebedor FROM pessoa_recebedor WHERE cpf_recebedor = @cpf";
+
+                    MySqlCommand comand = new MySqlCommand(sql2, Conexao);
+
+                    comand.Parameters.AddWithValue("@cpf", Convert.ToInt64(txtBusca.Text));
+
+                    MySqlDataReader reader = comand.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        txtNome.Text = reader.GetString(0);
+                        txtEndereco.Text = reader.GetString(1);
+                        txtTelefone.Text = reader.GetString(2);
+                        txtCPF.Text = reader.GetInt64(3).ToString();
+                    }
                 }
             }
 
