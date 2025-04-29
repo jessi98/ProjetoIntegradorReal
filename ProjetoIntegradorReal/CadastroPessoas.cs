@@ -171,8 +171,15 @@ namespace ProjetoIntegradorReal
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = Conexao;
 
-                //if ()
-                //{
+                string sql = "SELECT id_recebedor FROM pessoa_recebedor WHERE cpf_recebedor = @cpf";
+                MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+                comando.Parameters.AddWithValue("@cpf", Convert.ToInt64(txtCPF.Text));
+
+                Object cpf = comando.ExecuteScalar();
+
+                if (cpf == null)
+                {
 
                     if (rdbDoador.Checked == true)
                     {
@@ -183,7 +190,7 @@ namespace ProjetoIntegradorReal
                         cmd.Parameters.AddWithValue("@nome", txtNome.Text);
                         cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
                         cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text);
-                        cmd.Parameters.AddWithValue("cpf_doador", txtCPF.Text);
+                        cmd.Parameters.AddWithValue("@cpf_doador", txtCPF.Text);
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -199,7 +206,7 @@ namespace ProjetoIntegradorReal
                         cmd.Parameters.AddWithValue("@nome", txtNome.Text);
                         cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
                         cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text);
-                        cmd.Parameters.AddWithValue("cpf_recebedor", txtCPF.Text);
+                        cmd.Parameters.AddWithValue("@cpf_recebedor", txtCPF.Text);
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -210,7 +217,47 @@ namespace ProjetoIntegradorReal
                     {
                         MessageBox.Show("Selecione um tipo de pessoa para cadastrar");
                     }
-                //}
+                }
+                else
+                {
+                    if (rdbDoador.Checked == true)
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = "UPDATE pessoa_doador " +
+                                          "SET nome = @nome, endereco = @endereco, telefone = @telefone, cpf_doador = @cpf_doador " +
+                                          "WHERE cpf_doador = @cpf";
+
+                        cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+                        cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
+                        cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text);
+                        cmd.Parameters.AddWithValue("@cpf_doador", txtCPF.Text);
+                        cmd.Parameters.AddWithValue("@cpf", cpf);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Cadastro atualizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        EsconderTudo();
+                    }
+                    else if (rdbRecebedor.Checked == true)
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = "UPDATE pessoa_recebedor " +
+                                         "SET nome = @nome, endereco = @endereco, telefone = @telefone, cpf_recebedor = @cpf_recebedor " +
+                                         "WHERE cpf_recebedor = @cpf";
+
+                        cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+                        cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
+                        cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text);
+                        cmd.Parameters.AddWithValue("@cpf_recebedor", txtCPF.Text);
+                        cmd.Parameters.AddWithValue("@cpf", cpf);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Cadastro atualizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        EsconderTudo();
+                    }
+                }
+                
             }
             catch (MySqlException ex)
 
