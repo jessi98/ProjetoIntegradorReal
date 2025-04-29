@@ -4,21 +4,30 @@ CREATE DATABASE doacao;
 USE doacao;
  
 CREATE TABLE pessoa_doador(
-	cpf_doador INT PRIMARY KEY NOT NULL,
+	id_doador INT,
+	cpf_doador INT NOT NULL,
     nome VARCHAR(150) NOT NULL,
     endereco VARCHAR(200) NOT NULL,
     telefone VARCHAR(11) NOT NULL
-);
+	);
+    
+    ALTER TABLE pessoa_doador
+    ADD CONSTRAINT pk_id_cpf_doador
+    PRIMARY KEY (id_doador, cpf_doador);
 
 SELECT * FROM pessoa_doador;
- 
+
 CREATE TABLE pessoa_recebedor(
-	cpf_recebedor INT PRIMARY KEY NOT NULL,
+	id_recebedor INT,
+	cpf_recebedor INT NOT NULL,
     nome VARCHAR(150) NOT NULL,
     endereco VARCHAR(200) NOT NULL,
     telefone VARCHAR(11) NOT NULL
-   
-);
+	);
+    
+	ALTER TABLE pessoa_recebedor
+    ADD CONSTRAINT pk_id_cpf_recebedor
+    PRIMARY KEY (id_recebedor, cpf_recebedor);
 
 SELECT * FROM pessoa_recebedor;
  

@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
+using Org.BouncyCastle.Asn1.Cmp;
 
 namespace ProjetoIntegradorReal
 {
     public partial class CadastroPessoas: Form
     {
-        private List<string> BancoDados;
+        public int? cpf = null;
 
         MySqlConnection Conexao;
         private string data_source = "datasource=localhost;username=root;password=;database=doacao";
@@ -28,16 +30,65 @@ namespace ProjetoIntegradorReal
 
         }
 
-        public void VerificarBanco()
-        {
-            BancoDados = new List<string> {"SELECT cpf_doador FROM pessoa_doador" };
-        }
-
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+            Conexao = new MySqlConnection(data_source);
+            Conexao.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = Conexao;
 
+            if (String.IsNullOrEmpty(txtBusca.Text))
+            {
+                MessageBox.Show("Escreva um CPF!");
+                return;
+            }
 
-            MostrarTudo();
+            if (rdbDoador.Checked == true)
+            {
+                string sql = "SELECT id_doador FROM pessoa_doador WHERE cpf_doador = @cpf";
+                MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+                comando.Parameters.AddWithValue("@cpf", Convert.ToInt64(txtBusca.Text));
+
+                Object cpf = comando.ExecuteScalar();
+
+                if (cpf == null)
+                {
+                    DialogResult result = MessageBox.Show("CPF não encontrado, deseja adicionar uma pessoa?", "ERRO", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    if (result == DialogResult.Yes)
+                    {
+                        MostrarTudo();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pessoa já cadastrada");
+                }
+            }
+
+            else if (rdbRecebedor.Checked == true)
+            {
+                string sql = "SELECT id_recebedor FROM pessoa_recebedor WHERE cpf_recebedor = @cpf";
+                MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+                comando.Parameters.AddWithValue("@cpf", Convert.ToInt64(txtBusca.Text));
+
+                Object cpf = comando.ExecuteScalar();
+
+                if (cpf == null)
+                {
+                    DialogResult result = MessageBox.Show("CPF não encontrado, deseja adicionar uma pessoa?", "ERRO", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    if (result == DialogResult.Yes)
+                    {
+                        MostrarTudo();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Pessoa já cadastrada");
+                }
+            }
+
         }
 
         private void MostrarTudo()
@@ -88,43 +139,46 @@ namespace ProjetoIntegradorReal
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = Conexao;
 
-                if (rdbDoador.Checked == true)
-                {
-                    cmd.Parameters.Clear();
-                    cmd.CommandText = "INSERT INTO pessoa_doador (nome, endereco, telefone, cpf_doador)" +
-                                      "VALUES (@nome, @endereco, @telefone, @cpf_doador)";
+                //if ()
+                //{
 
-                    cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-                    cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
-                    cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text);
-                    cmd.Parameters.AddWithValue("cpf_doador", txtCPF.Text);
+                    if (rdbDoador.Checked == true)
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = "INSERT INTO pessoa_doador (nome, endereco, telefone, cpf_doador)" +
+                                          "VALUES (@nome, @endereco, @telefone, @cpf_doador)";
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+                        cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
+                        cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text);
+                        cmd.Parameters.AddWithValue("cpf_doador", txtCPF.Text);
 
-                    EsconderTudo();
-                }
-                else if (rdbRecebedor.Checked == true)
-                {
-                    cmd.Parameters.Clear();
-                    cmd.CommandText = "INSERT INTO pessoa_recebedor (nome, endereco, telefone, cpf_recebedor)" +
-                                      "VALUES (@nome, @endereco, @telefone, @cpf_recebedor)";
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    cmd.Parameters.AddWithValue("@nome", txtNome.Text);
-                    cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
-                    cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text);
-                    cmd.Parameters.AddWithValue("cpf_recebedor", txtCPF.Text);
+                        EsconderTudo();
+                    }
+                    else if (rdbRecebedor.Checked == true)
+                    {
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = "INSERT INTO pessoa_recebedor (nome, endereco, telefone, cpf_recebedor)" +
+                                          "VALUES (@nome, @endereco, @telefone, @cpf_recebedor)";
 
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+                        cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
+                        cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text);
+                        cmd.Parameters.AddWithValue("cpf_recebedor", txtCPF.Text);
 
-                    EsconderTudo();
-                }
-                else
-                {
-                    MessageBox.Show("Selecione um tipo de pessoa para cadastrar");
-                }
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        EsconderTudo();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selecione um tipo de pessoa para cadastrar");
+                    }
+                //}
             }
             catch (MySqlException ex)
 
