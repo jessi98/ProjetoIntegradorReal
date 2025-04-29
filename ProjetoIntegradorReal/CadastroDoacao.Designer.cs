@@ -554,7 +554,7 @@
             "Congelados",
             "Produtos de Limpeza",
             "Produtos de Higiene"});
-            this.cbxCestaBasica.Location = new System.Drawing.Point(27, 301);
+            this.cbxCestaBasica.Location = new System.Drawing.Point(28, 319);
             this.cbxCestaBasica.Name = "cbxCestaBasica";
             this.cbxCestaBasica.Size = new System.Drawing.Size(116, 27);
             this.cbxCestaBasica.TabIndex = 61;
