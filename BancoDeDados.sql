@@ -4,29 +4,34 @@ CREATE DATABASE doacao;
 USE doacao;
  
 CREATE TABLE pessoa_doador(
-	cpf_doador INT PRIMARY KEY NOT NULL,
+	id_doador INT AUTO_INCREMENT UNIQUE,
+	cpf_doador BIGINT PRIMARY KEY NOT NULL,
     nome VARCHAR(150) NOT NULL,
     endereco VARCHAR(200) NOT NULL,
     telefone VARCHAR(11) NOT NULL
-);
- 
+	);
+
+SELECT * FROM pessoa_doador;
+
 CREATE TABLE pessoa_recebedor(
-	cpf_recebedor INT PRIMARY KEY NOT NULL,
+	id_recebedor INT AUTO_INCREMENT UNIQUE,
+	cpf_recebedor BIGINT PRIMARY KEY NOT NULL,
     nome VARCHAR(150) NOT NULL,
     endereco VARCHAR(200) NOT NULL,
     telefone VARCHAR(11) NOT NULL
-   
-);
+	);
+    
+SELECT * FROM pessoa_recebedor;
  
 CREATE TABLE cadastro_pedido(
 	registro INT AUTO_INCREMENT PRIMARY KEY,
    
-	doador_cpf INT,
+	doador_cpf BIGINT,
     CONSTRAINT fk_cpf_doador_pedido
     FOREIGN KEY (doador_cpf)
     REFERENCES pessoa_doador(cpf_doador),
     
-    recebedor_cpf INT,
+    recebedor_cpf BIGINT,
 	CONSTRAINT fk_cpf_recebedor_pedido
     FOREIGN KEY (recebedor_cpf)
     REFERENCES pessoa_recebedor(cpf_recebedor),
@@ -42,12 +47,12 @@ CREATE TABLE cadastro_pedido(
 CREATE TABLE cadastro_doacao(
 	registro INT AUTO_INCREMENT PRIMARY KEY,
     
-    doador2_cpf INT,
+    doador2_cpf BIGINT,
     CONSTRAINT fk_cpf_doador_doacao
     FOREIGN KEY (doador2_cpf)
     REFERENCES pessoa_doador(cpf_doador),
     
-    recebedor_cpf INT,
+    recebedor_cpf BIGINT,
 	CONSTRAINT fk_cpf_recebedor_doacao
     FOREIGN KEY (recebedor_cpf)
     REFERENCES pessoa_recebedor(cpf_recebedor),
