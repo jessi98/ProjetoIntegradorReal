@@ -203,6 +203,7 @@
             // cmbProduto
             // 
             this.cmbProduto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProduto.Enabled = false;
             this.cmbProduto.Font = new System.Drawing.Font("Candara", 12F);
             this.cmbProduto.FormattingEnabled = true;
             this.cmbProduto.Items.AddRange(new object[] {
@@ -211,21 +212,24 @@
             "Livros",
             "Eletrodomésticos",
             "Cesta Básica"});
-            this.cmbProduto.Location = new System.Drawing.Point(264, 58);
+            this.cmbProduto.Location = new System.Drawing.Point(260, 58);
             this.cmbProduto.Name = "cmbProduto";
             this.cmbProduto.Size = new System.Drawing.Size(152, 27);
             this.cmbProduto.TabIndex = 34;
+            this.cmbProduto.Visible = false;
             this.cmbProduto.SelectedIndexChanged += new System.EventHandler(this.cmbProduto_SelectedIndexChanged);
             // 
             // lblProduto
             // 
             this.lblProduto.AutoSize = true;
+            this.lblProduto.Enabled = false;
             this.lblProduto.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblProduto.Location = new System.Drawing.Point(260, 36);
+            this.lblProduto.Location = new System.Drawing.Point(256, 36);
             this.lblProduto.Name = "lblProduto";
             this.lblProduto.Size = new System.Drawing.Size(156, 19);
             this.lblProduto.TabIndex = 33;
             this.lblProduto.Text = "Categoria do Produto";
+            this.lblProduto.Visible = false;
             // 
             // btnConfirma
             // 

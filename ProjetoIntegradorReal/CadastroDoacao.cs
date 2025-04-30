@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace ProjetoIntegradorReal
 {
     public partial class CadastroDoacao: Form
     {
+        MySqlConnection Conexao;
+        private string data_source = "datasource=localhost;username=root;password=;database=doacao";
+
         public CadastroDoacao()
         {
             InitializeComponent();
@@ -142,7 +146,51 @@ namespace ProjetoIntegradorReal
 
         private void btnConfirma_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Conexao = new MySqlConnection(data_source);
+                Conexao.Open();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = Conexao;
 
+                string sql = "SELECT id_doador FROM pessoa_doador WHERE cpf_doador = @cpf";
+                MySqlCommand comando = new MySqlCommand(sql, Conexao);
+
+                comando.Parameters.AddWithValue("@cpf", Convert.ToInt64(txtCPF.Text));
+
+                Object cpf = comando.ExecuteScalar();
+
+                if (cpf == null)
+                {
+                    DialogResult result =  MessageBox.Show(" Pessoa não encontrada! \n Deseja fazer o cadastro?", "Não encontrado", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    
+                    if (result == DialogResult.Yes)
+                    {
+                        CadastroPessoas form = new CadastroPessoas();
+                        form.ShowDialog();
+                    }
+                }
+                else
+                {
+                    MostrarCategoria();
+                }
+            }
+            catch (MySqlException ex)
+
+            {
+                MessageBox.Show("Error " + "has occured: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Has occured: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
