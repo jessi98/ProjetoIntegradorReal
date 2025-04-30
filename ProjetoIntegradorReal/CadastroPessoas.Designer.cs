@@ -212,7 +212,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(111, 34);
             this.btnCadastrar.TabIndex = 18;
-            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.Text = "Confirmar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCadastrar.UseVisualStyleBackColor = false;
