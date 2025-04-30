@@ -52,6 +52,33 @@ namespace ProjetoIntegradorReal
             }
         }
 
+        private void LimparTudo()
+        {
+            var controles = new Control[]
+            {
+                lblLivro1, lblLivro2,
+                cbxLivro1, cbxLivro2,
+                lblBrinq1, lblBrinq2,
+                cbxBrinq1, cbxBrinq2,
+                lblRoupa1, lblRoupa2, lblRoupa3,
+                cbxRoupa1, cbxRoupa2, cbxRoupa3,
+                cbxCestaBasica, cbxEletrodomestico, cbxEletrodomestico2, cbxEletrodomestico3,
+                lblLinha,lblDescricaoProduto,txtDescricaoProduto, lblEletro1, lblEletro2, lblEletro3, lblCesta
+            };
+            foreach (var controle in controles)
+            {
+                if (controle is TextBox)
+                {
+                    controle.Text = "";
+                }
+                if (controle is ComboBox)
+                {
+                    ((ComboBox)controle).SelectedIndex = -1;
+                }
+
+            }
+        }
+
         private void MostrarRoupa()
         {
             var controles = new Control[]
@@ -258,6 +285,7 @@ namespace ProjetoIntegradorReal
                 MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 EsconderTudo();
+                LimparTudo();
             }
 
             else if (cmbProduto.Text == "Livros")
@@ -276,6 +304,7 @@ namespace ProjetoIntegradorReal
                 MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 EsconderTudo();
+                LimparTudo();
 
             }
 
@@ -295,6 +324,7 @@ namespace ProjetoIntegradorReal
                 MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 EsconderTudo();
+                LimparTudo();
 
             }
             else if (cmbProduto.Text == "Eletrodomésticos")
@@ -314,6 +344,7 @@ namespace ProjetoIntegradorReal
                 MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 EsconderTudo();
+                LimparTudo();
             }
             else if (cmbProduto.Text == "Cesta Básica")
             {
@@ -331,6 +362,7 @@ namespace ProjetoIntegradorReal
                 MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 EsconderTudo();
+                LimparTudo();
 
             }
         }

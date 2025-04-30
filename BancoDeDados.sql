@@ -43,7 +43,7 @@ CREATE TABLE cadastro_pedido(
     descricao VARCHAR(250),
     status TINYINT NOT NULL
 );
- 
+
 CREATE TABLE cadastro_doacao(
 	registro INT AUTO_INCREMENT PRIMARY KEY,
     
@@ -63,6 +63,6 @@ CREATE TABLE cadastro_doacao(
     subcategoria_3 VARCHAR(25),
     descricao VARCHAR(250),
     status TINYINT NOT NULL
-)
+);
 
 SELECT * FROM cadastro_doacao;
