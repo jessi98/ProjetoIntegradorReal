@@ -181,5 +181,26 @@
   <ItemGroup>
     <None Include="Resources\Fundo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundopessoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voltar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pessoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categoria.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
