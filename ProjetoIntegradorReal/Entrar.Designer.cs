@@ -102,8 +102,10 @@
             this.chkMostrar.Name = "chkMostrar";
             this.chkMostrar.Size = new System.Drawing.Size(129, 23);
             this.chkMostrar.TabIndex = 6;
+            this.chkMostrar.Tag = "*";
             this.chkMostrar.Text = "Mostrar Senha";
             this.chkMostrar.UseVisualStyleBackColor = false;
+            this.chkMostrar.CheckedChanged += new System.EventHandler(this.chkMostrar_CheckedChanged);
             // 
             // pictureBox1
             // 
