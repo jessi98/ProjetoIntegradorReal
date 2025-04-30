@@ -32,13 +32,8 @@
             this.btnCadastroDoacao = new System.Windows.Forms.Button();
             this.btnCadastroPedido = new System.Windows.Forms.Button();
             this.btnEditarDoacao = new System.Windows.Forms.Button();
-            this.btnSelecionar = new System.Windows.Forms.Button();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.cbxPedidoDoacao = new System.Windows.Forms.ComboBox();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.lstBusca = new System.Windows.Forms.ListView();
             this.lstEspera = new System.Windows.Forms.ListView();
             this.btnCadastrarPessoa = new System.Windows.Forms.Button();
@@ -49,6 +44,28 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblCesta = new System.Windows.Forms.Label();
+            this.lblEletro3 = new System.Windows.Forms.Label();
+            this.lblEletro2 = new System.Windows.Forms.Label();
+            this.lblEletro1 = new System.Windows.Forms.Label();
+            this.cbxCestaBasica = new System.Windows.Forms.ComboBox();
+            this.cbxEletrodomestico3 = new System.Windows.Forms.ComboBox();
+            this.cbxEletrodomestico2 = new System.Windows.Forms.ComboBox();
+            this.cbxEletrodomestico = new System.Windows.Forms.ComboBox();
+            this.lblLivro2 = new System.Windows.Forms.Label();
+            this.lblLivro1 = new System.Windows.Forms.Label();
+            this.cbxLivro2 = new System.Windows.Forms.ComboBox();
+            this.cbxLivro1 = new System.Windows.Forms.ComboBox();
+            this.lblBrinq2 = new System.Windows.Forms.Label();
+            this.cbxBrinq2 = new System.Windows.Forms.ComboBox();
+            this.cbxBrinq1 = new System.Windows.Forms.ComboBox();
+            this.lblBrinq1 = new System.Windows.Forms.Label();
+            this.lblRoupa2 = new System.Windows.Forms.Label();
+            this.lblRoupa3 = new System.Windows.Forms.Label();
+            this.cbxRoupa2 = new System.Windows.Forms.ComboBox();
+            this.cbxRoupa3 = new System.Windows.Forms.ComboBox();
+            this.cbxRoupa1 = new System.Windows.Forms.ComboBox();
+            this.lblRoupa1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -106,28 +123,9 @@
             this.btnEditarDoacao.UseVisualStyleBackColor = false;
             this.btnEditarDoacao.Click += new System.EventHandler(this.btnEditarDoacao_Click);
             // 
-            // btnSelecionar
-            // 
-            this.btnSelecionar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnSelecionar.Location = new System.Drawing.Point(902, 25);
-            this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(121, 27);
-            this.btnSelecionar.TabIndex = 3;
-            this.btnSelecionar.Text = "Selecionar";
-            this.btnSelecionar.UseVisualStyleBackColor = false;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnPesquisar.Location = new System.Drawing.Point(902, 58);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(121, 27);
-            this.btnPesquisar.TabIndex = 4;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            // 
             // cbxPedidoDoacao
             // 
+            this.cbxPedidoDoacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPedidoDoacao.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxPedidoDoacao.FormattingEnabled = true;
             this.cbxPedidoDoacao.Items.AddRange(new object[] {
@@ -135,50 +133,28 @@
             "Pedido"});
             this.cbxPedidoDoacao.Location = new System.Drawing.Point(776, 25);
             this.cbxPedidoDoacao.Name = "cbxPedidoDoacao";
-            this.cbxPedidoDoacao.Size = new System.Drawing.Size(121, 27);
+            this.cbxPedidoDoacao.Size = new System.Drawing.Size(127, 27);
             this.cbxPedidoDoacao.TabIndex = 5;
+            this.cbxPedidoDoacao.SelectedIndexChanged += new System.EventHandler(this.cbxPedidoDoacao_SelectedIndexChanged);
             // 
             // cbxCategoria
             // 
+            this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCategoria.Enabled = false;
             this.cbxCategoria.Font = new System.Drawing.Font("Candara", 12F);
             this.cbxCategoria.FormattingEnabled = true;
             this.cbxCategoria.Items.AddRange(new object[] {
+            "Roupas",
             "Brinquedos",
-            "Cesta básica",
-            "Eletrodomésticos",
             "Livros",
-            "Roupas"});
+            "Eletrodomésticos",
+            "Cesta Básica"});
             this.cbxCategoria.Location = new System.Drawing.Point(776, 58);
             this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(121, 27);
+            this.cbxCategoria.Size = new System.Drawing.Size(127, 27);
             this.cbxCategoria.TabIndex = 6;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Candara", 12F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(650, 111);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(120, 27);
-            this.comboBox3.TabIndex = 7;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Candara", 12F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(776, 111);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(120, 27);
-            this.comboBox4.TabIndex = 8;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.Font = new System.Drawing.Font("Candara", 12F);
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(902, 111);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(120, 27);
-            this.comboBox5.TabIndex = 9;
+            this.cbxCategoria.Visible = false;
+            this.cbxCategoria.SelectedIndexChanged += new System.EventHandler(this.cbxCategoria_SelectedIndexChanged);
             // 
             // lstBusca
             // 
@@ -186,7 +162,7 @@
             this.lstBusca.HideSelection = false;
             this.lstBusca.Location = new System.Drawing.Point(470, 159);
             this.lstBusca.Name = "lstBusca";
-            this.lstBusca.Size = new System.Drawing.Size(556, 431);
+            this.lstBusca.Size = new System.Drawing.Size(564, 431);
             this.lstBusca.TabIndex = 10;
             this.lstBusca.UseCompatibleStateImageBehavior = false;
             // 
@@ -230,6 +206,7 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Enabled = false;
             this.lblCategoria.Font = new System.Drawing.Font("Candara", 12F);
             this.lblCategoria.Location = new System.Drawing.Point(695, 66);
             this.lblCategoria.Name = "lblCategoria";
@@ -237,6 +214,7 @@
             this.lblCategoria.TabIndex = 14;
             this.lblCategoria.Text = "Categoria";
             this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCategoria.Visible = false;
             // 
             // pictureBox1
             // 
@@ -247,7 +225,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -293,12 +270,381 @@
             this.pictureBox3.TabIndex = 24;
             this.pictureBox3.TabStop = false;
             // 
+            // lblCesta
+            // 
+            this.lblCesta.AutoSize = true;
+            this.lblCesta.Enabled = false;
+            this.lblCesta.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblCesta.Location = new System.Drawing.Point(670, 104);
+            this.lblCesta.Name = "lblCesta";
+            this.lblCesta.Size = new System.Drawing.Size(42, 19);
+            this.lblCesta.TabIndex = 87;
+            this.lblCesta.Text = "Tipo:";
+            this.lblCesta.Visible = false;
+            // 
+            // lblEletro3
+            // 
+            this.lblEletro3.AutoSize = true;
+            this.lblEletro3.Enabled = false;
+            this.lblEletro3.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblEletro3.Location = new System.Drawing.Point(943, 104);
+            this.lblEletro3.Name = "lblEletro3";
+            this.lblEletro3.Size = new System.Drawing.Size(60, 19);
+            this.lblEletro3.TabIndex = 86;
+            this.lblEletro3.Text = "Estado:";
+            this.lblEletro3.Visible = false;
+            // 
+            // lblEletro2
+            // 
+            this.lblEletro2.AutoSize = true;
+            this.lblEletro2.Enabled = false;
+            this.lblEletro2.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblEletro2.Location = new System.Drawing.Point(791, 104);
+            this.lblEletro2.Name = "lblEletro2";
+            this.lblEletro2.Size = new System.Drawing.Size(79, 19);
+            this.lblEletro2.TabIndex = 85;
+            this.lblEletro2.Text = "Voltagem:";
+            this.lblEletro2.Visible = false;
+            // 
+            // lblEletro1
+            // 
+            this.lblEletro1.AutoSize = true;
+            this.lblEletro1.Enabled = false;
+            this.lblEletro1.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblEletro1.Location = new System.Drawing.Point(670, 104);
+            this.lblEletro1.Name = "lblEletro1";
+            this.lblEletro1.Size = new System.Drawing.Size(42, 19);
+            this.lblEletro1.TabIndex = 84;
+            this.lblEletro1.Text = "Tipo:";
+            this.lblEletro1.Visible = false;
+            // 
+            // cbxCestaBasica
+            // 
+            this.cbxCestaBasica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCestaBasica.Enabled = false;
+            this.cbxCestaBasica.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxCestaBasica.FormattingEnabled = true;
+            this.cbxCestaBasica.Items.AddRange(new object[] {
+            "Cesta Básica",
+            "Congelados",
+            "Produtos de Limpeza",
+            "Produtos de Higiene"});
+            this.cbxCestaBasica.Location = new System.Drawing.Point(641, 126);
+            this.cbxCestaBasica.Name = "cbxCestaBasica";
+            this.cbxCestaBasica.Size = new System.Drawing.Size(129, 27);
+            this.cbxCestaBasica.TabIndex = 83;
+            this.cbxCestaBasica.Visible = false;
+            // 
+            // cbxEletrodomestico3
+            // 
+            this.cbxEletrodomestico3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEletrodomestico3.Enabled = false;
+            this.cbxEletrodomestico3.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxEletrodomestico3.FormattingEnabled = true;
+            this.cbxEletrodomestico3.Items.AddRange(new object[] {
+            "Semi-novo",
+            "Usado"});
+            this.cbxEletrodomestico3.Location = new System.Drawing.Point(909, 126);
+            this.cbxEletrodomestico3.Name = "cbxEletrodomestico3";
+            this.cbxEletrodomestico3.Size = new System.Drawing.Size(125, 27);
+            this.cbxEletrodomestico3.TabIndex = 82;
+            this.cbxEletrodomestico3.Visible = false;
+            // 
+            // cbxEletrodomestico2
+            // 
+            this.cbxEletrodomestico2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEletrodomestico2.Enabled = false;
+            this.cbxEletrodomestico2.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxEletrodomestico2.FormattingEnabled = true;
+            this.cbxEletrodomestico2.Items.AddRange(new object[] {
+            "110V",
+            "220V",
+            "Bivolt"});
+            this.cbxEletrodomestico2.Location = new System.Drawing.Point(776, 126);
+            this.cbxEletrodomestico2.Name = "cbxEletrodomestico2";
+            this.cbxEletrodomestico2.Size = new System.Drawing.Size(127, 27);
+            this.cbxEletrodomestico2.TabIndex = 81;
+            this.cbxEletrodomestico2.Visible = false;
+            // 
+            // cbxEletrodomestico
+            // 
+            this.cbxEletrodomestico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEletrodomestico.Enabled = false;
+            this.cbxEletrodomestico.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxEletrodomestico.FormattingEnabled = true;
+            this.cbxEletrodomestico.Items.AddRange(new object[] {
+            "Aspirador",
+            "Batedeira",
+            "Fogão",
+            "Geladeira",
+            "Liquidificador",
+            "Máquina de lavar",
+            "Televisão",
+            "Ventilador"});
+            this.cbxEletrodomestico.Location = new System.Drawing.Point(641, 126);
+            this.cbxEletrodomestico.Name = "cbxEletrodomestico";
+            this.cbxEletrodomestico.Size = new System.Drawing.Size(116, 27);
+            this.cbxEletrodomestico.TabIndex = 80;
+            this.cbxEletrodomestico.Visible = false;
+            // 
+            // lblLivro2
+            // 
+            this.lblLivro2.AutoSize = true;
+            this.lblLivro2.Enabled = false;
+            this.lblLivro2.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblLivro2.Location = new System.Drawing.Point(801, 104);
+            this.lblLivro2.Name = "lblLivro2";
+            this.lblLivro2.Size = new System.Drawing.Size(60, 19);
+            this.lblLivro2.TabIndex = 79;
+            this.lblLivro2.Text = "Estado:";
+            this.lblLivro2.Visible = false;
+            // 
+            // lblLivro1
+            // 
+            this.lblLivro1.AutoSize = true;
+            this.lblLivro1.Enabled = false;
+            this.lblLivro1.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblLivro1.Location = new System.Drawing.Point(670, 104);
+            this.lblLivro1.Name = "lblLivro1";
+            this.lblLivro1.Size = new System.Drawing.Size(63, 19);
+            this.lblLivro1.TabIndex = 78;
+            this.lblLivro1.Text = "Gênero:";
+            this.lblLivro1.Visible = false;
+            // 
+            // cbxLivro2
+            // 
+            this.cbxLivro2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxLivro2.Enabled = false;
+            this.cbxLivro2.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxLivro2.FormattingEnabled = true;
+            this.cbxLivro2.Items.AddRange(new object[] {
+            "Novo",
+            "Semi-novo",
+            "Usado"});
+            this.cbxLivro2.Location = new System.Drawing.Point(776, 126);
+            this.cbxLivro2.Name = "cbxLivro2";
+            this.cbxLivro2.Size = new System.Drawing.Size(116, 27);
+            this.cbxLivro2.TabIndex = 77;
+            this.cbxLivro2.Visible = false;
+            // 
+            // cbxLivro1
+            // 
+            this.cbxLivro1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxLivro1.Enabled = false;
+            this.cbxLivro1.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxLivro1.FormattingEnabled = true;
+            this.cbxLivro1.Items.AddRange(new object[] {
+            "Aventura",
+            "Biografia",
+            "Clássicos",
+            "Contos",
+            "Crônica",
+            "Didático",
+            "Drama",
+            "Fantasia",
+            "Ficção Científica",
+            "Infantil",
+            "Mistério",
+            "Poesia",
+            "Religioso",
+            "Romance",
+            "Suspense",
+            "Terror"});
+            this.cbxLivro1.Location = new System.Drawing.Point(641, 126);
+            this.cbxLivro1.Name = "cbxLivro1";
+            this.cbxLivro1.Size = new System.Drawing.Size(116, 27);
+            this.cbxLivro1.TabIndex = 76;
+            this.cbxLivro1.Visible = false;
+            // 
+            // lblBrinq2
+            // 
+            this.lblBrinq2.AutoSize = true;
+            this.lblBrinq2.Enabled = false;
+            this.lblBrinq2.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblBrinq2.Location = new System.Drawing.Point(803, 104);
+            this.lblBrinq2.Name = "lblBrinq2";
+            this.lblBrinq2.Size = new System.Drawing.Size(51, 19);
+            this.lblBrinq2.TabIndex = 75;
+            this.lblBrinq2.Text = "Idade:";
+            this.lblBrinq2.Visible = false;
+            // 
+            // cbxBrinq2
+            // 
+            this.cbxBrinq2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxBrinq2.Enabled = false;
+            this.cbxBrinq2.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxBrinq2.FormattingEnabled = true;
+            this.cbxBrinq2.Items.AddRange(new object[] {
+            "0 - 12 Meses",
+            "1 - 3 Anos",
+            "4 - 6 Anos",
+            "1 - 12 Anos",
+            "13+ Anos"});
+            this.cbxBrinq2.Location = new System.Drawing.Point(776, 126);
+            this.cbxBrinq2.Name = "cbxBrinq2";
+            this.cbxBrinq2.Size = new System.Drawing.Size(116, 27);
+            this.cbxBrinq2.TabIndex = 74;
+            this.cbxBrinq2.Visible = false;
+            // 
+            // cbxBrinq1
+            // 
+            this.cbxBrinq1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxBrinq1.Enabled = false;
+            this.cbxBrinq1.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxBrinq1.FormattingEnabled = true;
+            this.cbxBrinq1.Items.AddRange(new object[] {
+            "Bonecos",
+            "Cartas",
+            "Construção",
+            "Criativo",
+            "Educativo",
+            "Eletrônico",
+            "Esporte",
+            "Musical",
+            "Tabuleiro",
+            "Veículos"});
+            this.cbxBrinq1.Location = new System.Drawing.Point(641, 126);
+            this.cbxBrinq1.Name = "cbxBrinq1";
+            this.cbxBrinq1.Size = new System.Drawing.Size(116, 27);
+            this.cbxBrinq1.TabIndex = 73;
+            this.cbxBrinq1.Visible = false;
+            // 
+            // lblBrinq1
+            // 
+            this.lblBrinq1.AutoSize = true;
+            this.lblBrinq1.Enabled = false;
+            this.lblBrinq1.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblBrinq1.Location = new System.Drawing.Point(670, 104);
+            this.lblBrinq1.Name = "lblBrinq1";
+            this.lblBrinq1.Size = new System.Drawing.Size(42, 19);
+            this.lblBrinq1.TabIndex = 72;
+            this.lblBrinq1.Text = "Tipo:";
+            this.lblBrinq1.Visible = false;
+            // 
+            // lblRoupa2
+            // 
+            this.lblRoupa2.AutoSize = true;
+            this.lblRoupa2.Enabled = false;
+            this.lblRoupa2.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblRoupa2.Location = new System.Drawing.Point(794, 104);
+            this.lblRoupa2.Name = "lblRoupa2";
+            this.lblRoupa2.Size = new System.Drawing.Size(76, 19);
+            this.lblRoupa2.TabIndex = 71;
+            this.lblRoupa2.Text = "Tamanho:";
+            this.lblRoupa2.Visible = false;
+            // 
+            // lblRoupa3
+            // 
+            this.lblRoupa3.AutoSize = true;
+            this.lblRoupa3.Enabled = false;
+            this.lblRoupa3.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblRoupa3.Location = new System.Drawing.Point(943, 103);
+            this.lblRoupa3.Name = "lblRoupa3";
+            this.lblRoupa3.Size = new System.Drawing.Size(45, 19);
+            this.lblRoupa3.TabIndex = 70;
+            this.lblRoupa3.Text = "Peça:";
+            this.lblRoupa3.Visible = false;
+            // 
+            // cbxRoupa2
+            // 
+            this.cbxRoupa2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxRoupa2.Enabled = false;
+            this.cbxRoupa2.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxRoupa2.FormattingEnabled = true;
+            this.cbxRoupa2.Items.AddRange(new object[] {
+            "Infantil - RN",
+            "Infantil - 0 a 6 meses",
+            "Infantil - 6 meses a 1 ano",
+            "Infantil - 1 a 5 anos",
+            "infantil - 6 a 12 anos",
+            "PP",
+            "P",
+            "M",
+            "G",
+            "GG",
+            "XG"});
+            this.cbxRoupa2.Location = new System.Drawing.Point(776, 126);
+            this.cbxRoupa2.Name = "cbxRoupa2";
+            this.cbxRoupa2.Size = new System.Drawing.Size(116, 27);
+            this.cbxRoupa2.TabIndex = 69;
+            this.cbxRoupa2.Visible = false;
+            // 
+            // cbxRoupa3
+            // 
+            this.cbxRoupa3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxRoupa3.Enabled = false;
+            this.cbxRoupa3.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxRoupa3.FormattingEnabled = true;
+            this.cbxRoupa3.Items.AddRange(new object[] {
+            "Camiseta",
+            "Calça",
+            "Bermuda",
+            "Vestido",
+            "Blusa",
+            "Roupa Íntima"});
+            this.cbxRoupa3.Location = new System.Drawing.Point(909, 126);
+            this.cbxRoupa3.Name = "cbxRoupa3";
+            this.cbxRoupa3.Size = new System.Drawing.Size(116, 27);
+            this.cbxRoupa3.TabIndex = 68;
+            this.cbxRoupa3.Visible = false;
+            // 
+            // cbxRoupa1
+            // 
+            this.cbxRoupa1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxRoupa1.Enabled = false;
+            this.cbxRoupa1.Font = new System.Drawing.Font("Candara", 12F);
+            this.cbxRoupa1.FormattingEnabled = true;
+            this.cbxRoupa1.Items.AddRange(new object[] {
+            "Feminino",
+            "Masculino",
+            "Infantil Feminino",
+            "Infantil Masculino"});
+            this.cbxRoupa1.Location = new System.Drawing.Point(641, 126);
+            this.cbxRoupa1.Name = "cbxRoupa1";
+            this.cbxRoupa1.Size = new System.Drawing.Size(116, 27);
+            this.cbxRoupa1.TabIndex = 67;
+            this.cbxRoupa1.Visible = false;
+            // 
+            // lblRoupa1
+            // 
+            this.lblRoupa1.AutoSize = true;
+            this.lblRoupa1.Enabled = false;
+            this.lblRoupa1.Font = new System.Drawing.Font("Candara", 12F);
+            this.lblRoupa1.Location = new System.Drawing.Point(670, 104);
+            this.lblRoupa1.Name = "lblRoupa1";
+            this.lblRoupa1.Size = new System.Drawing.Size(63, 19);
+            this.lblRoupa1.TabIndex = 66;
+            this.lblRoupa1.Text = "Gênero:";
+            this.lblRoupa1.Visible = false;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1046, 623);
+            this.Controls.Add(this.lblCesta);
+            this.Controls.Add(this.lblEletro3);
+            this.Controls.Add(this.lblEletro2);
+            this.Controls.Add(this.lblEletro1);
+            this.Controls.Add(this.cbxCestaBasica);
+            this.Controls.Add(this.cbxEletrodomestico3);
+            this.Controls.Add(this.cbxEletrodomestico2);
+            this.Controls.Add(this.cbxEletrodomestico);
+            this.Controls.Add(this.lblLivro2);
+            this.Controls.Add(this.lblLivro1);
+            this.Controls.Add(this.cbxLivro2);
+            this.Controls.Add(this.cbxLivro1);
+            this.Controls.Add(this.lblBrinq2);
+            this.Controls.Add(this.cbxBrinq2);
+            this.Controls.Add(this.cbxBrinq1);
+            this.Controls.Add(this.lblBrinq1);
+            this.Controls.Add(this.lblRoupa2);
+            this.Controls.Add(this.lblRoupa3);
+            this.Controls.Add(this.cbxRoupa2);
+            this.Controls.Add(this.cbxRoupa3);
+            this.Controls.Add(this.cbxRoupa1);
+            this.Controls.Add(this.lblRoupa1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button1);
@@ -309,13 +655,8 @@
             this.Controls.Add(this.btnCadastrarPessoa);
             this.Controls.Add(this.lstEspera);
             this.Controls.Add(this.lstBusca);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.cbxCategoria);
             this.Controls.Add(this.cbxPedidoDoacao);
-            this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.btnEditarDoacao);
             this.Controls.Add(this.btnCadastroPedido);
             this.Controls.Add(this.btnCadastroDoacao);
@@ -335,13 +676,8 @@
         private System.Windows.Forms.Button btnCadastroDoacao;
         private System.Windows.Forms.Button btnCadastroPedido;
         private System.Windows.Forms.Button btnEditarDoacao;
-        private System.Windows.Forms.Button btnSelecionar;
-        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.ComboBox cbxPedidoDoacao;
         private System.Windows.Forms.ComboBox cbxCategoria;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ListView lstBusca;
         private System.Windows.Forms.ListView lstEspera;
         private System.Windows.Forms.Button btnCadastrarPessoa;
@@ -352,5 +688,27 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lblCesta;
+        private System.Windows.Forms.Label lblEletro3;
+        private System.Windows.Forms.Label lblEletro2;
+        private System.Windows.Forms.Label lblEletro1;
+        private System.Windows.Forms.ComboBox cbxCestaBasica;
+        private System.Windows.Forms.ComboBox cbxEletrodomestico3;
+        private System.Windows.Forms.ComboBox cbxEletrodomestico2;
+        private System.Windows.Forms.ComboBox cbxEletrodomestico;
+        private System.Windows.Forms.Label lblLivro2;
+        private System.Windows.Forms.Label lblLivro1;
+        private System.Windows.Forms.ComboBox cbxLivro2;
+        private System.Windows.Forms.ComboBox cbxLivro1;
+        private System.Windows.Forms.Label lblBrinq2;
+        private System.Windows.Forms.ComboBox cbxBrinq2;
+        private System.Windows.Forms.ComboBox cbxBrinq1;
+        private System.Windows.Forms.Label lblBrinq1;
+        private System.Windows.Forms.Label lblRoupa2;
+        private System.Windows.Forms.Label lblRoupa3;
+        private System.Windows.Forms.ComboBox cbxRoupa2;
+        private System.Windows.Forms.ComboBox cbxRoupa3;
+        private System.Windows.Forms.ComboBox cbxRoupa1;
+        private System.Windows.Forms.Label lblRoupa1;
     }
 }

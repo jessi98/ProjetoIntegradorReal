@@ -44,6 +44,8 @@ CREATE TABLE cadastro_pedido(
     status TINYINT NOT NULL
 );
 
+SELECT * FROM cadastro_pedido;
+
 CREATE TABLE cadastro_doacao(
 	registro INT AUTO_INCREMENT PRIMARY KEY,
     
