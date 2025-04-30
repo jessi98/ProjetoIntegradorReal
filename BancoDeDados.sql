@@ -36,11 +36,11 @@ CREATE TABLE cadastro_pedido(
     FOREIGN KEY (recebedor_cpf)
     REFERENCES pessoa_recebedor(cpf_recebedor),
 	
-    categoria TEXT NOT NULL,
-    subcategoria_1 TEXT NOT NULL,
-    subcategoria_2 TEXT NOT NULL,
-    subcategoria_3 TEXT,
-    descricao LONGTEXT,
+    categoria VARCHAR(25) NOT NULL,
+    subcategoria_1 VARCHAR(25) NOT NULL,
+    subcategoria_2 VARCHAR(25) NOT NULL,
+    subcategoria_3 VARCHAR(25),
+    descricao VARCHAR(250),
     status TINYINT NOT NULL
 );
  
@@ -57,10 +57,12 @@ CREATE TABLE cadastro_doacao(
     FOREIGN KEY (recebedor_cpf)
     REFERENCES pessoa_recebedor(cpf_recebedor),
 	
-    categoria TEXT NOT NULL,
-    subcategoria_1 TEXT NOT NULL,
-    subcategoria_2 TEXT NOT NULL,
-    subcategoria_3 TEXT,
-    descricao LONGTEXT,
+    categoria VARCHAR(25) NOT NULL,
+    subcategoria_1 VARCHAR(25) NOT NULL,
+    subcategoria_2 VARCHAR(25) NOT NULL,
+    subcategoria_3 VARCHAR(25),
+    descricao VARCHAR(250),
     status TINYINT NOT NULL
 )
+
+SELECT * FROM cadastro_doacao;

@@ -233,5 +233,106 @@ namespace ProjetoIntegradorReal
                 MostrarCesta();
             }
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Conexao = new MySqlConnection(data_source);
+            Conexao.Open();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = Conexao;
+
+            if (cmbProduto.Text == "Roupas")
+            {
+                cmd.Parameters.Clear();
+                cmd.CommandText = "INSERT INTO cadastro_doacao (categoria, subcategoria_1, subcategoria_2, subcategoria_3, descricao, doador2_cpf)" +
+                                  "VALUES (@categoria, @subcategoria_1, @subcategoria_2, @subcategoria_3, @descricao, @cpf_doador)";
+
+                cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_3", cbxRoupa3.Text);
+                cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
+                cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                EsconderTudo();
+            }
+
+            else if (cmbProduto.Text == "Livros")
+            {
+                cmd.Parameters.Clear();
+                cmd.CommandText = "INSERT INTO cadastro_doacao (categoria, subcategoria_1, subcategoria_2, descricao, doador2_cpf)" +
+                                  "VALUES (@categoria, @subcategoria_1, @subcategoria_2, @descricao, @cpf_doador)";
+
+                cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
+                cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
+                cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                EsconderTudo();
+
+            }
+
+            else if (cmbProduto.Text == "Brinquedos")
+            {
+                cmd.Parameters.Clear();
+                cmd.CommandText = "INSERT INTO cadastro_doacao (categoria, subcategoria_1, subcategoria_2, descricao, doador2_cpf)" +
+                                  "VALUES (@categoria, @subcategoria_1, @subcategoria_2, @descricao, @cpf_doador)";
+
+                cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
+                cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
+                cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                EsconderTudo();
+
+            }
+            else if (cmbProduto.Text == "Eletrodomésticos")
+            {
+                cmd.Parameters.Clear();
+                cmd.CommandText = "INSERT INTO cadastro_doacao (categoria, subcategoria_1, subcategoria_2, subcategoria_3, descricao, doador2_cpf)" +
+                                  "VALUES (@categoria, @subcategoria_1, @subcategoria_2, @subcategoria_3, @descricao, @cpf_doador)";
+
+                cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_3", cbxRoupa3.Text);
+                cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
+                cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                EsconderTudo();
+            }
+            else if (cmbProduto.Text == "Cesta Básica")
+            {
+                cmd.Parameters.Clear();
+                cmd.CommandText = "INSERT INTO cadastro_doacao (categoria, subcategoria_1, descricao, doador2_cpf)" +
+                                  "VALUES (@categoria, @subcategoria_1, @descricao, @cpf_doador)";
+
+                cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
+                cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
+                cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                EsconderTudo();
+
+            }
+        }
     }
 }
