@@ -136,7 +136,6 @@
     <Compile Include="StatusDoacao.Designer.cs">
       <DependentUpon>StatusDoacao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="CadastroDoacao.resx">
       <DependentUpon>CadastroDoacao.cs</DependentUpon>
     </EmbeddedResource>
