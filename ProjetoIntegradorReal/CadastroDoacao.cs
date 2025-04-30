@@ -363,7 +363,6 @@ namespace ProjetoIntegradorReal
 
                 EsconderTudo();
                 LimparTudo();
-
             }
         }
     }
