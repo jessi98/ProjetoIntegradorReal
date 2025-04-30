@@ -33,7 +33,6 @@
             this.lblDescricao = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.grbStatus = new System.Windows.Forms.GroupBox();
-            this.rdbInativo = new System.Windows.Forms.RadioButton();
             this.rdbAtivo = new System.Windows.Forms.RadioButton();
             this.rdbAguardando = new System.Windows.Forms.RadioButton();
             this.txtRegistro = new System.Windows.Forms.TextBox();
@@ -84,43 +83,32 @@
             // 
             // grbStatus
             // 
-            this.grbStatus.Controls.Add(this.rdbInativo);
             this.grbStatus.Controls.Add(this.rdbAtivo);
             this.grbStatus.Controls.Add(this.rdbAguardando);
             this.grbStatus.Font = new System.Drawing.Font("Candara", 12F);
-            this.grbStatus.Location = new System.Drawing.Point(30, 78);
+            this.grbStatus.Location = new System.Drawing.Point(30, 66);
             this.grbStatus.Name = "grbStatus";
-            this.grbStatus.Size = new System.Drawing.Size(363, 62);
+            this.grbStatus.Size = new System.Drawing.Size(387, 69);
             this.grbStatus.TabIndex = 36;
             this.grbStatus.TabStop = false;
             this.grbStatus.Text = "Status do Pedido";
             // 
-            // rdbInativo
-            // 
-            this.rdbInativo.AutoSize = true;
-            this.rdbInativo.Location = new System.Drawing.Point(119, 25);
-            this.rdbInativo.Name = "rdbInativo";
-            this.rdbInativo.Size = new System.Drawing.Size(74, 23);
-            this.rdbInativo.TabIndex = 37;
-            this.rdbInativo.TabStop = true;
-            this.rdbInativo.Text = "Inativo";
-            this.rdbInativo.UseVisualStyleBackColor = true;
-            // 
             // rdbAtivo
             // 
             this.rdbAtivo.AutoSize = true;
-            this.rdbAtivo.Location = new System.Drawing.Point(13, 25);
+            this.rdbAtivo.Location = new System.Drawing.Point(98, 26);
             this.rdbAtivo.Name = "rdbAtivo";
             this.rdbAtivo.Size = new System.Drawing.Size(63, 23);
             this.rdbAtivo.TabIndex = 38;
             this.rdbAtivo.TabStop = true;
             this.rdbAtivo.Text = "Ativo";
             this.rdbAtivo.UseVisualStyleBackColor = true;
+            this.rdbAtivo.CheckedChanged += new System.EventHandler(this.rdbAtivo_CheckedChanged);
             // 
             // rdbAguardando
             // 
             this.rdbAguardando.AutoSize = true;
-            this.rdbAguardando.Location = new System.Drawing.Point(233, 25);
+            this.rdbAguardando.Location = new System.Drawing.Point(184, 26);
             this.rdbAguardando.Name = "rdbAguardando";
             this.rdbAguardando.Size = new System.Drawing.Size(113, 23);
             this.rdbAguardando.TabIndex = 39;
@@ -307,7 +295,6 @@
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.GroupBox grbStatus;
-        private System.Windows.Forms.RadioButton rdbInativo;
         private System.Windows.Forms.RadioButton rdbAtivo;
         private System.Windows.Forms.RadioButton rdbAguardando;
         private System.Windows.Forms.TextBox txtRegistro;

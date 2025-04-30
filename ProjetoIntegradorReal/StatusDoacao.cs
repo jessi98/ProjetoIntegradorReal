@@ -31,5 +31,10 @@ namespace ProjetoIntegradorReal
         {
             this.Close();
         }
+
+        private void rdbAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
