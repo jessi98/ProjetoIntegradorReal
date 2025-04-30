@@ -55,7 +55,7 @@
             // 
             this.btnPesquisar.BackColor = System.Drawing.SystemColors.Window;
             this.btnPesquisar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnPesquisar.Location = new System.Drawing.Point(24, 87);
+            this.btnPesquisar.Location = new System.Drawing.Point(27, 94);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(137, 33);
             this.btnPesquisar.TabIndex = 0;
@@ -66,7 +66,7 @@
             // txtBusca
             // 
             this.txtBusca.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtBusca.Location = new System.Drawing.Point(24, 46);
+            this.txtBusca.Location = new System.Drawing.Point(27, 53);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(137, 27);
             this.txtBusca.TabIndex = 1;
@@ -74,8 +74,9 @@
             // lblBusca
             // 
             this.lblBusca.AutoSize = true;
+            this.lblBusca.BackColor = System.Drawing.Color.Transparent;
             this.lblBusca.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblBusca.Location = new System.Drawing.Point(46, 24);
+            this.lblBusca.Location = new System.Drawing.Point(57, 31);
             this.lblBusca.Name = "lblBusca";
             this.lblBusca.Size = new System.Drawing.Size(104, 19);
             this.lblBusca.TabIndex = 2;
@@ -85,7 +86,7 @@
             // 
             this.txtNome.Enabled = false;
             this.txtNome.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtNome.Location = new System.Drawing.Point(24, 203);
+            this.txtNome.Location = new System.Drawing.Point(27, 210);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(265, 27);
             this.txtNome.TabIndex = 3;
@@ -95,7 +96,7 @@
             // 
             this.txtEndereco.Enabled = false;
             this.txtEndereco.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtEndereco.Location = new System.Drawing.Point(24, 255);
+            this.txtEndereco.Location = new System.Drawing.Point(27, 262);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(265, 27);
             this.txtEndereco.TabIndex = 5;
@@ -105,7 +106,7 @@
             // 
             this.txtCPF.Enabled = false;
             this.txtCPF.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtCPF.Location = new System.Drawing.Point(179, 307);
+            this.txtCPF.Location = new System.Drawing.Point(182, 314);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(110, 27);
             this.txtCPF.TabIndex = 6;
@@ -114,9 +115,10 @@
             // lblNome
             // 
             this.lblNome.AutoSize = true;
+            this.lblNome.BackColor = System.Drawing.Color.Transparent;
             this.lblNome.Enabled = false;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblNome.Location = new System.Drawing.Point(21, 181);
+            this.lblNome.Location = new System.Drawing.Point(24, 188);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(120, 19);
             this.lblNome.TabIndex = 7;
@@ -126,9 +128,10 @@
             // lblEndereco
             // 
             this.lblEndereco.AutoSize = true;
+            this.lblEndereco.BackColor = System.Drawing.Color.Transparent;
             this.lblEndereco.Enabled = false;
             this.lblEndereco.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblEndereco.Location = new System.Drawing.Point(21, 233);
+            this.lblEndereco.Location = new System.Drawing.Point(24, 240);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(73, 19);
             this.lblEndereco.TabIndex = 9;
@@ -138,9 +141,10 @@
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
+            this.lblCPF.BackColor = System.Drawing.Color.Transparent;
             this.lblCPF.Enabled = false;
             this.lblCPF.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblCPF.Location = new System.Drawing.Point(175, 285);
+            this.lblCPF.Location = new System.Drawing.Point(178, 292);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(35, 19);
             this.lblCPF.TabIndex = 10;
@@ -151,7 +155,7 @@
             // 
             this.txtTelefone.Enabled = false;
             this.txtTelefone.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtTelefone.Location = new System.Drawing.Point(25, 307);
+            this.txtTelefone.Location = new System.Drawing.Point(28, 314);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(116, 27);
             this.txtTelefone.TabIndex = 11;
@@ -160,9 +164,10 @@
             // lblTefone
             // 
             this.lblTefone.AutoSize = true;
+            this.lblTefone.BackColor = System.Drawing.Color.Transparent;
             this.lblTefone.Enabled = false;
             this.lblTefone.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblTefone.Location = new System.Drawing.Point(21, 285);
+            this.lblTefone.Location = new System.Drawing.Point(24, 292);
             this.lblTefone.Name = "lblTefone";
             this.lblTefone.Size = new System.Drawing.Size(67, 19);
             this.lblTefone.TabIndex = 14;
@@ -171,10 +176,11 @@
             // 
             // grbSelecionar
             // 
+            this.grbSelecionar.BackColor = System.Drawing.Color.Transparent;
             this.grbSelecionar.Controls.Add(this.rdbRecebedor);
             this.grbSelecionar.Controls.Add(this.rdbDoador);
             this.grbSelecionar.Font = new System.Drawing.Font("Candara", 12F);
-            this.grbSelecionar.Location = new System.Drawing.Point(179, 35);
+            this.grbSelecionar.Location = new System.Drawing.Point(182, 42);
             this.grbSelecionar.Name = "grbSelecionar";
             this.grbSelecionar.Size = new System.Drawing.Size(111, 85);
             this.grbSelecionar.TabIndex = 17;
@@ -207,11 +213,13 @@
             this.btnCadastrar.BackColor = System.Drawing.SystemColors.Window;
             this.btnCadastrar.Font = new System.Drawing.Font("Candara", 12F);
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
-            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCadastrar.Location = new System.Drawing.Point(178, 360);
+            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrar.Location = new System.Drawing.Point(181, 367);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(111, 34);
             this.btnCadastrar.TabIndex = 18;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.Text = "Confirmar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -221,17 +229,18 @@
             // lblLinha
             // 
             this.lblLinha.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLinha.Location = new System.Drawing.Point(7, 150);
+            this.lblLinha.Location = new System.Drawing.Point(10, 157);
             this.lblLinha.Name = "lblLinha";
             this.lblLinha.Size = new System.Drawing.Size(300, 2);
             this.lblLinha.TabIndex = 19;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(27, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -240,23 +249,23 @@
             // 
             this.btnVoltar.BackColor = System.Drawing.SystemColors.Window;
             this.btnVoltar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVoltar.ImageKey = "(nenhum/a)";
-            this.btnVoltar.Location = new System.Drawing.Point(24, 360);
+            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
+            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVoltar.Location = new System.Drawing.Point(27, 367);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(111, 34);
-            this.btnVoltar.TabIndex = 21;
+            this.btnVoltar.TabIndex = 22;
             this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.UseVisualStyleBackColor = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // CadastroPessoas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 434);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(319, 436);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblLinha);
@@ -274,7 +283,10 @@
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.btnPesquisar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CadastroPessoas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroPessoas";
             this.Load += new System.EventHandler(this.CadastroPessoas_Load);
             this.grbSelecionar.ResumeLayout(false);
