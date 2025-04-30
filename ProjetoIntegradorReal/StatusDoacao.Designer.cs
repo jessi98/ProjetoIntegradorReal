@@ -40,6 +40,7 @@
             this.lblCPFDoador = new System.Windows.Forms.Label();
             this.lblCPFRecebedor = new System.Windows.Forms.Label();
             this.lblLinha = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtCPFDoador = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.grbStatus.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +56,6 @@
             // lblRegistro
             // 
             this.lblRegistro.AutoSize = true;
-            this.lblRegistro.BackColor = System.Drawing.Color.Transparent;
             this.lblRegistro.Font = new System.Drawing.Font("Candara", 12F);
             this.lblRegistro.Location = new System.Drawing.Point(136, 11);
             this.lblRegistro.Name = "lblRegistro";
@@ -67,7 +66,6 @@
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.BackColor = System.Drawing.Color.Transparent;
             this.lblDescricao.Font = new System.Drawing.Font("Candara", 12F);
             this.lblDescricao.Location = new System.Drawing.Point(26, 225);
             this.lblDescricao.Name = "lblDescricao";
@@ -139,7 +137,6 @@
             // lblCPFDoador
             // 
             this.lblCPFDoador.AutoSize = true;
-            this.lblCPFDoador.BackColor = System.Drawing.Color.Transparent;
             this.lblCPFDoador.Font = new System.Drawing.Font("Candara", 12F);
             this.lblCPFDoador.Location = new System.Drawing.Point(26, 357);
             this.lblCPFDoador.Name = "lblCPFDoador";
@@ -150,7 +147,6 @@
             // lblCPFRecebedor
             // 
             this.lblCPFRecebedor.AutoSize = true;
-            this.lblCPFRecebedor.BackColor = System.Drawing.Color.Transparent;
             this.lblCPFRecebedor.Font = new System.Drawing.Font("Candara", 12F);
             this.lblCPFRecebedor.Location = new System.Drawing.Point(244, 357);
             this.lblCPFRecebedor.Name = "lblCPFRecebedor";
@@ -187,13 +183,11 @@
             this.btnCadastrar.BackColor = System.Drawing.SystemColors.Window;
             this.btnCadastrar.Font = new System.Drawing.Font("Candara", 12F);
             this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
-            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCadastrar.Location = new System.Drawing.Point(293, 437);
+            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCadastrar.Location = new System.Drawing.Point(282, 437);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(111, 34);
             this.btnCadastrar.TabIndex = 51;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.Text = "Confirmar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -210,7 +204,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Candara", 12F);
             this.label2.Location = new System.Drawing.Point(16, 163);
             this.label2.Name = "label2";
@@ -248,7 +241,6 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Candara", 12F);
             this.label3.Location = new System.Drawing.Point(284, 163);
             this.label3.Name = "label3";
@@ -259,7 +251,6 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Candara", 12F);
             this.label4.Location = new System.Drawing.Point(151, 163);
             this.label4.Name = "label4";
@@ -267,19 +258,6 @@
             this.label4.TabIndex = 49;
             this.label4.Text = "SubCategoria 2";
             // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.SystemColors.Window;
-            this.btnVoltar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnVoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnVoltar.Image")));
-            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVoltar.Location = new System.Drawing.Point(20, 433);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(111, 34);
-            this.btnVoltar.TabIndex = 53;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVoltar.UseVisualStyleBackColor = false;
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.SystemColors.Window;
@@ -299,9 +277,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(429, 496);
             this.ClientSize = new System.Drawing.Size(429, 495);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnVoltar);
@@ -322,11 +297,7 @@
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblRegistro);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "StatusDoacao";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StatusDoacao";
             this.Load += new System.EventHandler(this.StatusDoacao_Load);
             this.grbStatus.ResumeLayout(false);
@@ -348,6 +319,7 @@
         private System.Windows.Forms.Label lblCPFDoador;
         private System.Windows.Forms.Label lblCPFRecebedor;
         private System.Windows.Forms.Label lblLinha;
+        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txtCPFDoador;
         private System.Windows.Forms.Label label2;
@@ -356,7 +328,6 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnExcluir;
     }
 }
