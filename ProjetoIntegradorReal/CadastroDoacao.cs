@@ -361,6 +361,7 @@ namespace ProjetoIntegradorReal
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+
                 EsconderTudo();
                 LimparTudo();
             }
