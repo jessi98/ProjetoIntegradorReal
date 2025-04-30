@@ -62,7 +62,7 @@ namespace ProjetoIntegradorReal
                 cbxBrinq1, cbxBrinq2,
                 lblRoupa1, lblRoupa2, lblRoupa3,
                 cbxRoupa1, cbxRoupa2, cbxRoupa3,
-                cbxCestaBasica, cbxEletrodomestico, cbxEletrodomestico2, cbxEletrodomestico3,
+                cbxCestaBasica, cbxEletrodomestico, cbxEletrodomestico2, cbxEletrodomestico3, cmbProduto,
                 lblLinha,lblDescricaoProduto,txtDescricaoProduto, lblEletro1, lblEletro2, lblEletro3, lblCesta
             };
             foreach (var controle in controles)
@@ -360,7 +360,6 @@ namespace ProjetoIntegradorReal
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Cadastro realizado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
 
                 EsconderTudo();
                 LimparTudo();
