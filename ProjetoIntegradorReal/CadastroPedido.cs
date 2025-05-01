@@ -336,12 +336,12 @@ namespace ProjetoIntegradorReal
             else if (cmbProduto.Text == "Cesta Básica")
             {
                 cmd.Parameters.Clear();
-                cmd.CommandText = "INSERT INTO cadastro_pedido (categoria, subcategoria_1, descricao, recebedor_cpf)" +
-                                  "VALUES (@categoria, @subcategoria_1, @descricao, @cpf_recebedor)";
+                cmd.CommandText = "INSERT INTO cadastro_pedido (categoria, subcategoria_1, subcategoria_2, descricao, recebedor_cpf)" +
+                                  "VALUES (@categoria, @subcategoria_1, @subcategoria_2, @descricao, @cpf_recebedor)";
 
                 cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
                 cmd.Parameters.AddWithValue("@subcategoria_1", cbxCestaBasica.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", "INVALIDO");
                 cmd.Parameters.AddWithValue("@descricao", txtInformacoes.Text);
                 cmd.Parameters.AddWithValue("@cpf_recebedor", Convert.ToInt64(txtCPF.Text));
 
