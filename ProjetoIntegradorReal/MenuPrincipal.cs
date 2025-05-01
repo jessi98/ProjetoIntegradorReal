@@ -189,72 +189,7 @@ namespace ProjetoIntegradorReal
                 lstBusca.Refresh();
                 lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
 
-                try
-                {
-                    Conexao = new MySqlConnection(data_source);
-                    Conexao.Open();
-
-                    if (cbxPedidoDoacao.Text == "Pedido")
-                    {
-                        String sql = "SELECT subcategoria_1, subcategoria_2, subcategoria_3, descricao FROM cadastro_pedido WHERE status = 0";
-
-                        if (cbxRoupa1.SelectedItem != null)
-                        {
-                            sql += " AND subcategoria_1 = @subcategoria1";
-                        }
-                        if (cbxRoupa2.SelectedItem != null)
-                        {
-                            sql += " AND subcategoria_2 = @subcategoria2";
-                        }
-                        if (cbxRoupa3.SelectedItem != null)
-                        {
-                            sql += " AND subcategoria_3 = @subcategoria3";
-                        }
-
-                        sql += " ORDER BY registro ASC";
-
-                        MySqlCommand buscar = new MySqlCommand(sql, Conexao);
-
-                        if (cbxRoupa1.SelectedItem != null)
-                        {
-                            buscar.Parameters.AddWithValue("@subcategoria1", cbxRoupa1.Text);
-                        }
-                        if (cbxRoupa2.SelectedItem != null)
-                        {
-                            buscar.Parameters.AddWithValue("@subcategoria2", cbxRoupa2.Text);
-                        }
-                        if (cbxRoupa3.SelectedItem != null)
-                        {
-                            buscar.Parameters.AddWithValue("@subcategoria3", cbxRoupa3.Text);
-                        }
-
-                        MySqlDataReader reader = buscar.ExecuteReader();
-                        lstBusca.Items.Clear();
-
-                        while (reader.Read())
-                        {
-                            string[] row =
-                            {
-                                reader.GetString(0),
-                                reader.GetString(1),
-                                reader.GetString(2),
-                                reader.GetString(3)
-                        };
-
-                            var linha_list_view = new ListViewItem(row);
-                            lstBusca.Items.Add(linha_list_view);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    Conexao.Close();
-                }
-
+                AtualizarCom3();    
             }
 
             else if (cbxCategoria.Text == "Livros")
@@ -361,6 +296,59 @@ namespace ProjetoIntegradorReal
                         var linha_list_view = new ListViewItem(row);
                         lstBusca.Items.Add(linha_list_view);
                     }
+                }
+
+                else if (cbxPedidoDoacao.Text == "Doação")
+                {
+                    String sql = "SELECT subcategoria_1, subcategoria_2, subcategoria_3, descricao FROM cadastro_doacao WHERE status = 0";
+
+                    if (cbxRoupa1.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_1 = @subcategoria1";
+                    }
+                    if (cbxRoupa2.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_2 = @subcategoria2";
+                    }
+                    if (cbxRoupa3.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_3 = @subcategoria3";
+                    }
+
+                    sql += " ORDER BY registro ASC";
+
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+
+                    if (cbxRoupa1.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria1", cbxRoupa1.Text);
+                    }
+                    if (cbxRoupa2.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria2", cbxRoupa2.Text);
+                    }
+                    if (cbxRoupa3.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria3", cbxRoupa3.Text);
+                    }
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+                    lstBusca.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetString(0),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetString(3)
+                        };
+
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+                    }
+
                 }
             }
             catch (Exception ex)
