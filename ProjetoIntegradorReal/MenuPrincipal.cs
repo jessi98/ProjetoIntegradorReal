@@ -643,7 +643,13 @@ namespace ProjetoIntegradorReal
         //PESQUISA CESTA-BASICA
         private void cbxCestaBasica_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Carregar1Colunas();
+            lstBusca.Items.Clear();
+            EsconderTudo();
+            MostrarCesta();
+            lstBusca.Columns[1].Text = lblCesta.Text;
+            AtualizarCesta();
+            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
 
         private void AtualizarEletro()
@@ -1088,6 +1094,95 @@ namespace ProjetoIntegradorReal
                                 reader.GetString(1),
                                 reader.GetString(2),
                                 reader.GetString(3),
+                        };
+
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+        }
+
+        private void AtualizarCesta()
+        {
+            try
+            {
+                Conexao = new MySqlConnection(data_source);
+                Conexao.Open();
+
+                if (cbxPedidoDoacao.Text == "Pedido")
+                {
+                    String sql = "SELECT registro, subcategoria_1, descricao FROM cadastro_pedido WHERE status = 0";
+
+                    if (cbxCestaBasica.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_1 = @subcategoria1";
+                    }
+
+                    sql += " ORDER BY registro ASC";
+
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+
+                    if (cbxCestaBasica.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria1", cbxCestaBasica.Text);
+                    }
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+                    lstBusca.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetInt32(0).ToString(),
+                                reader.GetString(1),
+                                reader.GetString(2)
+
+                        };
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+
+                    }
+                }
+
+                else if (cbxPedidoDoacao.Text == "Doação")
+                {
+                    String sql = "SELECT registro, subcategoria_1, descricao FROM cadastro_doacao WHERE status = 0";
+
+                    if (cbxCestaBasica.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_1 = @subcategoria1";
+                    }
+
+                    sql += " ORDER BY registro ASC";
+
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+
+                    if (cbxCestaBasica.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria1", cbxCestaBasica.Text);
+                    }
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+                    lstBusca.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetInt32(0).ToString(),
+                                reader.GetString(1),
+                                reader.GetString(2)
                         };
 
                         var linha_list_view = new ListViewItem(row);
