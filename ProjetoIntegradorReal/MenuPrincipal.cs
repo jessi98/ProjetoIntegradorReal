@@ -96,7 +96,26 @@ namespace ProjetoIntegradorReal
         private void cbxPedidoDoacao_SelectedIndexChanged(object sender, EventArgs e)
         {
             EsconderTudo();
+            cbxCategoria.SelectedIndex = -1;
+            lstBusca.Items.Clear();
             MostrarCategoria();
+        }
+
+
+        private void LimparTudo()
+        {
+            var controles = new Control[]
+            {
+                cbxBrinq1, cbxBrinq2, cbxRoupa1, cbxRoupa2, cbxRoupa3, cbxEletrodomestico, cbxEletrodomestico2, cbxEletrodomestico3,
+                cbxLivro1, cbxLivro2, cbxCestaBasica
+            };
+            foreach (var controle in controles)
+            {
+                if (controle is System.Windows.Forms.ComboBox)
+                {
+                    ((System.Windows.Forms.ComboBox)controle).SelectedIndex = -1;
+                }
+            }
         }
 
         private void EsconderTudo()
@@ -118,6 +137,7 @@ namespace ProjetoIntegradorReal
                 controle.Visible = false;
             }
         }
+
 
         private void MostrarRoupa()
         {
@@ -204,9 +224,10 @@ namespace ProjetoIntegradorReal
 
             }
         }
-
         private void cbxCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
+            LimparTudo();
+
             if (cbxCategoria.Text == "Roupas")
             {
                 Carregar3Colunas();
@@ -514,139 +535,171 @@ namespace ProjetoIntegradorReal
 
         private void cbxRoupa1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lstBusca.Columns[1].Text = lblRoupa1.Text;
-            lstBusca.Columns[2].Text = lblRoupa2.Text;
-            lstBusca.Columns[3].Text = lblRoupa3.Text;
-            lstBusca.Refresh();
-            AtualizarRoupa();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            if (cbxRoupa1.SelectedItem != null)
+            {
+                lstBusca.Columns[1].Text = lblRoupa1.Text;
+                lstBusca.Columns[2].Text = lblRoupa2.Text;
+                lstBusca.Columns[3].Text = lblRoupa3.Text;
+                lstBusca.Refresh();
+                AtualizarRoupa();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
         }
 
         private void cbxRoupa2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lstBusca.Columns[1].Text = lblRoupa1.Text;
-            lstBusca.Columns[2].Text = lblRoupa2.Text;
-            lstBusca.Columns[3].Text = lblRoupa3.Text;
-            lstBusca.Refresh();
-            AtualizarRoupa();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            if (cbxRoupa2.SelectedItem != null)
+            {
+                lstBusca.Columns[1].Text = lblRoupa1.Text;
+                lstBusca.Columns[2].Text = lblRoupa2.Text;
+                lstBusca.Columns[3].Text = lblRoupa3.Text;
+                lstBusca.Refresh();
+                AtualizarRoupa();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
         }
 
         private void cbxRoupa3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lstBusca.Columns[1].Text = lblRoupa1.Text;
-            lstBusca.Columns[2].Text = lblRoupa2.Text;
-            lstBusca.Columns[3].Text = lblRoupa3.Text;
-            lstBusca.Refresh();
-            AtualizarRoupa();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            if (cbxRoupa3.SelectedItem != null)
+            {
+                lstBusca.Columns[1].Text = lblRoupa1.Text;
+                lstBusca.Columns[2].Text = lblRoupa2.Text;
+                lstBusca.Columns[3].Text = lblRoupa3.Text;
+                lstBusca.Refresh();
+                AtualizarRoupa();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
         }
 
 
         //PESQUISA BRINQUEDOS
         private void cbxBrinq1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Carregar2Colunas();
-            lstBusca.Items.Clear();
-            EsconderTudo();
-            MostrarBrinq();
-            lstBusca.Columns[1].Text = lblBrinq1.Text;
-            lstBusca.Columns[2].Text = lblBrinq2.Text;
-            AtualizarBrinq();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            if (cbxBrinq1.SelectedItem != null)
+            {
+                Carregar2Colunas();
+                lstBusca.Items.Clear();
+                EsconderTudo();
+                MostrarBrinq();
+                lstBusca.Columns[1].Text = lblBrinq1.Text;
+                lstBusca.Columns[2].Text = lblBrinq2.Text;
+                AtualizarBrinq();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
         }
 
         private void cbxBrinq2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Carregar2Colunas();
-            lstBusca.Items.Clear();
-            EsconderTudo();
-            MostrarBrinq();
-            lstBusca.Columns[1].Text = lblBrinq1.Text;
-            lstBusca.Columns[2].Text = lblBrinq2.Text;
-            AtualizarBrinq();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            if (cbxBrinq2.SelectedItem != null)
+            {
+                Carregar2Colunas();
+                lstBusca.Items.Clear();
+                EsconderTudo();
+                MostrarBrinq();
+                lstBusca.Columns[1].Text = lblBrinq1.Text;
+                lstBusca.Columns[2].Text = lblBrinq2.Text;
+                AtualizarBrinq();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
         }
 
 
         //PESQUISA ELETRODOMESTICOS
         private void cbxEletrodomestico_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Carregar3Colunas();
-            lstBusca.Items.Clear();
-            EsconderTudo();
-            MostrarEletro();
-            lstBusca.Columns[1].Text = lblEletro1.Text;
-            lstBusca.Columns[2].Text = lblEletro2.Text;
-            lstBusca.Columns[3].Text = lblEletro3.Text;
-            AtualizarEletro();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            if (cbxEletrodomestico.SelectedItem != null)
+            {
+                Carregar3Colunas();
+                lstBusca.Items.Clear();
+                EsconderTudo();
+                MostrarEletro();
+                lstBusca.Columns[1].Text = lblEletro1.Text;
+                lstBusca.Columns[2].Text = lblEletro2.Text;
+                lstBusca.Columns[3].Text = lblEletro3.Text;
+                AtualizarEletro();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
         }
 
         private void cbxEletrodomestico2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Carregar3Colunas();
-            lstBusca.Items.Clear();
-            EsconderTudo();
-            MostrarEletro();
-            lstBusca.Columns[1].Text = lblEletro1.Text;
-            lstBusca.Columns[2].Text = lblEletro2.Text;
-            lstBusca.Columns[3].Text = lblEletro3.Text;
-            AtualizarEletro();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            if (cbxEletrodomestico2.SelectedItem != null)
+            {
+                Carregar3Colunas();
+                lstBusca.Items.Clear();
+                EsconderTudo();
+                MostrarEletro();
+                lstBusca.Columns[1].Text = lblEletro1.Text;
+                lstBusca.Columns[2].Text = lblEletro2.Text;
+                lstBusca.Columns[3].Text = lblEletro3.Text;
+                AtualizarEletro();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
         }
 
         private void cbxEletrodomestico3_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            Carregar3Colunas();
-            lstBusca.Items.Clear();
-            EsconderTudo();
-            MostrarEletro();
-            lstBusca.Columns[1].Text = lblEletro1.Text;
-            lstBusca.Columns[2].Text = lblEletro2.Text;
-            lstBusca.Columns[3].Text = lblEletro3.Text;
-            AtualizarEletro();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            if (cbxEletrodomestico3.SelectedItem != null)
+            {
+                Carregar3Colunas();
+                lstBusca.Items.Clear();
+                EsconderTudo();
+                MostrarEletro();
+                lstBusca.Columns[1].Text = lblEletro1.Text;
+                lstBusca.Columns[2].Text = lblEletro2.Text;
+                lstBusca.Columns[3].Text = lblEletro3.Text;
+                AtualizarEletro();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
         }
 
 
         //PESQUISA LIVROS
         private void cbxLivro1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Carregar2Colunas();
-            lstBusca.Items.Clear();
-            EsconderTudo();
-            MostrarLivro();
-            lstBusca.Columns[1].Text = lblLivro1.Text;
-            lstBusca.Columns[2].Text = lblLivro2.Text;
-            AtualizarLivro();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            if (cbxLivro1.SelectedItem != null)
+            {
+                Carregar2Colunas();
+                lstBusca.Items.Clear();
+                EsconderTudo();
+                MostrarLivro();
+                lstBusca.Columns[1].Text = lblLivro1.Text;
+                lstBusca.Columns[2].Text = lblLivro2.Text;
+                AtualizarLivro();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
         }
 
         private void cbxLivro2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Carregar2Colunas();
-            lstBusca.Items.Clear();
-            EsconderTudo();
-            MostrarLivro();
-            lstBusca.Columns[1].Text = lblLivro1.Text;
-            lstBusca.Columns[2].Text = lblLivro2.Text;
-            AtualizarLivro();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            if (cbxLivro2.SelectedItem != null)
+            {
+                Carregar2Colunas();
+                lstBusca.Items.Clear();
+                EsconderTudo();
+                MostrarLivro();
+                lstBusca.Columns[1].Text = lblLivro1.Text;
+                lstBusca.Columns[2].Text = lblLivro2.Text;
+                AtualizarLivro();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
         }
 
 
         //PESQUISA CESTA-BASICA
         private void cbxCestaBasica_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Carregar1Colunas();
-            lstBusca.Items.Clear();
-            EsconderTudo();
-            MostrarCesta();
-            lstBusca.Columns[1].Text = lblCesta.Text;
-            AtualizarCesta();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            if (cbxCestaBasica.SelectedItem != null)
+            {
+                Carregar1Colunas();
+                lstBusca.Items.Clear();
+                EsconderTudo();
+                MostrarCesta();
+                lstBusca.Columns[1].Text = lblCesta.Text;
+                AtualizarCesta();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            }
         }
 
         private void AtualizarEletro()
