@@ -219,7 +219,6 @@ namespace ProjetoIntegradorReal
                 lstBusca.Columns[3].Text = lblRoupa3.Text;
                 Conexao = new MySqlConnection(data_source);
                 Conexao.Open();
-
                 if (cbxPedidoDoacao.Text == "Pedido")
                 {
                     String sql = "SELECT registro, subcategoria_1, subcategoria_2, subcategoria_3, descricao FROM cadastro_pedido WHERE status = 0 AND categoria = @categoria";
@@ -466,7 +465,7 @@ namespace ProjetoIntegradorReal
 
                 if (cbxPedidoDoacao.Text == "Pedido")
                 {
-                    String sql = "SELECT registro, subcategoria_1, subcategoria_2, descricao FROM cadastro_pedido WHERE status = 0 AND categoria = @categoria";
+                    String sql = "SELECT registro, subcategoria_1, descricao FROM cadastro_pedido WHERE status = 0 AND categoria = @categoria";
                     MySqlCommand buscar = new MySqlCommand(sql, Conexao);
                     buscar.Parameters.AddWithValue("@categoria", "Cesta Básica");
 
@@ -479,8 +478,7 @@ namespace ProjetoIntegradorReal
                         {
                                 reader.GetInt32(0).ToString(),
                                 reader.GetString(1),
-                                reader.GetString(2),
-                                reader.GetString(3)
+                                reader.GetString(2)
                         };
                         var linha_list_view = new ListViewItem(row);
                         lstBusca.Items.Add(linha_list_view);
@@ -489,7 +487,7 @@ namespace ProjetoIntegradorReal
                 }
                 else if (cbxPedidoDoacao.Text == "Doação")
                 {
-                    String sql = "SELECT registro, subcategoria_1, subcategoria_2, descricao FROM cadastro_doacao WHERE status = 0 AND categoria = @categoria";
+                    String sql = "SELECT registro, subcategoria_1, descricao FROM cadastro_doacao WHERE status = 0 AND categoria = @categoria";
                     MySqlCommand buscar = new MySqlCommand(sql, Conexao);
                     buscar.Parameters.AddWithValue("@categoria", "Cesta Básica");
 
@@ -503,7 +501,6 @@ namespace ProjetoIntegradorReal
                                 reader.GetInt32(0).ToString(),
                                 reader.GetString(1),
                                 reader.GetString(2),
-                                reader.GetString(3)
                         };
                         var linha_list_view = new ListViewItem(row);
                         lstBusca.Items.Add(linha_list_view);
@@ -1188,7 +1185,6 @@ namespace ProjetoIntegradorReal
                         var linha_list_view = new ListViewItem(row);
                         lstBusca.Items.Add(linha_list_view);
                     }
-
                 }
             }
             catch (Exception ex)
