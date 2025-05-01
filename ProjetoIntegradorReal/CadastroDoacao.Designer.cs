@@ -114,7 +114,7 @@
             this.lblRoupa2.BackColor = System.Drawing.Color.Transparent;
             this.lblRoupa2.Enabled = false;
             this.lblRoupa2.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblRoupa2.Location = new System.Drawing.Point(218, 100);
+            this.lblRoupa2.Location = new System.Drawing.Point(215, 100);
             this.lblRoupa2.Name = "lblRoupa2";
             this.lblRoupa2.Size = new System.Drawing.Size(76, 19);
             this.lblRoupa2.TabIndex = 40;
@@ -282,7 +282,7 @@
             this.lblBrinq2.BackColor = System.Drawing.Color.Transparent;
             this.lblBrinq2.Enabled = false;
             this.lblBrinq2.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblBrinq2.Location = new System.Drawing.Point(228, 100);
+            this.lblBrinq2.Location = new System.Drawing.Point(215, 100);
             this.lblBrinq2.Name = "lblBrinq2";
             this.lblBrinq2.Size = new System.Drawing.Size(51, 19);
             this.lblBrinq2.TabIndex = 51;
@@ -407,7 +407,7 @@
             this.lblLivro2.BackColor = System.Drawing.Color.Transparent;
             this.lblLivro2.Enabled = false;
             this.lblLivro2.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblLivro2.Location = new System.Drawing.Point(219, 100);
+            this.lblLivro2.Location = new System.Drawing.Point(215, 100);
             this.lblLivro2.Name = "lblLivro2";
             this.lblLivro2.Size = new System.Drawing.Size(60, 19);
             this.lblLivro2.TabIndex = 56;
@@ -605,6 +605,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CadastroDoacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroDoacao";
             this.Load += new System.EventHandler(this.CadastroDoacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
