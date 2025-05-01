@@ -86,7 +86,6 @@ namespace ProjetoIntegradorReal
             {
                 controle.Enabled = false;
                 controle.Visible = false;
-
             }
         }
 
@@ -189,7 +188,7 @@ namespace ProjetoIntegradorReal
                 lstBusca.Refresh();
                 lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
 
-                AtualizarCom3();    
+                AtualizarRoupa();    
             }
 
             else if (cbxCategoria.Text == "Livros")
@@ -219,11 +218,11 @@ namespace ProjetoIntegradorReal
             {
                 EsconderTudo();
                 MostrarEletro();
-
-                lstBusca.Columns[0].Text = lblRoupa1.Text;
-                lstBusca.Columns[1].Text = lblRoupa2.Text;
-                lstBusca.Columns[2].Text = lblRoupa3.Text;
+                lstBusca.Columns[0].Text = lblEletro1.Text;
+                lstBusca.Columns[1].Text = lblEletro2.Text;
+                lstBusca.Columns[2].Text = lblEletro3.Text;
                 lstBusca.Refresh();
+                AtualizarEletro();
                 lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             }
             else if (cbxCategoria.Text == "Cesta Básica")
@@ -239,7 +238,227 @@ namespace ProjetoIntegradorReal
             }
         }
 
-        private void AtualizarCom3()
+        //PESQUISA ROUPAS
+
+        private void cbxRoupa1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstBusca.Columns[0].Text = lblRoupa1.Text;
+            lstBusca.Columns[1].Text = lblRoupa2.Text;
+            lstBusca.Columns[2].Text = lblRoupa3.Text;
+            lstBusca.Refresh();
+            AtualizarRoupa();
+            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        }
+
+        private void cbxRoupa2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstBusca.Columns[0].Text = lblRoupa1.Text;
+            lstBusca.Columns[1].Text = lblRoupa2.Text;
+            lstBusca.Columns[2].Text = lblRoupa3.Text;
+            lstBusca.Refresh();
+            AtualizarRoupa();
+            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        }
+
+        private void cbxRoupa3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstBusca.Columns[0].Text = lblRoupa1.Text;
+            lstBusca.Columns[1].Text = lblRoupa2.Text;
+            lstBusca.Columns[2].Text = lblRoupa3.Text;
+            lstBusca.Refresh();
+            AtualizarRoupa();
+            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        }
+
+
+        //PESQUISA BRINQUEDOS
+        private void cbxBrinq1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxBrinq2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //PESQUISA ELETRODOMESTICOS
+        private void cbxEletrodomestico_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstBusca.Columns[0].Text = lblEletro1.Text;
+            lstBusca.Columns[1].Text = lblEletro2.Text;
+            lstBusca.Columns[2].Text = lblEletro3.Text;
+            lstBusca.Refresh();
+            AtualizarEletro();
+            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        }
+
+        private void cbxEletrodomestico2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstBusca.Columns[0].Text = lblEletro1.Text;
+            lstBusca.Columns[1].Text = lblEletro2.Text;
+            lstBusca.Columns[2].Text = lblEletro3.Text;
+            lstBusca.Refresh();
+            AtualizarEletro();
+            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        }
+
+        private void cbxEletrodomestico3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            lstBusca.Columns[0].Text = lblEletro1.Text;
+            lstBusca.Columns[1].Text = lblEletro2.Text;
+            lstBusca.Columns[2].Text = lblEletro3.Text;
+            lstBusca.Refresh();
+            AtualizarEletro();
+            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        }
+
+
+        //PESQUISA LIVROS
+        private void cbxLivro1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxLivro2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //PESQUISA CESTA-BASICA
+        private void cbxCestaBasica_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AtualizarEletro()
+        {
+            try
+            {
+                Conexao = new MySqlConnection(data_source);
+                Conexao.Open();
+
+                if (cbxPedidoDoacao.Text == "Pedido")
+                {
+                    String sql = "SELECT subcategoria_1, subcategoria_2, subcategoria_3, descricao FROM cadastro_pedido WHERE status = 0";
+
+                    if (cbxEletrodomestico.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_1 = @subcategoria1";
+                    }
+                    if (cbxEletrodomestico2.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_2 = @subcategoria2";
+                    }
+                    if (cbxEletrodomestico3.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_3 = @subcategoria3";
+                    }
+
+                    sql += " ORDER BY registro ASC";
+
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+                    buscar.Parameters.Clear();
+
+                    if (cbxEletrodomestico.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria1", cbxEletrodomestico.Text);
+                    }
+                    if (cbxEletrodomestico2.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria2", cbxEletrodomestico2.Text);
+                    }
+                    if (cbxEletrodomestico3.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria3", cbxEletrodomestico3.Text);
+                    }
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+                    lstBusca.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetString(0),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetString(3)
+                        };
+                        lstBusca.Items.Clear();
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+                    }
+                }
+
+                else if (cbxPedidoDoacao.Text == "Doação")
+                {
+                    String sql = "SELECT subcategoria_1, subcategoria_2, subcategoria_3, descricao FROM cadastro_doacao WHERE status = 0";
+
+                    if (cbxEletrodomestico.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_1 = @subcategoria1";
+                    }
+                    if (cbxEletrodomestico2.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_2 = @subcategoria2";
+                    }
+                    if (cbxEletrodomestico3.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_3 = @subcategoria3";
+                    }
+
+                    sql += " ORDER BY registro ASC";
+
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+                    buscar.Parameters.Clear();
+
+                    if (cbxEletrodomestico.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria1", cbxEletrodomestico.Text);
+                    }
+                    if (cbxEletrodomestico2.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria2", cbxEletrodomestico2.Text);
+                    }
+                    if (cbxEletrodomestico3.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria3", cbxEletrodomestico3.Text);
+                    }
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+                    lstBusca.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetString(0),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetString(3)
+                        };
+                        lstBusca.Items.Clear();
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+        }
+
+        private void AtualizarRoupa()
         {
             try
             {
@@ -292,9 +511,10 @@ namespace ProjetoIntegradorReal
                                 reader.GetString(2),
                                 reader.GetString(3)
                         };
-
+                        lstBusca.Items.Clear();
                         var linha_list_view = new ListViewItem(row);
                         lstBusca.Items.Add(linha_list_view);
+
                     }
                 }
 
@@ -344,7 +564,7 @@ namespace ProjetoIntegradorReal
                                 reader.GetString(2),
                                 reader.GetString(3)
                         };
-
+                        lstBusca.Items.Clear();
                         var linha_list_view = new ListViewItem(row);
                         lstBusca.Items.Add(linha_list_view);
                     }
@@ -360,35 +580,5 @@ namespace ProjetoIntegradorReal
                 Conexao.Close();
             }
         }
-
-        private void cbxRoupa1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lstBusca.Columns[0].Text = lblRoupa1.Text;
-            lstBusca.Columns[1].Text = lblRoupa2.Text;
-            lstBusca.Columns[2].Text = lblRoupa3.Text;
-            lstBusca.Refresh();
-            AtualizarCom3();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-        }
-
-        private void cbxRoupa2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lstBusca.Columns[0].Text = lblRoupa1.Text;
-            lstBusca.Columns[1].Text = lblRoupa2.Text;
-            lstBusca.Columns[2].Text = lblRoupa3.Text;
-            lstBusca.Refresh();
-            AtualizarCom3();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-        }
-
-        private void cbxRoupa3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lstBusca.Columns[0].Text = lblRoupa1.Text;
-            lstBusca.Columns[1].Text = lblRoupa2.Text;
-            lstBusca.Columns[2].Text = lblRoupa3.Text;
-            lstBusca.Refresh();
-            AtualizarCom3();
-            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-        }
-    }
+    }  
 }

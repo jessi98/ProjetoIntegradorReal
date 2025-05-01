@@ -354,6 +354,7 @@
             this.cbxCestaBasica.Size = new System.Drawing.Size(171, 32);
             this.cbxCestaBasica.TabIndex = 83;
             this.cbxCestaBasica.Visible = false;
+            this.cbxCestaBasica.SelectedIndexChanged += new System.EventHandler(this.cbxCestaBasica_SelectedIndexChanged);
             // 
             // cbxEletrodomestico3
             // 
@@ -370,6 +371,7 @@
             this.cbxEletrodomestico3.Size = new System.Drawing.Size(165, 32);
             this.cbxEletrodomestico3.TabIndex = 82;
             this.cbxEletrodomestico3.Visible = false;
+            this.cbxEletrodomestico3.SelectedIndexChanged += new System.EventHandler(this.cbxEletrodomestico3_SelectedIndexChanged);
             // 
             // cbxEletrodomestico2
             // 
@@ -387,6 +389,7 @@
             this.cbxEletrodomestico2.Size = new System.Drawing.Size(168, 32);
             this.cbxEletrodomestico2.TabIndex = 81;
             this.cbxEletrodomestico2.Visible = false;
+            this.cbxEletrodomestico2.SelectedIndexChanged += new System.EventHandler(this.cbxEletrodomestico2_SelectedIndexChanged);
             // 
             // cbxEletrodomestico
             // 
@@ -409,6 +412,7 @@
             this.cbxEletrodomestico.Size = new System.Drawing.Size(153, 32);
             this.cbxEletrodomestico.TabIndex = 80;
             this.cbxEletrodomestico.Visible = false;
+            this.cbxEletrodomestico.SelectedIndexChanged += new System.EventHandler(this.cbxEletrodomestico_SelectedIndexChanged);
             // 
             // lblLivro2
             // 
@@ -452,6 +456,7 @@
             this.cbxLivro2.Size = new System.Drawing.Size(153, 32);
             this.cbxLivro2.TabIndex = 77;
             this.cbxLivro2.Visible = false;
+            this.cbxLivro2.SelectedIndexChanged += new System.EventHandler(this.cbxLivro2_SelectedIndexChanged);
             // 
             // cbxLivro1
             // 
@@ -482,6 +487,7 @@
             this.cbxLivro1.Size = new System.Drawing.Size(153, 32);
             this.cbxLivro1.TabIndex = 76;
             this.cbxLivro1.Visible = false;
+            this.cbxLivro1.SelectedIndexChanged += new System.EventHandler(this.cbxLivro1_SelectedIndexChanged);
             // 
             // lblBrinq2
             // 
@@ -514,6 +520,7 @@
             this.cbxBrinq2.Size = new System.Drawing.Size(153, 32);
             this.cbxBrinq2.TabIndex = 74;
             this.cbxBrinq2.Visible = false;
+            this.cbxBrinq2.SelectedIndexChanged += new System.EventHandler(this.cbxBrinq2_SelectedIndexChanged);
             // 
             // cbxBrinq1
             // 
@@ -538,6 +545,7 @@
             this.cbxBrinq1.Size = new System.Drawing.Size(153, 32);
             this.cbxBrinq1.TabIndex = 73;
             this.cbxBrinq1.Visible = false;
+            this.cbxBrinq1.SelectedIndexChanged += new System.EventHandler(this.cbxBrinq1_SelectedIndexChanged);
             // 
             // lblBrinq1
             // 

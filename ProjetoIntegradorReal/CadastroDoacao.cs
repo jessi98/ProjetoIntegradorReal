@@ -296,8 +296,8 @@ namespace ProjetoIntegradorReal
                                   "VALUES (@categoria, @subcategoria_1, @subcategoria_2, @descricao, @cpf_doador)";
 
                 cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxLivro1.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", cbxLivro2.Text);
                 cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
                 cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
 
@@ -316,8 +316,8 @@ namespace ProjetoIntegradorReal
                                   "VALUES (@categoria, @subcategoria_1, @subcategoria_2, @descricao, @cpf_doador)";
 
                 cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxBrinq1.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", cbxBrinq2.Text);
                 cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
                 cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
 
@@ -335,9 +335,9 @@ namespace ProjetoIntegradorReal
                                   "VALUES (@categoria, @subcategoria_1, @subcategoria_2, @subcategoria_3, @descricao, @cpf_doador)";
 
                 cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_3", cbxRoupa3.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxEletrodomestico.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", cbxEletrodomestico2.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_3", cbxEletrodomestico3.Text);
                 cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
                 cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
 
@@ -354,7 +354,7 @@ namespace ProjetoIntegradorReal
                                   "VALUES (@categoria, @subcategoria_1, @descricao, @cpf_doador)";
 
                 cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxCestaBasica.Text);
                 cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
                 cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
                 cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
