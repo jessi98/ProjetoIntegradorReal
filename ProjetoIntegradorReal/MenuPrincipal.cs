@@ -13,7 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjetoIntegradorReal
 {
-    public partial class MenuPrincipal: Form
+    public partial class MenuPrincipal : Form
     {
 
         MySqlConnection Conexao;
@@ -32,13 +32,34 @@ namespace ProjetoIntegradorReal
             lstBusca.FullRowSelect = true;
             lstBusca.GridLines = true;
 
-            // Posição dos Cabeçalhos a serem exibidos na tela
+            //Posição dos Cabeçalhos a serem exibidos na tela
+            lstBusca.Columns.Add("ID", 150, HorizontalAlignment.Left);
             lstBusca.Columns.Add("Subcategoria 1", 150, HorizontalAlignment.Left);
             lstBusca.Columns.Add("Subcategoria 2", 150, HorizontalAlignment.Left);
             lstBusca.Columns.Add("Subcategoria 3", 150, HorizontalAlignment.Left);
             lstBusca.Columns.Add("Descrição", 150, HorizontalAlignment.Left);
 
         }
+        private void Carregar3Colunas()
+        {
+            lstBusca.Columns.Clear();
+            lstBusca.Columns.Add("ID", 150, HorizontalAlignment.Left);
+            lstBusca.Columns.Add("Subcategoria 1", 150, HorizontalAlignment.Left);
+            lstBusca.Columns.Add("Subcategoria 2", 150, HorizontalAlignment.Left);
+            lstBusca.Columns.Add("Subcategoria 3", 150, HorizontalAlignment.Left);
+            lstBusca.Columns.Add("Descrição", 150, HorizontalAlignment.Left);
+        }
+
+        private void Carregar2Colunas()
+        {
+
+            lstBusca.Columns.Clear();
+            lstBusca.Columns.Add("ID", 150, HorizontalAlignment.Left);
+            lstBusca.Columns.Add("Subcategoria 1", 150, HorizontalAlignment.Left);
+            lstBusca.Columns.Add("Subcategoria 2", 150, HorizontalAlignment.Left);
+            lstBusca.Columns.Add("Descrição", 150, HorizontalAlignment.Left);
+        }
+
         private void btnCadastroDoacao_Click(object sender, EventArgs e)
         {
             CadastroDoacao form = new CadastroDoacao();
@@ -179,28 +200,125 @@ namespace ProjetoIntegradorReal
         {
             if (cbxCategoria.Text == "Roupas")
             {
+                Carregar3Colunas();
+                lstBusca.Items.Clear();
                 EsconderTudo();
                 MostrarRoupa();
 
-                lstBusca.Columns[0].Text = lblRoupa1.Text;
-                lstBusca.Columns[1].Text = lblRoupa2.Text;
-                lstBusca.Columns[2].Text = lblRoupa3.Text;
-                lstBusca.Refresh();
-                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                lstBusca.Columns[1].Text = lblRoupa1.Text;
+                lstBusca.Columns[2].Text = lblRoupa2.Text;
+                lstBusca.Columns[3].Text = lblRoupa3.Text;
+                Conexao = new MySqlConnection(data_source);
+                Conexao.Open();
 
-                AtualizarRoupa();    
+                if (cbxPedidoDoacao.Text == "Pedido")
+                {
+                    String sql = "SELECT subcategoria_1, subcategoria_2, subcategoria_3, descricao FROM cadastro_pedido WHERE status = 0 AND categoria = @categoria";
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+                    buscar.Parameters.AddWithValue("@categoria", "Roupas");
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+                    lstBusca.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetString(0),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetString(3)
+                        };
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+                    }
+                    lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                }
+                else if (cbxPedidoDoacao.Text == "Doação")
+                {
+                    String sql = "SELECT subcategoria_1, subcategoria_2, subcategoria_3, descricao FROM cadastro_doacao WHERE status = 0 AND categoria = @categoria";
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+                    buscar.Parameters.AddWithValue("@categoria", "Roupas");
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetString(0),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetString(3)
+                        };
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+                    }
+                }
+
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             }
 
             else if (cbxCategoria.Text == "Livros")
             {
+                Carregar2Colunas();
+                lstBusca.Items.Clear();
                 EsconderTudo();
                 MostrarLivro();
 
-                lstBusca.Columns[0].Text = lblRoupa1.Text;
-                lstBusca.Columns[1].Text = lblRoupa2.Text;
-                lstBusca.Columns[2].Text = lblRoupa3.Text;
-                lstBusca.Refresh();
-                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                lstBusca.Columns[1].Text = lblLivro1.Text;
+                lstBusca.Columns[2].Text = lblLivro2.Text;
+
+                Conexao = new MySqlConnection(data_source);
+                Conexao.Open();
+
+                if (cbxPedidoDoacao.Text == "Pedido")
+                {
+                    String sql = "SELECT registro, subcategoria_1, subcategoria_2, descricao FROM cadastro_pedido WHERE status = 0 AND categoria = @categoria";
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+                    buscar.Parameters.AddWithValue("@categoria", "Livros");
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+                    lstBusca.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetInt32(0).ToString(),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetString(3)
+                        };
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+                    }
+                    lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                }
+                else if (cbxPedidoDoacao.Text == "Doação")
+                {
+                    String sql = "SELECT registro, subcategoria_1, subcategoria_2, descricao FROM cadastro_doacao WHERE status = 0 AND categoria = @categoria";
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+                    buscar.Parameters.AddWithValue("@categoria", "Livros");
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetInt32(0).ToString(),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetString(3)
+                        };
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+                    }
+                    lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                }
             }
 
             else if (cbxCategoria.Text == "Brinquedos")
@@ -216,14 +334,60 @@ namespace ProjetoIntegradorReal
             }
             else if (cbxCategoria.Text == "Eletrodomésticos")
             {
+                lstBusca.Items.Clear();
                 EsconderTudo();
                 MostrarEletro();
                 lstBusca.Columns[0].Text = lblEletro1.Text;
                 lstBusca.Columns[1].Text = lblEletro2.Text;
                 lstBusca.Columns[2].Text = lblEletro3.Text;
-                lstBusca.Refresh();
-                AtualizarEletro();
-                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                Conexao = new MySqlConnection(data_source);
+                Conexao.Open();
+
+                if (cbxPedidoDoacao.Text == "Pedido")
+                {
+                    String sql = "SELECT subcategoria_1, subcategoria_2, subcategoria_3, descricao FROM cadastro_pedido WHERE status = 0 AND categoria = @categoria";
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+                    buscar.Parameters.AddWithValue("@categoria", "Eletrodomésticos");
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetString(0),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetString(3)
+                        };
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+                    }
+                    lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                }
+                else if (cbxPedidoDoacao.Text == "Doação")
+                {
+                    String sql = "SELECT subcategoria_1, subcategoria_2, subcategoria_3, descricao FROM cadastro_doacao WHERE status = 0 AND categoria = @categoria";
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+                    buscar.Parameters.AddWithValue("@categoria", "Eletrodomésticos");
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetString(0),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetString(3)
+                        };
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+                    }
+                    lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                }
             }
             else if (cbxCategoria.Text == "Cesta Básica")
             {
@@ -306,7 +470,7 @@ namespace ProjetoIntegradorReal
 
         private void cbxEletrodomestico3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             lstBusca.Columns[0].Text = lblEletro1.Text;
             lstBusca.Columns[1].Text = lblEletro2.Text;
             lstBusca.Columns[2].Text = lblEletro3.Text;
@@ -319,12 +483,20 @@ namespace ProjetoIntegradorReal
         //PESQUISA LIVROS
         private void cbxLivro1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            lstBusca.Columns[0].Text = lblLivro1.Text;
+            lstBusca.Columns[1].Text = lblLivro2.Text;
+            lstBusca.Refresh();
+            AtualizarLivro();
+            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
 
         private void cbxLivro2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            lstBusca.Columns[0].Text = lblLivro1.Text;
+            lstBusca.Columns[1].Text = lblLivro2.Text;
+            lstBusca.Refresh();
+            AtualizarLivro();
+            lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
 
 
@@ -388,9 +560,6 @@ namespace ProjetoIntegradorReal
                                 reader.GetString(2),
                                 reader.GetString(3)
                         };
-                        lstBusca.Items.Clear();
-                        var linha_list_view = new ListViewItem(row);
-                        lstBusca.Items.Add(linha_list_view);
                     }
                 }
 
@@ -430,7 +599,6 @@ namespace ProjetoIntegradorReal
                     }
 
                     MySqlDataReader reader = buscar.ExecuteReader();
-                    lstBusca.Items.Clear();
 
                     while (reader.Read())
                     {
@@ -441,7 +609,6 @@ namespace ProjetoIntegradorReal
                                 reader.GetString(2),
                                 reader.GetString(3)
                         };
-                        lstBusca.Items.Clear();
                         var linha_list_view = new ListViewItem(row);
                         lstBusca.Items.Add(linha_list_view);
                     }
@@ -485,6 +652,7 @@ namespace ProjetoIntegradorReal
                     sql += " ORDER BY registro ASC";
 
                     MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+                    lstBusca.Items.Clear();
 
                     if (cbxRoupa1.SelectedItem != null)
                     {
@@ -511,7 +679,6 @@ namespace ProjetoIntegradorReal
                                 reader.GetString(2),
                                 reader.GetString(3)
                         };
-                        lstBusca.Items.Clear();
                         var linha_list_view = new ListViewItem(row);
                         lstBusca.Items.Add(linha_list_view);
 
@@ -564,7 +731,6 @@ namespace ProjetoIntegradorReal
                                 reader.GetString(2),
                                 reader.GetString(3)
                         };
-                        lstBusca.Items.Clear();
                         var linha_list_view = new ListViewItem(row);
                         lstBusca.Items.Add(linha_list_view);
                     }
@@ -580,5 +746,109 @@ namespace ProjetoIntegradorReal
                 Conexao.Close();
             }
         }
-    }  
+
+        private void AtualizarLivro()
+        {
+            try
+            {
+                Conexao = new MySqlConnection(data_source);
+                Conexao.Open();
+
+                if (cbxPedidoDoacao.Text == "Pedido")
+                {
+                    String sql = "SELECT subcategoria_1, subcategoria_2, descricao FROM cadastro_pedido WHERE  1=1 AND status = 0";
+
+                    if (cbxRoupa1.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_1 = @subcategoria1";
+                    }
+                    if (cbxRoupa2.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_2 = @subcategoria2";
+                    }
+
+                    sql += " ORDER BY registro ASC";
+
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+
+                    if (cbxRoupa1.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria1", cbxLivro1.Text);
+                    }
+                    if (cbxRoupa2.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria2", cbxLivro2.Text);
+                    }
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+                    lstBusca.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetString(0),
+                                reader.GetString(1),
+                                reader.GetString(2)
+                        };
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+
+                    }
+                }
+
+                else if (cbxPedidoDoacao.Text == "Doação")
+                {
+                    String sql = "SELECT subcategoria_1, subcategoria_2, descricao FROM cadastro_doacao WHERE status = 0";
+
+                    if (cbxLivro1.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_1 = @subcategoria1";
+                    }
+                    if (cbxLivro2.SelectedItem != null)
+                    {
+                        sql += " AND subcategoria_2 = @subcategoria2";
+                    }
+
+                    sql += " ORDER BY registro ASC";
+
+                    MySqlCommand buscar = new MySqlCommand(sql, Conexao);
+
+                    if (cbxLivro1.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria1", cbxLivro1.Text);
+                    }
+                    if (cbxLivro2.SelectedItem != null)
+                    {
+                        buscar.Parameters.AddWithValue("@subcategoria2", cbxLivro2.Text);
+                    }
+
+                    MySqlDataReader reader = buscar.ExecuteReader();
+                    lstBusca.Items.Clear();
+
+                    while (reader.Read())
+                    {
+                        string[] row =
+                        {
+                                reader.GetString(0),
+                                reader.GetString(1),
+                                reader.GetString(2)
+                        };
+
+                        var linha_list_view = new ListViewItem(row);
+                        lstBusca.Items.Add(linha_list_view);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+        }
+    }
 }
