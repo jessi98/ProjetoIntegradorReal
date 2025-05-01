@@ -14,7 +14,8 @@ namespace ProjetoIntegradorReal
     public partial class CadastroPedido: Form
     {
         MySqlConnection Conexao;
-        private string data_source = "datasource=localhost;username=root;password=;database=doacao";
+        //private string data_source = "datasource=localhost;username=root;password=;database=doacao";
+        private string data_source = "datasource=localhost;username=root;password=Martinsfreitas8;database=doacao";
 
         public CadastroPedido()
         {

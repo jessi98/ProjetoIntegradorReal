@@ -18,7 +18,8 @@ namespace ProjetoIntegradorReal
         public int? cpf = null;
 
         MySqlConnection Conexao;
-        private string data_source = "datasource=localhost;username=root;password=;database=doacao";
+        //private string data_source = "datasource=localhost;username=root;password=;database=doacao";
+        private string data_source = "datasource=localhost;username=root;password=Martinsfreitas8;database=doacao";
 
         public CadastroPessoas()
         {
