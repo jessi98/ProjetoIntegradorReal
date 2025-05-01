@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjetoIntegradorReal
 {
     public partial class MenuPrincipal: Form
     {
+
         MySqlConnection Conexao;
         private string data_source = "datasource=localhost;username=root;password=;database=doacao";
 
@@ -21,19 +23,18 @@ namespace ProjetoIntegradorReal
         {
             InitializeComponent();
 
+            lstBusca.Scrollable = true;
             lstBusca.View = View.Details;
             lstBusca.LabelEdit = true;
             lstBusca.AllowColumnReorder = true;
             lstBusca.FullRowSelect = true;
             lstBusca.GridLines = true;
 
-
             // Posição dos Cabeçalhos a serem exibidos na tela
-            lstBusca.Columns.Add("Categoria", 150, HorizontalAlignment.Left);
             lstBusca.Columns.Add("Subcategoria 1", 150, HorizontalAlignment.Left);
             lstBusca.Columns.Add("Subcategoria 2", 150, HorizontalAlignment.Left);
             lstBusca.Columns.Add("Subcategoria 3", 150, HorizontalAlignment.Left);
-            lstBusca.Columns.
+            lstBusca.Columns.Add("Descrição", 150, HorizontalAlignment.Left);
 
         }
         private void btnCadastroDoacao_Click(object sender, EventArgs e)
@@ -83,33 +84,6 @@ namespace ProjetoIntegradorReal
             {
                 controle.Enabled = false;
                 controle.Visible = false;
-
-            }
-        }
-
-        private void LimparTudo()
-        {
-            var controles = new Control[]
-            {
-                lblLivro1, lblLivro2,
-                cbxLivro1, cbxLivro2,
-                lblBrinq1, lblBrinq2,
-                cbxBrinq1, cbxBrinq2,
-                lblRoupa1, lblRoupa2, lblRoupa3,
-                cbxRoupa1, cbxRoupa2, cbxRoupa3,
-                cbxCestaBasica, cbxEletrodomestico, cbxEletrodomestico2, cbxEletrodomestico3, cbxCategoria,
-                lblEletro1, lblEletro2, lblEletro3, lblCesta
-            };
-            foreach (var controle in controles)
-            {
-                if (controle is TextBox)
-                {
-                    controle.Text = "";
-                }
-                if (controle is ComboBox)
-                {
-                    ((ComboBox)controle).SelectedIndex = -1;
-                }
 
             }
         }
@@ -206,28 +180,58 @@ namespace ProjetoIntegradorReal
             {
                 EsconderTudo();
                 MostrarRoupa();
+
+                lstBusca.Columns[0].Text = lblRoupa1.Text;
+                lstBusca.Columns[1].Text = lblRoupa2.Text;
+                lstBusca.Columns[2].Text = lblRoupa3.Text;
+                lstBusca.Refresh();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             }
 
             else if (cbxCategoria.Text == "Livros")
             {
                 EsconderTudo();
                 MostrarLivro();
+
+                lstBusca.Columns[0].Text = lblRoupa1.Text;
+                lstBusca.Columns[1].Text = lblRoupa2.Text;
+                lstBusca.Columns[2].Text = lblRoupa3.Text;
+                lstBusca.Refresh();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             }
 
             else if (cbxCategoria.Text == "Brinquedos")
             {
                 EsconderTudo();
                 MostrarBrinq();
+
+                lstBusca.Columns[0].Text = lblRoupa1.Text;
+                lstBusca.Columns[1].Text = lblRoupa2.Text;
+                lstBusca.Columns[2].Text = lblRoupa3.Text;
+                lstBusca.Refresh();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             }
             else if (cbxCategoria.Text == "Eletrodomésticos")
             {
                 EsconderTudo();
                 MostrarEletro();
+
+                lstBusca.Columns[0].Text = lblRoupa1.Text;
+                lstBusca.Columns[1].Text = lblRoupa2.Text;
+                lstBusca.Columns[2].Text = lblRoupa3.Text;
+                lstBusca.Refresh();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             }
             else if (cbxCategoria.Text == "Cesta Básica")
             {
                 EsconderTudo();
                 MostrarCesta();
+
+                lstBusca.Columns[0].Text = lblRoupa1.Text;
+                lstBusca.Columns[1].Text = lblRoupa2.Text;
+                lstBusca.Columns[2].Text = lblRoupa3.Text;
+                lstBusca.Refresh();
+                lstBusca.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             }
         }
     }
