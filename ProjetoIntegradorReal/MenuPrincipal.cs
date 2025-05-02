@@ -1291,15 +1291,17 @@ namespace ProjetoIntegradorReal
             lstEspera.GridLines = true;
 
             //Posição dos Cabeçalhos a serem exibidos na tela
+            lstEspera.Columns.Add("ID", 10, HorizontalAlignment.Left);
             lstEspera.Columns.Add("Doador", 75, HorizontalAlignment.Left);
             lstEspera.Columns.Add("Telefone", 75, HorizontalAlignment.Left);
             lstEspera.Columns.Add("Item", 100, HorizontalAlignment.Left);
             lstEspera.Columns.Add("Recebedor", 75, HorizontalAlignment.Left);
             lstEspera.Columns.Add("Telefone", 75, HorizontalAlignment.Left);
+            lstEspera.Columns.Add("Origem", 75, HorizontalAlignment.Left);
 
             Conexao = new MySqlConnection(data_source);
             Conexao.Open();
-            string sql = "SELECT d.nome, d.telefone, dc.categoria, r.nome, r.telefone" +
+            string sql =    "SELECT dc.registro, d.nome, d.telefone, dc.categoria, r.nome, r.telefone, 'Pedido' AS origem" +
                             " FROM cadastro_pedido dc" +
                             " JOIN pessoa_doador d ON dc.doador_cpf = d.cpf_doador" +
                             " JOIN pessoa_recebedor r ON dc.recebedor_cpf = r.cpf_recebedor" +
@@ -1310,18 +1312,20 @@ namespace ProjetoIntegradorReal
 
             while (reader.Read())
             {
-                var item = new ListViewItem(reader.GetString(0));
+                var item = new ListViewItem(reader.GetInt32(0).ToString());
                 item.SubItems.Add(reader.GetString(1));
                 item.SubItems.Add(reader.GetString(2));
                 item.SubItems.Add(reader.GetString(3));
                 item.SubItems.Add(reader.GetString(4));
+                item.SubItems.Add(reader.GetString(5));
+                item.SubItems.Add(reader.GetString(6));
                 lstEspera.Items.Add(item);
             }
             lstEspera.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
 
             reader.Close();
 
-            string sql2 = "SELECT d.nome, d.telefone, dc.categoria, r.nome, r.telefone" +
+            string sql2 =   "SELECT dc.registro, d.nome, d.telefone, dc.categoria, r.nome, r.telefone, 'Doação' AS origem" +
                             " FROM cadastro_doacao dc" +
                             " JOIN pessoa_doador d ON dc.doador2_cpf = d.cpf_doador" +
                             " JOIN pessoa_recebedor r ON dc.recebedor_cpf = r.cpf_recebedor" +
@@ -1332,26 +1336,37 @@ namespace ProjetoIntegradorReal
 
             while (reader2.Read())
             {
-                var item2 = new ListViewItem(reader2.GetString(0));
+                var item2 = new ListViewItem(reader2.GetInt32(0).ToString());
                 item2.SubItems.Add(reader2.GetString(1));
                 item2.SubItems.Add(reader2.GetString(2));
                 item2.SubItems.Add(reader2.GetString(3));
                 item2.SubItems.Add(reader2.GetString(4));
+                item2.SubItems.Add(reader2.GetString(5));
+                item2.SubItems.Add(reader2.GetString(6));
                 lstEspera.Items.Add(item2);
             }
             lstEspera.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
+        int id;
+        string table;
 
         private void lstEspera_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            System.Windows.Forms.ListView.SelectedListViewItemCollection itens_selecionados = lstBusca.SelectedItems;
+            System.Windows.Forms.ListView.SelectedListViewItemCollection itens_selecionados = lstEspera.SelectedItems;
 
             foreach (ListViewItem item in itens_selecionados)
             {
-
-
+                id = Convert.ToInt32(item.SubItems[0].Text);
+                table = item.SubItems[6].Text;
                 status status = new status();
+                status.registro = id;
+                status.tabela = table;
+
+                status.list.Clear();
+
+                status.list.Add(status);
             }
         }
+
     }
 }
