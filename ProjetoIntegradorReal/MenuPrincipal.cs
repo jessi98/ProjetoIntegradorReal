@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -1247,6 +1248,109 @@ namespace ProjetoIntegradorReal
             finally
             {
                 Conexao.Close();
+            }
+        }
+
+        private void Status_Click(object sender, EventArgs e)
+        {
+            StatusDoacao form = new StatusDoacao();
+            form.ShowDialog();
+        }
+
+        private void lstBusca_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+
+            System.Windows.Forms.ListView.SelectedListViewItemCollection itens_selecionados = lstBusca.SelectedItems;
+
+            foreach (ListViewItem item in itens_selecionados)
+            {
+
+
+                status status = new status();
+                status.registro = Convert.ToInt32(item.SubItems[0].Text);
+                status.tabela = cbxPedidoDoacao.Text;
+                status.list.Clear();
+
+                status.list.Add(status);
+            }
+
+        }
+
+        private void lstEspera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            lstEspera.Scrollable = true;
+            lstEspera.View = View.Details;
+            lstEspera.LabelEdit = true;
+            lstEspera.AllowColumnReorder = true;
+            lstEspera.FullRowSelect = true;
+            lstEspera.GridLines = true;
+
+            //Posição dos Cabeçalhos a serem exibidos na tela
+            lstEspera.Columns.Add("Doador", 75, HorizontalAlignment.Left);
+            lstEspera.Columns.Add("Telefone", 75, HorizontalAlignment.Left);
+            lstEspera.Columns.Add("Item", 100, HorizontalAlignment.Left);
+            lstEspera.Columns.Add("Recebedor", 75, HorizontalAlignment.Left);
+            lstEspera.Columns.Add("Telefone", 75, HorizontalAlignment.Left);
+
+            Conexao = new MySqlConnection(data_source);
+            Conexao.Open();
+            string sql = "SELECT d.nome, d.telefone, dc.categoria, r.nome, r.telefone" +
+                            " FROM cadastro_pedido dc" +
+                            " JOIN pessoa_doador d ON dc.doador_cpf = d.cpf_doador" +
+                            " JOIN pessoa_recebedor r ON dc.recebedor_cpf = r.cpf_recebedor" +
+                            " WHERE status = 1";
+            MySqlCommand cmd = new MySqlCommand(sql, Conexao);
+
+            var reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                var item = new ListViewItem(reader.GetString(0));
+                item.SubItems.Add(reader.GetString(1));
+                item.SubItems.Add(reader.GetString(2));
+                item.SubItems.Add(reader.GetString(3));
+                item.SubItems.Add(reader.GetString(4));
+                lstEspera.Items.Add(item);
+            }
+            lstEspera.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+
+            reader.Close();
+
+            string sql2 = "SELECT d.nome, d.telefone, dc.categoria, r.nome, r.telefone" +
+                            " FROM cadastro_doacao dc" +
+                            " JOIN pessoa_doador d ON dc.doador2_cpf = d.cpf_doador" +
+                            " JOIN pessoa_recebedor r ON dc.recebedor_cpf = r.cpf_recebedor" +
+                            " WHERE status = 1";
+            MySqlCommand cmd2 = new MySqlCommand(sql2, Conexao);
+
+            var reader2 = cmd2.ExecuteReader();
+
+            while (reader2.Read())
+            {
+                var item2 = new ListViewItem(reader2.GetString(0));
+                item2.SubItems.Add(reader2.GetString(1));
+                item2.SubItems.Add(reader2.GetString(2));
+                item2.SubItems.Add(reader2.GetString(3));
+                item2.SubItems.Add(reader2.GetString(4));
+                lstEspera.Items.Add(item2);
+            }
+            lstEspera.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+        }
+
+        private void lstEspera_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            System.Windows.Forms.ListView.SelectedListViewItemCollection itens_selecionados = lstBusca.SelectedItems;
+
+            foreach (ListViewItem item in itens_selecionados)
+            {
+
+
+                status status = new status();
             }
         }
     }

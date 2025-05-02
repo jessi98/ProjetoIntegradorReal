@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.btnCadastroDoacao = new System.Windows.Forms.Button();
             this.btnCadastroPedido = new System.Windows.Forms.Button();
-            this.btnEditarDoacao = new System.Windows.Forms.Button();
             this.cbxPedidoDoacao = new System.Windows.Forms.ComboBox();
             this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.lstBusca = new System.Windows.Forms.ListView();
@@ -66,9 +66,12 @@
             this.cbxRoupa3 = new System.Windows.Forms.ComboBox();
             this.cbxRoupa1 = new System.Windows.Forms.ComboBox();
             this.lblRoupa1 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Status = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCadastroDoacao
@@ -81,7 +84,7 @@
             this.btnCadastroDoacao.Font = new System.Drawing.Font("Candara", 12F);
             this.btnCadastroDoacao.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroDoacao.Image")));
             this.btnCadastroDoacao.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnCadastroDoacao.Location = new System.Drawing.Point(15, 96);
+            this.btnCadastroDoacao.Location = new System.Drawing.Point(479, 56);
             this.btnCadastroDoacao.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastroDoacao.Name = "btnCadastroDoacao";
             this.btnCadastroDoacao.Size = new System.Drawing.Size(225, 74);
@@ -99,7 +102,7 @@
             this.btnCadastroPedido.Font = new System.Drawing.Font("Candara", 12F);
             this.btnCadastroPedido.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroPedido.Image")));
             this.btnCadastroPedido.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnCadastroPedido.Location = new System.Drawing.Point(248, 9);
+            this.btnCadastroPedido.Location = new System.Drawing.Point(246, 56);
             this.btnCadastroPedido.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastroPedido.Name = "btnCadastroPedido";
             this.btnCadastroPedido.Size = new System.Drawing.Size(225, 74);
@@ -107,24 +110,6 @@
             this.btnCadastroPedido.Text = "Cadastro de\r\nPedido";
             this.btnCadastroPedido.UseVisualStyleBackColor = false;
             this.btnCadastroPedido.Click += new System.EventHandler(this.btnCadastroPedido_Click);
-            // 
-            // btnEditarDoacao
-            // 
-            this.btnEditarDoacao.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEditarDoacao.FlatAppearance.BorderSize = 2;
-            this.btnEditarDoacao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnEditarDoacao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEditarDoacao.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnEditarDoacao.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarDoacao.Image")));
-            this.btnEditarDoacao.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnEditarDoacao.Location = new System.Drawing.Point(15, 10);
-            this.btnEditarDoacao.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditarDoacao.Name = "btnEditarDoacao";
-            this.btnEditarDoacao.Size = new System.Drawing.Size(225, 74);
-            this.btnEditarDoacao.TabIndex = 2;
-            this.btnEditarDoacao.Text = "Editar\r\nDoação";
-            this.btnEditarDoacao.UseVisualStyleBackColor = false;
-            this.btnEditarDoacao.Click += new System.EventHandler(this.btnEditarDoacao_Click);
             // 
             // cbxPedidoDoacao
             // 
@@ -171,6 +156,8 @@
             this.lstBusca.Size = new System.Drawing.Size(751, 530);
             this.lstBusca.TabIndex = 10;
             this.lstBusca.UseCompatibleStateImageBehavior = false;
+            this.lstBusca.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstBusca_ItemSelectionChanged);
+            this.lstBusca.Click += new System.EventHandler(this.Status_Click);
             // 
             // lstEspera
             // 
@@ -182,6 +169,9 @@
             this.lstEspera.Size = new System.Drawing.Size(601, 443);
             this.lstEspera.TabIndex = 11;
             this.lstEspera.UseCompatibleStateImageBehavior = false;
+            this.lstEspera.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstEspera_ItemSelectionChanged);
+            this.lstEspera.SelectedIndexChanged += new System.EventHandler(this.lstEspera_SelectedIndexChanged);
+            this.lstEspera.Click += new System.EventHandler(this.Status_Click);
             // 
             // btnCadastrarPessoa
             // 
@@ -192,7 +182,7 @@
             this.btnCadastrarPessoa.Font = new System.Drawing.Font("Candara", 12F);
             this.btnCadastrarPessoa.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarPessoa.Image")));
             this.btnCadastrarPessoa.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btnCadastrarPessoa.Location = new System.Drawing.Point(248, 96);
+            this.btnCadastrarPessoa.Location = new System.Drawing.Point(13, 56);
             this.btnCadastrarPessoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnCadastrarPessoa.Name = "btnCadastrarPessoa";
             this.btnCadastrarPessoa.Size = new System.Drawing.Size(225, 74);
@@ -665,6 +655,21 @@
             this.lblRoupa1.Text = "Gênero:";
             this.lblRoupa1.Visible = false;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Status});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(119, 28);
+            // 
+            // Status
+            // 
+            this.Status.Name = "Status";
+            this.Status.Size = new System.Drawing.Size(118, 24);
+            this.Status.Text = "Status";
+            this.Status.Click += new System.EventHandler(this.Status_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -705,16 +710,17 @@
             this.Controls.Add(this.lstBusca);
             this.Controls.Add(this.cbxCategoria);
             this.Controls.Add(this.cbxPedidoDoacao);
-            this.Controls.Add(this.btnEditarDoacao);
             this.Controls.Add(this.btnCadastroPedido);
             this.Controls.Add(this.btnCadastroDoacao);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuPrincipal";
             this.Text = "MenuPrincipal";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -724,7 +730,6 @@
 
         private System.Windows.Forms.Button btnCadastroDoacao;
         private System.Windows.Forms.Button btnCadastroPedido;
-        private System.Windows.Forms.Button btnEditarDoacao;
         private System.Windows.Forms.ComboBox cbxPedidoDoacao;
         private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.ListView lstBusca;
@@ -759,5 +764,7 @@
         private System.Windows.Forms.ComboBox cbxRoupa3;
         private System.Windows.Forms.ComboBox cbxRoupa1;
         private System.Windows.Forms.Label lblRoupa1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem Status;
     }
 }
