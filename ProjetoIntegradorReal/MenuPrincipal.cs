@@ -335,6 +335,7 @@ namespace ProjetoIntegradorReal
                     buscar.Parameters.AddWithValue("@categoria", "Livros");
 
                     MySqlDataReader reader = buscar.ExecuteReader();
+                    lstBusca.Items.Clear();
 
 
                     while (reader.Read())
@@ -974,11 +975,11 @@ namespace ProjetoIntegradorReal
 
                     MySqlCommand buscar = new MySqlCommand(sql, Conexao);
 
-                    if (cbxRoupa1.SelectedItem != null)
+                    if (cbxLivro1.SelectedItem != null)
                     {
                         buscar.Parameters.AddWithValue("@subcategoria1", cbxLivro1.Text);
                     }
-                    if (cbxRoupa2.SelectedItem != null)
+                    if (cbxLivro2.SelectedItem != null)
                     {
                         buscar.Parameters.AddWithValue("@subcategoria2", cbxLivro2.Text);
                     }
@@ -995,9 +996,9 @@ namespace ProjetoIntegradorReal
                                 reader.GetString(2),
                                 reader.GetString(3),
                         };
+
                         var linha_list_view = new ListViewItem(row);
                         lstBusca.Items.Add(linha_list_view);
-
                     }
                 }
 
