@@ -40,13 +40,13 @@
             this.lblCPFDoador = new System.Windows.Forms.Label();
             this.lblCPFRecebedor = new System.Windows.Forms.Label();
             this.lblLinha = new System.Windows.Forms.Label();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtCPFDoador = new System.Windows.Forms.TextBox();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.txtSub1 = new System.Windows.Forms.TextBox();
             this.txtSub2 = new System.Windows.Forms.TextBox();
             this.txtSub3 = new System.Windows.Forms.TextBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.grbStatus.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -165,23 +165,6 @@
             this.lblLinha.Size = new System.Drawing.Size(400, 2);
             this.lblLinha.TabIndex = 50;
             // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackColor = System.Drawing.SystemColors.Window;
-            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnVoltar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnVoltar.Image = global::ProjetoIntegradorReal.Properties.Resources.voltar;
-            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVoltar.ImageKey = "(nenhum/a)";
-            this.btnVoltar.Location = new System.Drawing.Point(20, 437);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(111, 34);
-            this.btnVoltar.TabIndex = 52;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVoltar.UseVisualStyleBackColor = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.SystemColors.Window;
@@ -204,20 +187,6 @@
             this.txtCPFDoador.Name = "txtCPFDoador";
             this.txtCPFDoador.Size = new System.Drawing.Size(145, 27);
             this.txtCPFDoador.TabIndex = 38;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.BackColor = System.Drawing.SystemColors.Window;
-            this.btnExcluir.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnExcluir.Image = global::ProjetoIntegradorReal.Properties.Resources.lixo;
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluir.ImageKey = "(nenhum/a)";
-            this.btnExcluir.Location = new System.Drawing.Point(151, 437);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(111, 34);
-            this.btnExcluir.TabIndex = 53;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
             // 
             // txtSub1
             // 
@@ -246,6 +215,36 @@
             this.txtSub3.Size = new System.Drawing.Size(130, 27);
             this.txtSub3.TabIndex = 56;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.SystemColors.Window;
+            this.btnExcluir.Font = new System.Drawing.Font("Candara", 12F);
+            this.btnExcluir.Image = global::ProjetoIntegradorReal.Properties.Resources.lixo;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.Location = new System.Drawing.Point(153, 437);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(111, 34);
+            this.btnExcluir.TabIndex = 57;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.SystemColors.Window;
+            this.btnVoltar.Font = new System.Drawing.Font("Candara", 12F);
+            this.btnVoltar.Image = global::ProjetoIntegradorReal.Properties.Resources.voltar;
+            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVoltar.Location = new System.Drawing.Point(25, 437);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(111, 34);
+            this.btnVoltar.TabIndex = 58;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
+            // 
             // StatusDoacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,11 +252,11 @@
             this.BackgroundImage = global::ProjetoIntegradorReal.Properties.Resources.fundo2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(429, 496);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.txtSub3);
             this.Controls.Add(this.txtSub2);
             this.Controls.Add(this.txtSub1);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.lblLinha);
             this.Controls.Add(this.lblCPFRecebedor);
@@ -286,7 +285,6 @@
         private System.Windows.Forms.Label lblRegistro;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.GroupBox grbStatus;
         private System.Windows.Forms.RadioButton rdbAtivo;
         private System.Windows.Forms.RadioButton rdbAguardando;
         private System.Windows.Forms.TextBox txtRegistro;
@@ -294,12 +292,13 @@
         private System.Windows.Forms.Label lblCPFDoador;
         private System.Windows.Forms.Label lblCPFRecebedor;
         private System.Windows.Forms.Label lblLinha;
-        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txtCPFDoador;
-        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.TextBox txtSub1;
         private System.Windows.Forms.TextBox txtSub2;
         private System.Windows.Forms.TextBox txtSub3;
+        private System.Windows.Forms.GroupBox grbStatus;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

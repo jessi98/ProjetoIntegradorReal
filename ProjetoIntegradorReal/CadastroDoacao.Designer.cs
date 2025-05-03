@@ -142,11 +142,10 @@
             this.cbxRoupa2.FormattingEnabled = true;
             this.cbxRoupa2.Items.AddRange(new object[] {
             "Infantil - RN",
-            "Infantil - 0 a 6 meses",
-            "Infantil - 6 meses a 1 ano",
-            "Infantil - 1 a 5 anos",
-            "infantil - 6 a 12 anos",
-            "PP",
+            "Infantil - n1 a n4",
+            "Infantil - n6 a n8",
+            "Infantil - n10 a n12",
+            "Infantil - n14 a n16",
             "P",
             "M",
             "G",
@@ -185,9 +184,7 @@
             this.cbxRoupa1.FormattingEnabled = true;
             this.cbxRoupa1.Items.AddRange(new object[] {
             "Feminino",
-            "Masculino",
-            "Infantil Feminino",
-            "Infantil Masculino"});
+            "Masculino"});
             this.cbxRoupa1.Location = new System.Drawing.Point(20, 122);
             this.cbxRoupa1.Name = "cbxRoupa1";
             this.cbxRoupa1.Size = new System.Drawing.Size(150, 27);

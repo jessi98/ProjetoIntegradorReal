@@ -15,7 +15,8 @@ namespace ProjetoIntegradorReal
     {
         MySqlConnection Conexao;
         //private string data_source = "datasource=localhost;username=root;password=;database=doacao";
-        private string data_source = "datasource=localhost;username=root;password=Martinsfreitas8;database=doacao";
+        private string data_source = "datasource=localhost;username=root;password=;database=doacao";
+        //private string data_source = "datasource=localhost;username=root;password=Martinsfreitas8;database=doacao";
 
         public CadastroDoacao()
         {
@@ -221,11 +222,6 @@ namespace ProjetoIntegradorReal
             }
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void cbxEletrodomestico2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -369,7 +365,7 @@ namespace ProjetoIntegradorReal
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

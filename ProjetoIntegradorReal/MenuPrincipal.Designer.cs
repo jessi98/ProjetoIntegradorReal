@@ -279,7 +279,7 @@
             "110V",
             "220V",
             "Bivolt"});
-            this.cbxEletrodomestico2.Location = new System.Drawing.Point(728, 126);
+            this.cbxEletrodomestico2.Location = new System.Drawing.Point(728, 125);
             this.cbxEletrodomestico2.Name = "cbxEletrodomestico2";
             this.cbxEletrodomestico2.Size = new System.Drawing.Size(150, 27);
             this.cbxEletrodomestico2.TabIndex = 81;
@@ -344,7 +344,7 @@
             "Novo",
             "Semi-novo",
             "Usado"});
-            this.cbxLivro2.Location = new System.Drawing.Point(728, 126);
+            this.cbxLivro2.Location = new System.Drawing.Point(728, 125);
             this.cbxLivro2.Name = "cbxLivro2";
             this.cbxLivro2.Size = new System.Drawing.Size(150, 27);
             this.cbxLivro2.TabIndex = 77;
@@ -406,7 +406,7 @@
             "4 - 6 Anos",
             "1 - 12 Anos",
             "13+ Anos"});
-            this.cbxBrinq2.Location = new System.Drawing.Point(728, 126);
+            this.cbxBrinq2.Location = new System.Drawing.Point(728, 125);
             this.cbxBrinq2.Name = "cbxBrinq2";
             this.cbxBrinq2.Size = new System.Drawing.Size(150, 27);
             this.cbxBrinq2.TabIndex = 74;
@@ -493,7 +493,7 @@
             "G",
             "GG",
             "XG"});
-            this.cbxRoupa2.Location = new System.Drawing.Point(728, 126);
+            this.cbxRoupa2.Location = new System.Drawing.Point(728, 125);
             this.cbxRoupa2.Name = "cbxRoupa2";
             this.cbxRoupa2.Size = new System.Drawing.Size(150, 27);
             this.cbxRoupa2.TabIndex = 69;
