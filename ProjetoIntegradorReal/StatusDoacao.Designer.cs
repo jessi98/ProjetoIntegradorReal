@@ -53,45 +53,43 @@
             // lblRegistro
             // 
             this.lblRegistro.AutoSize = true;
+            this.lblRegistro.BackColor = System.Drawing.Color.Transparent;
             this.lblRegistro.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblRegistro.Location = new System.Drawing.Point(181, 14);
-            this.lblRegistro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRegistro.Location = new System.Drawing.Point(136, 11);
             this.lblRegistro.Name = "lblRegistro";
-            this.lblRegistro.Size = new System.Drawing.Size(178, 24);
+            this.lblRegistro.Size = new System.Drawing.Size(147, 19);
             this.lblRegistro.TabIndex = 2;
             this.lblRegistro.Text = "Numero do Registro";
             // 
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
+            this.lblDescricao.BackColor = System.Drawing.Color.Transparent;
             this.lblDescricao.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblDescricao.Location = new System.Drawing.Point(35, 277);
-            this.lblDescricao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescricao.Location = new System.Drawing.Point(26, 225);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(91, 24);
+            this.lblDescricao.Size = new System.Drawing.Size(74, 19);
             this.lblDescricao.TabIndex = 35;
             this.lblDescricao.Text = "Descrição";
             // 
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtDescricao.Location = new System.Drawing.Point(40, 304);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescricao.Location = new System.Drawing.Point(30, 247);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(483, 121);
+            this.txtDescricao.Size = new System.Drawing.Size(363, 99);
             this.txtDescricao.TabIndex = 34;
             // 
             // grbStatus
             // 
+            this.grbStatus.BackColor = System.Drawing.Color.Transparent;
             this.grbStatus.Controls.Add(this.rdbAtivo);
             this.grbStatus.Controls.Add(this.rdbAguardando);
             this.grbStatus.Font = new System.Drawing.Font("Candara", 12F);
-            this.grbStatus.Location = new System.Drawing.Point(40, 81);
-            this.grbStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.grbStatus.Location = new System.Drawing.Point(30, 66);
             this.grbStatus.Name = "grbStatus";
-            this.grbStatus.Padding = new System.Windows.Forms.Padding(4);
-            this.grbStatus.Size = new System.Drawing.Size(516, 85);
+            this.grbStatus.Size = new System.Drawing.Size(387, 69);
             this.grbStatus.TabIndex = 36;
             this.grbStatus.TabStop = false;
             this.grbStatus.Text = "Status do Pedido";
@@ -99,10 +97,9 @@
             // rdbAtivo
             // 
             this.rdbAtivo.AutoSize = true;
-            this.rdbAtivo.Location = new System.Drawing.Point(131, 32);
-            this.rdbAtivo.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbAtivo.Location = new System.Drawing.Point(98, 26);
             this.rdbAtivo.Name = "rdbAtivo";
-            this.rdbAtivo.Size = new System.Drawing.Size(75, 28);
+            this.rdbAtivo.Size = new System.Drawing.Size(63, 23);
             this.rdbAtivo.TabIndex = 38;
             this.rdbAtivo.TabStop = true;
             this.rdbAtivo.Text = "Ativo";
@@ -112,10 +109,9 @@
             // rdbAguardando
             // 
             this.rdbAguardando.AutoSize = true;
-            this.rdbAguardando.Location = new System.Drawing.Point(245, 32);
-            this.rdbAguardando.Margin = new System.Windows.Forms.Padding(4);
+            this.rdbAguardando.Location = new System.Drawing.Point(184, 26);
             this.rdbAguardando.Name = "rdbAguardando";
-            this.rdbAguardando.Size = new System.Drawing.Size(136, 28);
+            this.rdbAguardando.Size = new System.Drawing.Size(113, 23);
             this.rdbAguardando.TabIndex = 39;
             this.rdbAguardando.TabStop = true;
             this.rdbAguardando.Text = "Aguardando";
@@ -126,66 +122,63 @@
             // 
             this.txtRegistro.Enabled = false;
             this.txtRegistro.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtRegistro.Location = new System.Drawing.Point(187, 41);
-            this.txtRegistro.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRegistro.Location = new System.Drawing.Point(140, 33);
             this.txtRegistro.Name = "txtRegistro";
-            this.txtRegistro.Size = new System.Drawing.Size(192, 32);
+            this.txtRegistro.Size = new System.Drawing.Size(145, 27);
             this.txtRegistro.TabIndex = 37;
             // 
             // txtCPFRecebedor
             // 
             this.txtCPFRecebedor.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtCPFRecebedor.Location = new System.Drawing.Point(331, 466);
-            this.txtCPFRecebedor.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCPFRecebedor.Location = new System.Drawing.Point(248, 379);
             this.txtCPFRecebedor.Name = "txtCPFRecebedor";
-            this.txtCPFRecebedor.Size = new System.Drawing.Size(192, 32);
+            this.txtCPFRecebedor.Size = new System.Drawing.Size(145, 27);
             this.txtCPFRecebedor.TabIndex = 39;
             // 
             // lblCPFDoador
             // 
             this.lblCPFDoador.AutoSize = true;
+            this.lblCPFDoador.BackColor = System.Drawing.Color.Transparent;
             this.lblCPFDoador.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblCPFDoador.Location = new System.Drawing.Point(35, 439);
-            this.lblCPFDoador.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCPFDoador.Location = new System.Drawing.Point(26, 357);
             this.lblCPFDoador.Name = "lblCPFDoador";
-            this.lblCPFDoador.Size = new System.Drawing.Size(135, 24);
+            this.lblCPFDoador.Size = new System.Drawing.Size(110, 19);
             this.lblCPFDoador.TabIndex = 40;
             this.lblCPFDoador.Text = "CPF do Doador";
             // 
             // lblCPFRecebedor
             // 
             this.lblCPFRecebedor.AutoSize = true;
+            this.lblCPFRecebedor.BackColor = System.Drawing.Color.Transparent;
             this.lblCPFRecebedor.Font = new System.Drawing.Font("Candara", 12F);
-            this.lblCPFRecebedor.Location = new System.Drawing.Point(325, 439);
-            this.lblCPFRecebedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCPFRecebedor.Location = new System.Drawing.Point(244, 357);
             this.lblCPFRecebedor.Name = "lblCPFRecebedor";
-            this.lblCPFRecebedor.Size = new System.Drawing.Size(167, 24);
+            this.lblCPFRecebedor.Size = new System.Drawing.Size(136, 19);
             this.lblCPFRecebedor.TabIndex = 41;
             this.lblCPFRecebedor.Text = "CPF do Recebedor ";
             // 
             // lblLinha
             // 
             this.lblLinha.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblLinha.Location = new System.Drawing.Point(19, 185);
-            this.lblLinha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLinha.Location = new System.Drawing.Point(14, 150);
             this.lblLinha.Name = "lblLinha";
-            this.lblLinha.Size = new System.Drawing.Size(533, 2);
+            this.lblLinha.Size = new System.Drawing.Size(400, 2);
             this.lblLinha.TabIndex = 50;
             // 
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.SystemColors.Window;
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnVoltar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVoltar.Image = global::ProjetoIntegradorReal.Properties.Resources.voltar;
+            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVoltar.ImageKey = "(nenhum/a)";
-            this.btnVoltar.Location = new System.Drawing.Point(27, 538);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVoltar.Location = new System.Drawing.Point(20, 437);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(148, 42);
+            this.btnVoltar.Size = new System.Drawing.Size(111, 34);
             this.btnVoltar.TabIndex = 52;
             this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
@@ -193,79 +186,73 @@
             // 
             this.btnCadastrar.BackColor = System.Drawing.SystemColors.Window;
             this.btnCadastrar.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
-            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCadastrar.Location = new System.Drawing.Point(376, 538);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCadastrar.Image = global::ProjetoIntegradorReal.Properties.Resources.salvar;
+            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrar.Location = new System.Drawing.Point(282, 437);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(148, 42);
+            this.btnCadastrar.Size = new System.Drawing.Size(111, 34);
             this.btnCadastrar.TabIndex = 51;
             this.btnCadastrar.Text = "Confirmar";
-            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtCPFDoador
             // 
             this.txtCPFDoador.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtCPFDoador.Location = new System.Drawing.Point(40, 466);
-            this.txtCPFDoador.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCPFDoador.Location = new System.Drawing.Point(30, 379);
             this.txtCPFDoador.Name = "txtCPFDoador";
-            this.txtCPFDoador.Size = new System.Drawing.Size(192, 32);
+            this.txtCPFDoador.Size = new System.Drawing.Size(145, 27);
             this.txtCPFDoador.TabIndex = 38;
             // 
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.SystemColors.Window;
             this.btnExcluir.Font = new System.Drawing.Font("Candara", 12F);
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExcluir.Image = global::ProjetoIntegradorReal.Properties.Resources.lixo;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.ImageKey = "(nenhum/a)";
-            this.btnExcluir.Location = new System.Drawing.Point(201, 538);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcluir.Location = new System.Drawing.Point(151, 437);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(148, 42);
+            this.btnExcluir.Size = new System.Drawing.Size(111, 34);
             this.btnExcluir.TabIndex = 53;
             this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnExcluir.UseVisualStyleBackColor = false;
             // 
             // txtSub1
             // 
             this.txtSub1.Enabled = false;
             this.txtSub1.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtSub1.Location = new System.Drawing.Point(19, 227);
-            this.txtSub1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSub1.Location = new System.Drawing.Point(14, 184);
             this.txtSub1.Name = "txtSub1";
-            this.txtSub1.Size = new System.Drawing.Size(173, 32);
+            this.txtSub1.Size = new System.Drawing.Size(131, 27);
             this.txtSub1.TabIndex = 54;
             // 
             // txtSub2
             // 
             this.txtSub2.Enabled = false;
             this.txtSub2.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtSub2.Location = new System.Drawing.Point(200, 227);
-            this.txtSub2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSub2.Location = new System.Drawing.Point(150, 184);
             this.txtSub2.Name = "txtSub2";
-            this.txtSub2.Size = new System.Drawing.Size(172, 32);
+            this.txtSub2.Size = new System.Drawing.Size(130, 27);
             this.txtSub2.TabIndex = 55;
             // 
             // txtSub3
             // 
             this.txtSub3.Enabled = false;
             this.txtSub3.Font = new System.Drawing.Font("Candara", 12F);
-            this.txtSub3.Location = new System.Drawing.Point(380, 227);
-            this.txtSub3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSub3.Location = new System.Drawing.Point(285, 184);
             this.txtSub3.Name = "txtSub3";
-            this.txtSub3.Size = new System.Drawing.Size(172, 32);
+            this.txtSub3.Size = new System.Drawing.Size(130, 27);
             this.txtSub3.TabIndex = 56;
             // 
             // StatusDoacao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 609);
+            this.BackgroundImage = global::ProjetoIntegradorReal.Properties.Resources.fundo2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(429, 496);
             this.Controls.Add(this.txtSub3);
             this.Controls.Add(this.txtSub2);
             this.Controls.Add(this.txtSub1);
@@ -282,7 +269,9 @@
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblRegistro);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "StatusDoacao";
             this.Text = "StatusDoacao";
             this.Load += new System.EventHandler(this.StatusDoacao_Load);

@@ -1369,5 +1369,19 @@ namespace ProjetoIntegradorReal
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Programa desenvolvido por: \n\n" +
+                            "Andre Viana \n" +
+                            "Theodoro Martins \n" +
+                            "Jessica Santos \n" +
+                            "Kaulyane Perreira\n\n" +
+                            "Versão 1.0 \n\n" +
+                            "Agradecimento especial ao programa Tranforme-se, \n" +
+                            "Senac e a todos os colaboradores e professores do projeto.",
+                            "Informação!", MessageBoxButtons.OK, MessageBoxIcon.Information
+                            );
+
+        }
     }
 }
