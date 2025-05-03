@@ -19,7 +19,8 @@ namespace ProjetoIntegradorReal
 
         MySqlConnection Conexao;
         //private string data_source = "datasource=localhost;username=root;password=;database=doacao";
-        private string data_source = "datasource=localhost;username=root;password=Martinsfreitas8;database=doacao";
+        private string data_source = "datasource=localhost;username=root;password=;database=doacao";
+        //private string data_source = "datasource=localhost;username=root;password=Martinsfreitas8;database=doacao";
 
 
         public MenuPrincipal()
@@ -1374,8 +1375,8 @@ namespace ProjetoIntegradorReal
             MessageBox.Show("Programa desenvolvido por: \n\n" +
                             "Andre Viana \n" +
                             "Theodoro Martins \n" +
-                            "Jessica Santos \n" +
-                            "Kaulyane Perreira\n\n" +
+                            "Jessica Batista \n" +
+                            "Kauany Santos \n\n" +
                             "Versão 1.0 \n\n" +
                             "Agradecimento especial ao programa Tranforme-se, \n" +
                             "Senac e a todos os colaboradores e professores do projeto.",
