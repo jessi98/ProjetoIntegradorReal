@@ -14,7 +14,8 @@ namespace ProjetoIntegradorReal
     public partial class CadastroDoacao: Form
     {
         MySqlConnection Conexao;
-        private string data_source = "datasource=localhost;username=root;password=;database=doacao";
+        //private string data_source = "datasource=localhost;username=root;password=;database=doacao";
+        private string data_source = "datasource=localhost;username=root;password=Martinsfreitas8;database=doacao";
 
         public CadastroDoacao()
         {
@@ -295,8 +296,8 @@ namespace ProjetoIntegradorReal
                                   "VALUES (@categoria, @subcategoria_1, @subcategoria_2, @descricao, @cpf_doador)";
 
                 cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxLivro1.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", cbxLivro2.Text);
                 cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
                 cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
 
@@ -315,8 +316,8 @@ namespace ProjetoIntegradorReal
                                   "VALUES (@categoria, @subcategoria_1, @subcategoria_2, @descricao, @cpf_doador)";
 
                 cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxBrinq1.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", cbxBrinq2.Text);
                 cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
                 cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
 
@@ -334,9 +335,9 @@ namespace ProjetoIntegradorReal
                                   "VALUES (@categoria, @subcategoria_1, @subcategoria_2, @subcategoria_3, @descricao, @cpf_doador)";
 
                 cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_3", cbxRoupa3.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxEletrodomestico.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", cbxEletrodomestico2.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_3", cbxEletrodomestico3.Text);
                 cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
                 cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
 
@@ -349,12 +350,12 @@ namespace ProjetoIntegradorReal
             else if (cmbProduto.Text == "Cesta Básica")
             {
                 cmd.Parameters.Clear();
-                cmd.CommandText = "INSERT INTO cadastro_doacao (categoria, subcategoria_1, descricao, doador2_cpf)" +
-                                  "VALUES (@categoria, @subcategoria_1, @descricao, @cpf_doador)";
+                cmd.CommandText = "INSERT INTO cadastro_doacao (categoria, subcategoria_1, subcategoria_2, descricao, doador2_cpf)" +
+                                  "VALUES (@categoria, @subcategoria_1, @subcategoria_2, @descricao, @cpf_doador)";
 
                 cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_1", cbxRoupa1.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_2", cbxRoupa2.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_1", cbxCestaBasica.Text);
+                cmd.Parameters.AddWithValue("@subcategoria_2", "INVALIDO");
                 cmd.Parameters.AddWithValue("@descricao", txtDescricaoProduto.Text);
                 cmd.Parameters.AddWithValue("@cpf_doador", Convert.ToInt64(txtCPF.Text));
 
