@@ -175,7 +175,9 @@
             this.txtInformacoes.Name = "txtInformacoes";
             this.txtInformacoes.Size = new System.Drawing.Size(412, 99);
             this.txtInformacoes.TabIndex = 56;
+            this.txtInformacoes.UseWaitCursor = true;
             this.txtInformacoes.Visible = false;
+            this.txtInformacoes.TextChanged += new System.EventHandler(this.txtInformacoes_TextChanged);
             // 
             // lblCesta
             // 
@@ -597,6 +599,7 @@
             this.Controls.Add(this.cmbProduto);
             this.Controls.Add(this.lblProduto);
             this.Controls.Add(this.btnConfirma);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

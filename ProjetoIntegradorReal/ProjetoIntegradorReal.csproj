@@ -116,6 +116,7 @@
     <Compile Include="CadastroPessoas.Designer.cs">
       <DependentUpon>CadastroPessoas.cs</DependentUpon>
     </Compile>
+    <Compile Include="EntarUsuario.cs" />
     <Compile Include="Entrar.cs">
       <SubType>Form</SubType>
     </Compile>

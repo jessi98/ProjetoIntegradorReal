@@ -353,5 +353,10 @@ namespace ProjetoIntegradorReal
         {
             this.Close();
         }
+
+        private void txtInformacoes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
