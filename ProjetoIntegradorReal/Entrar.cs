@@ -96,5 +96,10 @@ namespace ProjetoIntegradorReal
                 txtSenha.PasswordChar = '*';
             }
         }
+
+        private void Entrar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
