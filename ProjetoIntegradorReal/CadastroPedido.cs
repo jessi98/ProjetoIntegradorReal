@@ -14,9 +14,7 @@ namespace ProjetoIntegradorReal
     public partial class CadastroPedido: Form
     {
         MySqlConnection Conexao;
-        //private string data_source = "datasource=localhost;username=root;password=;database=doacao";
         private string data_source = "datasource=localhost;username=root;password=;database=doacao";
-        //private string data_source = "datasource=localhost;username=root;password=Martinsfreitas8;database=doacao";
 
         public CadastroPedido()
         {
@@ -337,7 +335,7 @@ namespace ProjetoIntegradorReal
 
                 cmd.Parameters.AddWithValue("@categoria", cmbProduto.Text);
                 cmd.Parameters.AddWithValue("@subcategoria_1", cbxCestaBasica.Text);
-                cmd.Parameters.AddWithValue("@subcategoria_2", "INVALIDO");
+                cmd.Parameters.AddWithValue("@subcategoria_2", "");
                 cmd.Parameters.AddWithValue("@descricao", txtInformacoes.Text);
                 cmd.Parameters.AddWithValue("@cpf_recebedor", Convert.ToInt64(txtCPF.Text));
 
@@ -352,6 +350,11 @@ namespace ProjetoIntegradorReal
         private void btnVoltar_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void CadastroPedido_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
