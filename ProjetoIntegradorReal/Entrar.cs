@@ -21,5 +21,10 @@ namespace ProjetoIntegradorReal
         {
             
         }
+
+        private void Entrar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

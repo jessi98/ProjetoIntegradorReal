@@ -15,7 +15,8 @@ namespace ProjetoIntegradorReal
     {
         MySqlConnection Conexao;
         //private string data_source = "datasource=localhost;username=root;password=;database=doacao";
-        private string data_source = "datasource=localhost;username=root;password=Martinsfreitas8;database=doacao";
+        private string data_source = "datasource=localhost;username=root;password=;database=doacao";
+        //private string data_source = "datasource=localhost;username=root;password=Martinsfreitas8;database=doacao";
 
         string tabela;
         int registro;
@@ -127,11 +128,6 @@ namespace ProjetoIntegradorReal
             }
         }
 
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void rdbAtivo_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -240,5 +236,15 @@ namespace ProjetoIntegradorReal
                                 MessageBoxIcon.Information);
             }
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnVoltar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
