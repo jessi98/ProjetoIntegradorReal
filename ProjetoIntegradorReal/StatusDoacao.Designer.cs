@@ -74,7 +74,7 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtDescricao.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricao.Location = new System.Drawing.Point(30, 247);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
@@ -121,19 +121,19 @@
             // txtRegistro
             // 
             this.txtRegistro.Enabled = false;
-            this.txtRegistro.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtRegistro.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRegistro.Location = new System.Drawing.Point(140, 33);
             this.txtRegistro.Name = "txtRegistro";
-            this.txtRegistro.Size = new System.Drawing.Size(145, 27);
+            this.txtRegistro.Size = new System.Drawing.Size(145, 26);
             this.txtRegistro.TabIndex = 37;
             // 
             // txtCPFRecebedor
             // 
-            this.txtCPFRecebedor.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtCPFRecebedor.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPFRecebedor.Location = new System.Drawing.Point(248, 379);
             this.txtCPFRecebedor.Name = "txtCPFRecebedor";
-            this.txtCPFRecebedor.Size = new System.Drawing.Size(145, 27);
-            this.txtCPFRecebedor.TabIndex = 39;
+            this.txtCPFRecebedor.Size = new System.Drawing.Size(145, 26);
+            this.txtCPFRecebedor.TabIndex = 1;
             // 
             // lblCPFDoador
             // 
@@ -174,7 +174,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(282, 437);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(111, 34);
-            this.btnCadastrar.TabIndex = 51;
+            this.btnCadastrar.TabIndex = 2;
             this.btnCadastrar.Text = "Confirmar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -182,11 +182,11 @@
             // 
             // txtCPFDoador
             // 
-            this.txtCPFDoador.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtCPFDoador.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPFDoador.Location = new System.Drawing.Point(30, 379);
             this.txtCPFDoador.Name = "txtCPFDoador";
-            this.txtCPFDoador.Size = new System.Drawing.Size(145, 27);
-            this.txtCPFDoador.TabIndex = 38;
+            this.txtCPFDoador.Size = new System.Drawing.Size(145, 26);
+            this.txtCPFDoador.TabIndex = 1;
             // 
             // txtSub1
             // 
@@ -224,7 +224,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(153, 437);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(111, 34);
-            this.btnExcluir.TabIndex = 57;
+            this.btnExcluir.TabIndex = 4;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -239,7 +239,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(25, 437);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(111, 34);
-            this.btnVoltar.TabIndex = 58;
+            this.btnVoltar.TabIndex = 3;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.UseVisualStyleBackColor = false;
@@ -268,10 +268,12 @@
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblRegistro);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StatusDoacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StatusDoacao";
             this.Load += new System.EventHandler(this.StatusDoacao_Load);
             this.grbStatus.ResumeLayout(false);

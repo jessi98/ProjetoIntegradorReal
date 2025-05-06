@@ -86,7 +86,7 @@
             this.cbxPedidoDoacao.Location = new System.Drawing.Point(776, 25);
             this.cbxPedidoDoacao.Name = "cbxPedidoDoacao";
             this.cbxPedidoDoacao.Size = new System.Drawing.Size(150, 27);
-            this.cbxPedidoDoacao.TabIndex = 5;
+            this.cbxPedidoDoacao.TabIndex = 59;
             this.cbxPedidoDoacao.SelectedIndexChanged += new System.EventHandler(this.cbxPedidoDoacao_SelectedIndexChanged);
             // 
             // cbxCategoria
@@ -104,7 +104,7 @@
             this.cbxCategoria.Location = new System.Drawing.Point(776, 58);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(150, 27);
-            this.cbxCategoria.TabIndex = 6;
+            this.cbxCategoria.TabIndex = 60;
             this.cbxCategoria.Visible = false;
             this.cbxCategoria.SelectedIndexChanged += new System.EventHandler(this.cbxCategoria_SelectedIndexChanged);
             // 
@@ -173,12 +173,12 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::ProjetoIntegradorReal.Properties.Resources.info;
+            this.button1.Image = global::ProjetoIntegradorReal.Properties.Resources.interrogatorio;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(949, 582);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 35);
-            this.button1.TabIndex = 22;
+            this.button1.Size = new System.Drawing.Size(74, 27);
+            this.button1.TabIndex = 5;
             this.button1.Text = "Sobre";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
@@ -250,7 +250,7 @@
             this.cbxCestaBasica.Location = new System.Drawing.Point(572, 126);
             this.cbxCestaBasica.Name = "cbxCestaBasica";
             this.cbxCestaBasica.Size = new System.Drawing.Size(150, 27);
-            this.cbxCestaBasica.TabIndex = 83;
+            this.cbxCestaBasica.TabIndex = 61;
             this.cbxCestaBasica.Visible = false;
             this.cbxCestaBasica.SelectedIndexChanged += new System.EventHandler(this.cbxCestaBasica_SelectedIndexChanged);
             // 
@@ -266,7 +266,7 @@
             this.cbxEletrodomestico3.Location = new System.Drawing.Point(884, 125);
             this.cbxEletrodomestico3.Name = "cbxEletrodomestico3";
             this.cbxEletrodomestico3.Size = new System.Drawing.Size(150, 27);
-            this.cbxEletrodomestico3.TabIndex = 82;
+            this.cbxEletrodomestico3.TabIndex = 5;
             this.cbxEletrodomestico3.Visible = false;
             this.cbxEletrodomestico3.SelectedIndexChanged += new System.EventHandler(this.cbxEletrodomestico3_SelectedIndexChanged);
             // 
@@ -283,7 +283,7 @@
             this.cbxEletrodomestico2.Location = new System.Drawing.Point(728, 125);
             this.cbxEletrodomestico2.Name = "cbxEletrodomestico2";
             this.cbxEletrodomestico2.Size = new System.Drawing.Size(150, 27);
-            this.cbxEletrodomestico2.TabIndex = 81;
+            this.cbxEletrodomestico2.TabIndex = 62;
             this.cbxEletrodomestico2.Visible = false;
             this.cbxEletrodomestico2.SelectedIndexChanged += new System.EventHandler(this.cbxEletrodomestico2_SelectedIndexChanged);
             // 
@@ -517,7 +517,7 @@
             this.cbxRoupa3.Location = new System.Drawing.Point(884, 126);
             this.cbxRoupa3.Name = "cbxRoupa3";
             this.cbxRoupa3.Size = new System.Drawing.Size(150, 27);
-            this.cbxRoupa3.TabIndex = 68;
+            this.cbxRoupa3.TabIndex = 63;
             this.cbxRoupa3.Visible = false;
             this.cbxRoupa3.SelectedIndexChanged += new System.EventHandler(this.cbxRoupa3_SelectedIndexChanged);
             // 
@@ -610,7 +610,7 @@
             this.btnCadastrarPessoa.Location = new System.Drawing.Point(12, 45);
             this.btnCadastrarPessoa.Name = "btnCadastrarPessoa";
             this.btnCadastrarPessoa.Size = new System.Drawing.Size(150, 60);
-            this.btnCadastrarPessoa.TabIndex = 12;
+            this.btnCadastrarPessoa.TabIndex = 1;
             this.btnCadastrarPessoa.Text = "Cadastrar\r\nPessoa";
             this.btnCadastrarPessoa.UseVisualStyleBackColor = false;
             this.btnCadastrarPessoa.Click += new System.EventHandler(this.btnCadastrarPessoa_Click);
@@ -627,8 +627,8 @@
             this.btnCadastroPedido.Location = new System.Drawing.Point(163, 45);
             this.btnCadastroPedido.Name = "btnCadastroPedido";
             this.btnCadastroPedido.Size = new System.Drawing.Size(150, 60);
-            this.btnCadastroPedido.TabIndex = 1;
-            this.btnCadastroPedido.Text = "Cadastro de\r\nPedido";
+            this.btnCadastroPedido.TabIndex = 2;
+            this.btnCadastroPedido.Text = "Cadastrar\r\nPedido";
             this.btnCadastroPedido.UseVisualStyleBackColor = false;
             this.btnCadastroPedido.Click += new System.EventHandler(this.btnCadastroPedido_Click);
             // 
@@ -645,8 +645,8 @@
             this.btnCadastroDoacao.Location = new System.Drawing.Point(314, 45);
             this.btnCadastroDoacao.Name = "btnCadastroDoacao";
             this.btnCadastroDoacao.Size = new System.Drawing.Size(150, 60);
-            this.btnCadastroDoacao.TabIndex = 0;
-            this.btnCadastroDoacao.Text = "Cadastor de\r\nDoação";
+            this.btnCadastroDoacao.TabIndex = 3;
+            this.btnCadastroDoacao.Text = "Cadastrar\r\nDoação";
             this.btnCadastroDoacao.UseVisualStyleBackColor = false;
             this.btnCadastroDoacao.Click += new System.EventHandler(this.btnCadastroDoacao_Click);
             // 
@@ -659,7 +659,7 @@
             this.button2.Location = new System.Drawing.Point(12, 126);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(81, 27);
-            this.button2.TabIndex = 88;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Atualizar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
@@ -709,12 +709,14 @@
             this.Controls.Add(this.cbxPedidoDoacao);
             this.Controls.Add(this.btnCadastroPedido);
             this.Controls.Add(this.btnCadastroDoacao);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

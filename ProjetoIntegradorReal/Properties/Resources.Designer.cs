@@ -153,6 +153,16 @@ namespace ProjetoIntegradorReal.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap interrogatorio {
+            get {
+                object obj = ResourceManager.GetObject("interrogatorio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lixo {
             get {
                 object obj = ResourceManager.GetObject("lixo", resourceCulture);

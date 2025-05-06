@@ -58,17 +58,17 @@
             this.btnPesquisar.Location = new System.Drawing.Point(26, 90);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(137, 33);
-            this.btnPesquisar.TabIndex = 0;
+            this.btnPesquisar.TabIndex = 2;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // txtBusca
             // 
-            this.txtBusca.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtBusca.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusca.Location = new System.Drawing.Point(26, 49);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(137, 27);
+            this.txtBusca.Size = new System.Drawing.Size(137, 26);
             this.txtBusca.TabIndex = 1;
             // 
             // lblBusca
@@ -85,31 +85,31 @@
             // txtNome
             // 
             this.txtNome.Enabled = false;
-            this.txtNome.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtNome.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(26, 206);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(265, 27);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.Size = new System.Drawing.Size(265, 26);
+            this.txtNome.TabIndex = 5;
             this.txtNome.Visible = false;
             // 
             // txtEndereco
             // 
             this.txtEndereco.Enabled = false;
-            this.txtEndereco.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtEndereco.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.Location = new System.Drawing.Point(26, 258);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(265, 27);
-            this.txtEndereco.TabIndex = 5;
+            this.txtEndereco.Size = new System.Drawing.Size(265, 26);
+            this.txtEndereco.TabIndex = 6;
             this.txtEndereco.Visible = false;
             // 
             // txtCPF
             // 
             this.txtCPF.Enabled = false;
-            this.txtCPF.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtCPF.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPF.Location = new System.Drawing.Point(181, 310);
             this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(110, 27);
-            this.txtCPF.TabIndex = 6;
+            this.txtCPF.Size = new System.Drawing.Size(110, 26);
+            this.txtCPF.TabIndex = 8;
             this.txtCPF.Visible = false;
             // 
             // lblNome
@@ -154,11 +154,11 @@
             // txtTelefone
             // 
             this.txtTelefone.Enabled = false;
-            this.txtTelefone.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtTelefone.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone.Location = new System.Drawing.Point(27, 310);
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(116, 27);
-            this.txtTelefone.TabIndex = 11;
+            this.txtTelefone.Size = new System.Drawing.Size(116, 26);
+            this.txtTelefone.TabIndex = 7;
             this.txtTelefone.Visible = false;
             // 
             // lblTefone
@@ -192,7 +192,7 @@
             this.rdbRecebedor.Location = new System.Drawing.Point(6, 52);
             this.rdbRecebedor.Name = "rdbRecebedor";
             this.rdbRecebedor.Size = new System.Drawing.Size(90, 23);
-            this.rdbRecebedor.TabIndex = 1;
+            this.rdbRecebedor.TabIndex = 4;
             this.rdbRecebedor.TabStop = true;
             this.rdbRecebedor.Text = "Receptor";
             this.rdbRecebedor.UseVisualStyleBackColor = true;
@@ -203,7 +203,7 @@
             this.rdbDoador.Location = new System.Drawing.Point(6, 15);
             this.rdbDoador.Name = "rdbDoador";
             this.rdbDoador.Size = new System.Drawing.Size(78, 23);
-            this.rdbDoador.TabIndex = 0;
+            this.rdbDoador.TabIndex = 3;
             this.rdbDoador.TabStop = true;
             this.rdbDoador.Text = "Doador";
             this.rdbDoador.UseVisualStyleBackColor = true;
@@ -236,7 +236,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(180, 363);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(111, 34);
-            this.btnCadastrar.TabIndex = 18;
+            this.btnCadastrar.TabIndex = 9;
             this.btnCadastrar.Text = "Confirmar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -251,7 +251,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(26, 363);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(111, 34);
-            this.btnVoltar.TabIndex = 22;
+            this.btnVoltar.TabIndex = 10;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.UseVisualStyleBackColor = false;
@@ -279,6 +279,7 @@
             this.Controls.Add(this.lblBusca);
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.btnPesquisar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

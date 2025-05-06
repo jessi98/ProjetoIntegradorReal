@@ -1412,5 +1412,10 @@ namespace ProjetoIntegradorReal
             Atualizar();
             lstBusca.Clear();
         }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

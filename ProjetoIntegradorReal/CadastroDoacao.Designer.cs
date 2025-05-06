@@ -68,12 +68,12 @@
             // txtDescricaoProduto
             // 
             this.txtDescricaoProduto.Enabled = false;
-            this.txtDescricaoProduto.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtDescricaoProduto.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricaoProduto.Location = new System.Drawing.Point(45, 207);
             this.txtDescricaoProduto.Multiline = true;
             this.txtDescricaoProduto.Name = "txtDescricaoProduto";
             this.txtDescricaoProduto.Size = new System.Drawing.Size(412, 99);
-            this.txtDescricaoProduto.TabIndex = 11;
+            this.txtDescricaoProduto.TabIndex = 3;
             this.txtDescricaoProduto.Visible = false;
             // 
             // lblDescricaoProduto
@@ -91,11 +91,11 @@
             // 
             // txtCPF
             // 
-            this.txtCPF.Font = new System.Drawing.Font("Candara", 12F);
+            this.txtCPF.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCPF.Location = new System.Drawing.Point(20, 56);
             this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(150, 27);
-            this.txtCPF.TabIndex = 42;
+            this.txtCPF.Size = new System.Drawing.Size(150, 26);
+            this.txtCPF.TabIndex = 1;
             // 
             // lblCPF
             // 
@@ -243,7 +243,7 @@
             this.btnConfirma.Location = new System.Drawing.Point(202, 33);
             this.btnConfirma.Name = "btnConfirma";
             this.btnConfirma.Size = new System.Drawing.Size(98, 50);
-            this.btnConfirma.TabIndex = 32;
+            this.btnConfirma.TabIndex = 2;
             this.btnConfirma.Text = "Confirma";
             this.btnConfirma.UseVisualStyleBackColor = false;
             this.btnConfirma.Click += new System.EventHandler(this.btnConfirma_Click);
@@ -267,7 +267,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(349, 337);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(108, 34);
-            this.btnCadastrar.TabIndex = 44;
+            this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -542,7 +542,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(46, 337);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(108, 34);
-            this.btnVoltar.TabIndex = 66;
+            this.btnVoltar.TabIndex = 5;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVoltar.UseVisualStyleBackColor = false;
@@ -598,6 +598,7 @@
             this.Controls.Add(this.btnConfirma);
             this.Controls.Add(this.lblDescricaoProduto);
             this.Controls.Add(this.txtDescricaoProduto);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
