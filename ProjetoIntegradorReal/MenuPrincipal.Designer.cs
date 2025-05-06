@@ -68,6 +68,7 @@
             this.btnCadastrarPessoa = new System.Windows.Forms.Button();
             this.btnCadastroPedido = new System.Windows.Forms.Button();
             this.btnCadastroDoacao = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -649,6 +650,21 @@
             this.btnCadastroDoacao.UseVisualStyleBackColor = false;
             this.btnCadastroDoacao.Click += new System.EventHandler(this.btnCadastroDoacao_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Window;
+            this.button2.Font = new System.Drawing.Font("Candara", 9.75F);
+            this.button2.Image = global::ProjetoIntegradorReal.Properties.Resources.atualizar__1_;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(12, 126);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(81, 27);
+            this.button2.TabIndex = 88;
+            this.button2.Text = "Atualizar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -656,6 +672,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = global::ProjetoIntegradorReal.Properties.Resources.fundo2;
             this.ClientSize = new System.Drawing.Size(1049, 621);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.lblCesta);
             this.Controls.Add(this.lblEletro3);
             this.Controls.Add(this.lblEletro2);
@@ -698,7 +715,6 @@
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
-            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -748,5 +764,6 @@
         private System.Windows.Forms.Label lblRoupa1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Status;
+        private System.Windows.Forms.Button button2;
     }
 }

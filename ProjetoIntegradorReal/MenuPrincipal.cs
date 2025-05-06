@@ -20,7 +20,6 @@ namespace ProjetoIntegradorReal
         MySqlConnection Conexao;
         private string data_source = "datasource=localhost;username=root;password=;database=doacao";
 
-
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -39,6 +38,8 @@ namespace ProjetoIntegradorReal
             lstBusca.Columns.Add("Subcategoria 3", 150, HorizontalAlignment.Left);
             lstBusca.Columns.Add("Descrição", 150, HorizontalAlignment.Left);
 
+            Atualizar();
+            
         }
         private void Carregar3Colunas()
         {
@@ -1161,6 +1162,7 @@ namespace ProjetoIntegradorReal
             {
                 Conexao.Close();
             }
+
         }
 
         private void AtualizarCesta()
@@ -1249,6 +1251,7 @@ namespace ProjetoIntegradorReal
             {
                 Conexao.Close();
             }
+
         }
 
         private void Status_Click(object sender, EventArgs e)
@@ -1276,77 +1279,98 @@ namespace ProjetoIntegradorReal
 
         }
 
+        public void Atualizar()
+        {
+            try
+            {
+                lstEspera.Clear();
+                #region
+                lstEspera.Scrollable = true;
+                lstEspera.View = View.Details;
+                lstEspera.LabelEdit = true;
+                lstEspera.AllowColumnReorder = true;
+                lstEspera.FullRowSelect = true;
+                lstEspera.GridLines = true;
+
+                //Posição dos Cabeçalhos a serem exibidos na tela
+                lstEspera.Columns.Add("ID", 10, HorizontalAlignment.Left);
+                lstEspera.Columns.Add("Doador", 75, HorizontalAlignment.Left);
+                lstEspera.Columns.Add("Telefone", 75, HorizontalAlignment.Left);
+                lstEspera.Columns.Add("Item", 100, HorizontalAlignment.Left);
+                lstEspera.Columns.Add("Recebedor", 75, HorizontalAlignment.Left);
+                lstEspera.Columns.Add("Telefone", 75, HorizontalAlignment.Left);
+                lstEspera.Columns.Add("Origem", 75, HorizontalAlignment.Left);
+
+                Conexao = new MySqlConnection(data_source);
+                Conexao.Open();
+                string sql = "SELECT dc.registro, d.nome, d.telefone, dc.categoria, r.nome, r.telefone, 'Pedido' AS origem" +
+                                " FROM cadastro_pedido dc" +
+                                " JOIN pessoa_doador d ON dc.doador_cpf = d.cpf_doador" +
+                                " JOIN pessoa_recebedor r ON dc.recebedor_cpf = r.cpf_recebedor" +
+                                " WHERE status = 1";
+                MySqlCommand cmd = new MySqlCommand(sql, Conexao);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var item = new ListViewItem(reader.GetInt32(0).ToString());
+                    item.SubItems.Add(reader.GetString(1));
+                    item.SubItems.Add(reader.GetString(2));
+                    item.SubItems.Add(reader.GetString(3));
+                    item.SubItems.Add(reader.GetString(4));
+                    item.SubItems.Add(reader.GetString(5));
+                    item.SubItems.Add(reader.GetString(6));
+                    lstEspera.Items.Add(item);
+                }
+                lstEspera.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+
+                reader.Close();
+
+                string sql2 = "SELECT dc.registro, d.nome, d.telefone, dc.categoria, r.nome, r.telefone, 'Doação' AS origem" +
+                                " FROM cadastro_doacao dc" +
+                                " JOIN pessoa_doador d ON dc.doador2_cpf = d.cpf_doador" +
+                                " JOIN pessoa_recebedor r ON dc.recebedor_cpf = r.cpf_recebedor" +
+                                " WHERE status = 1";
+                MySqlCommand cmd2 = new MySqlCommand(sql2, Conexao);
+
+                MySqlDataReader reader2 = cmd2.ExecuteReader();
+
+                while (reader2.Read())
+                {
+                    var item2 = new ListViewItem(reader2.GetInt32(0).ToString());
+                    item2.SubItems.Add(reader2.GetString(1));
+                    item2.SubItems.Add(reader2.GetString(2));
+                    item2.SubItems.Add(reader2.GetString(3));
+                    item2.SubItems.Add(reader2.GetString(4));
+                    item2.SubItems.Add(reader2.GetString(5));
+                    item2.SubItems.Add(reader2.GetString(6));
+                    lstEspera.Items.Add(item2);
+                }
+                lstEspera.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                #endregion
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            } finally
+            {
+                Conexao.Close();
+            }
+           
+
+        }
+
         private void lstEspera_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
-        private void MenuPrincipal_Load(object sender, EventArgs e)
-        {
-            lstEspera.Scrollable = true;
-            lstEspera.View = View.Details;
-            lstEspera.LabelEdit = true;
-            lstEspera.AllowColumnReorder = true;
-            lstEspera.FullRowSelect = true;
-            lstEspera.GridLines = true;
+        //public void MenuPrincipal_Load(object sender, EventArgs e)
+        //{
 
-            //Posição dos Cabeçalhos a serem exibidos na tela
-            lstEspera.Columns.Add("ID", 10, HorizontalAlignment.Left);
-            lstEspera.Columns.Add("Doador", 75, HorizontalAlignment.Left);
-            lstEspera.Columns.Add("Telefone", 75, HorizontalAlignment.Left);
-            lstEspera.Columns.Add("Item", 100, HorizontalAlignment.Left);
-            lstEspera.Columns.Add("Recebedor", 75, HorizontalAlignment.Left);
-            lstEspera.Columns.Add("Telefone", 75, HorizontalAlignment.Left);
-            lstEspera.Columns.Add("Origem", 75, HorizontalAlignment.Left);
 
-            Conexao = new MySqlConnection(data_source);
-            Conexao.Open();
-            string sql =    "SELECT dc.registro, d.nome, d.telefone, dc.categoria, r.nome, r.telefone, 'Pedido' AS origem" +
-                            " FROM cadastro_pedido dc" +
-                            " JOIN pessoa_doador d ON dc.doador_cpf = d.cpf_doador" +
-                            " JOIN pessoa_recebedor r ON dc.recebedor_cpf = r.cpf_recebedor" +
-                            " WHERE status = 1";
-            MySqlCommand cmd = new MySqlCommand(sql, Conexao);
+        //}
 
-            var reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-                var item = new ListViewItem(reader.GetInt32(0).ToString());
-                item.SubItems.Add(reader.GetString(1));
-                item.SubItems.Add(reader.GetString(2));
-                item.SubItems.Add(reader.GetString(3));
-                item.SubItems.Add(reader.GetString(4));
-                item.SubItems.Add(reader.GetString(5));
-                item.SubItems.Add(reader.GetString(6));
-                lstEspera.Items.Add(item);
-            }
-            lstEspera.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-
-            reader.Close();
-
-            string sql2 =   "SELECT dc.registro, d.nome, d.telefone, dc.categoria, r.nome, r.telefone, 'Doação' AS origem" +
-                            " FROM cadastro_doacao dc" +
-                            " JOIN pessoa_doador d ON dc.doador2_cpf = d.cpf_doador" +
-                            " JOIN pessoa_recebedor r ON dc.recebedor_cpf = r.cpf_recebedor" +
-                            " WHERE status = 1";
-            MySqlCommand cmd2 = new MySqlCommand(sql2, Conexao);
-
-            var reader2 = cmd2.ExecuteReader();
-
-            while (reader2.Read())
-            {
-                var item2 = new ListViewItem(reader2.GetInt32(0).ToString());
-                item2.SubItems.Add(reader2.GetString(1));
-                item2.SubItems.Add(reader2.GetString(2));
-                item2.SubItems.Add(reader2.GetString(3));
-                item2.SubItems.Add(reader2.GetString(4));
-                item2.SubItems.Add(reader2.GetString(5));
-                item2.SubItems.Add(reader2.GetString(6));
-                lstEspera.Items.Add(item2);
-            }
-            lstEspera.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-        }
         int id;
         string table;
 
@@ -1381,6 +1405,12 @@ namespace ProjetoIntegradorReal
                             "Informação!", MessageBoxButtons.OK, MessageBoxIcon.Information
                             );
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Atualizar();
+            lstBusca.Clear();
         }
     }
 }
