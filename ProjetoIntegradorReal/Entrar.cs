@@ -44,12 +44,8 @@ namespace ProjetoIntegradorReal
             {
                 if ((user.Nome == txtNome.Text) && (user.Senha == txtSenha.Text))
                 {
-                    MessageBox.Show(
-                        "Usuario Autenticado com Sucesso!",
-                        "Sucesso!", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
-                        );
-
+                    txtNome.Clear();
+                    txtSenha.Clear();
                     MenuPrincipal form = new MenuPrincipal();
                     form.ShowDialog();
 

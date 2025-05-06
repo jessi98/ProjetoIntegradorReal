@@ -173,6 +173,12 @@ namespace ProjetoIntegradorReal
 
         private void btnConfirma_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrEmpty(txtCPF.Text))
+            {
+                MessageBox.Show(" Campo vazio \n Informe o CPF", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 Conexao = new MySqlConnection(data_source);

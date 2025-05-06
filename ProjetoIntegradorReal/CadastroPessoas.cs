@@ -164,6 +164,28 @@ namespace ProjetoIntegradorReal
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtCPF.Text))
+            {
+                MessageBox.Show(" Campos vazios \n Verifique os campos", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(txtEndereco.Text))
+            {
+                MessageBox.Show(" Campos vazios \n Verifique os campos", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(txtNome.Text))
+            {
+                MessageBox.Show(" Campos vazios \n Verifique os campos", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(txtTelefone.Text))
+            {
+                MessageBox.Show(" Campos vazios \n Verifique os campos", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             try
             {
                 Conexao = new MySqlConnection(data_source);
