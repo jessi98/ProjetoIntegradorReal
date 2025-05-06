@@ -1397,8 +1397,8 @@ namespace ProjetoIntegradorReal
             MessageBox.Show("Programa desenvolvido por: \n\n" +
                             "Andre Viana \n" +
                             "Jessica Batista \n" +
-                            "Kauany Santos \n\n" +
-                            "Theodoro Martins \n" +
+                            "Kauany Santos \n" +
+                            "Theodoro Martins \n\n" +
                             "Versão 1.0 \n\n" +
                             "Agradecimento especial ao programa Tranforme-se, \n" +
                             "Senac e a todos os colaboradores e professores do projeto.",

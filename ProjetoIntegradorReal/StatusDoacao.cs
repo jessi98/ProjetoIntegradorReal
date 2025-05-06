@@ -272,6 +272,7 @@ namespace ProjetoIntegradorReal
                     MessageBox.Show("Contato excluido com sucesso");
 
                 }
+                    this.Close();
 
             }
         }
