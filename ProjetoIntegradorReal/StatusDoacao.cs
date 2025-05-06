@@ -14,9 +14,7 @@ namespace ProjetoIntegradorReal
     public partial class StatusDoacao : Form
     {
         MySqlConnection Conexao;
-        //private string data_source = "datasource=localhost;username=root;password=;database=doacao";
         private string data_source = "datasource=localhost;username=root;password=;database=doacao";
-        //private string data_source = "datasource=localhost;username=root;password=Martinsfreitas8;database=doacao";
 
         string tabela;
         int registro;
@@ -25,6 +23,7 @@ namespace ProjetoIntegradorReal
         public StatusDoacao()
         {
             InitializeComponent();
+            //Atualizar();
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
@@ -235,16 +234,53 @@ namespace ProjetoIntegradorReal
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
             }
+
+            this.Close();
+            
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            DialogResult conf = MessageBox.Show("Deseja excluir o contato?", "EXCLUIR!", MessageBoxButtons.YesNo);
 
+            if (conf == DialogResult.Yes)
+            {
+                if (tabela == "cadastro_pedido")
+                {
+                    Conexao = new MySqlConnection(data_source);
+                    Conexao.Open();
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.Connection = Conexao;
+
+                    cmd.CommandText = "DELETE FROM cadastro_pedido WHERE registro = @registro";
+                    cmd.Parameters.AddWithValue("@registro", registro);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Contato excluido com sucesso");
+                }
+                else if (tabela == "cadastro_doacao")
+                {
+                    Conexao = new MySqlConnection(data_source);
+                    Conexao.Open();
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.Connection = Conexao;
+
+                    cmd.CommandText = "DELETE FROM cadastro_doacao WHERE registro = @registro";
+                    cmd.Parameters.AddWithValue("@registro", registro);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Contato excluido com sucesso");
+
+                }
+
+            }
         }
         private void btnVoltar_Click_1(object sender, EventArgs e)
         {
             this.Close();
+
         }
+
 
     }
 }
