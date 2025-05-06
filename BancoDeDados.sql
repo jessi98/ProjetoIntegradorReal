@@ -67,4 +67,4 @@ CREATE TABLE cadastro_doacao(
     status TINYINT NOT NULL
 );
 
-SELECT * FROM cadastro_doacao;
+SELECT subcategoria_1, subcategoria_2, subcategoria_3, descricao FROM cadastro_doacao WHERE status = 0;

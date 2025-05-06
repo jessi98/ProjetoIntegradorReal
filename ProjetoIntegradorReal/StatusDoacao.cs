@@ -140,13 +140,54 @@ namespace ProjetoIntegradorReal
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = Conexao;
 
+            string sql3 = "SELECT id_doador FROM pessoa_doador WHERE cpf_doador = @cpf";
+            MySqlCommand comando = new MySqlCommand(sql3, Conexao);
+            comando.Parameters.AddWithValue("@cpf", Convert.ToInt64(txtCPFDoador.Text));
+            Object cpf = comando.ExecuteScalar();
+
+            while (cpf == null)
+            {
+                DialogResult result = MessageBox.Show(" CPF do doador não encontrado! \n Deseja fazer o cadastro?", "Não encontrado", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+
+                if (result == DialogResult.Yes)
+                {
+                    CadastroPessoas form = new CadastroPessoas();
+                    form.ShowDialog();
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            string sql4 = "SELECT id_recebedor FROM pessoa_recebedor WHERE cpf_recebedor = @cpf";
+            MySqlCommand comando2 = new MySqlCommand(sql4, Conexao);
+            comando2.Parameters.AddWithValue("@cpf", Convert.ToInt64(txtCPFRecebedor.Text));
+            Object cpf2 = comando2.ExecuteScalar();
+
+            while (cpf2 == null)
+            {
+                DialogResult result = MessageBox.Show(" CPF do receptor não encontrado! \n Deseja fazer o cadastro?", "Não encontrado", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+
+                if (result == DialogResult.Yes)
+                {
+                    CadastroPessoas form = new CadastroPessoas();
+                    form.ShowDialog();
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+
             if (tabela == "cadastro_pedido")
             {
 
-                cmd.Parameters.Clear(); 
+                cmd.Parameters.Clear();
                 cmd.CommandText =
                     "UPDATE cadastro_pedido " +
-                    "SET registro = @registro, subcategoria_1 = @subcategoria_1, subcategoria_2 = @subcategoria2, subcategoria_3 = @subcategoria3 " + 
+                    "SET registro = @registro, subcategoria_1 = @subcategoria_1, subcategoria_2 = @subcategoria2, subcategoria_3 = @subcategoria3 " +
                     ", descricao = @descricao, doador_cpf = @doadorcpf, recebedor_cpf = @recebedorcpf, status = @status" +
                     " WHERE registro = @id";
                 cmd.Parameters.AddWithValue("@registro", Convert.ToInt32(txtRegistro.Text));
@@ -154,31 +195,9 @@ namespace ProjetoIntegradorReal
                 cmd.Parameters.AddWithValue("@subcategoria2", txtSub2.Text);
                 cmd.Parameters.AddWithValue("@subcategoria3", txtSub3.Text);
                 cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
-                if (string.IsNullOrEmpty(txtCPFDoador.Text))
-                {
-                    cmd.Parameters.AddWithValue("doadorcpf", null);
-                }
-                else
-                    cmd.Parameters.AddWithValue("@doadorcpf", Convert.ToInt64(txtCPFDoador.Text));
-
+                cmd.Parameters.AddWithValue("@doadorcpf", Convert.ToInt64(txtCPFDoador.Text));
                 cmd.Parameters.AddWithValue("@recebedorcpf", Convert.ToInt64(txtCPFRecebedor.Text));
-                if (rdbAtivo.Checked == true)
-                {
-                    atv = 0;
-                    cmd.Parameters.AddWithValue("@status", atv);
-                }
-                else if (rdbAguardando.Checked == true)
-                {
-                    atv = 1;
-                    cmd.Parameters.AddWithValue("@status", atv);
-                }
-
-                if (string.IsNullOrEmpty(txtCPFDoador.Text) || string.IsNullOrEmpty(txtCPFRecebedor.Text))
-                    atv = 0;
-                else
-                    atv = 1;
-
-
+                cmd.Parameters.AddWithValue("@status", atv);
                 cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtRegistro.Text));
 
                 cmd.ExecuteNonQuery();
@@ -202,31 +221,8 @@ namespace ProjetoIntegradorReal
                 cmd.Parameters.AddWithValue("@subcategoria3", txtSub3.Text);
                 cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
                 cmd.Parameters.AddWithValue("@doadorcpf", Convert.ToInt64(txtCPFDoador.Text));
-                if(string.IsNullOrEmpty(txtCPFRecebedor.Text))
-                {
-                    cmd.Parameters.AddWithValue("recebedorcpf", null);
-                }
-                else
                 cmd.Parameters.AddWithValue("@recebedorcpf", Convert.ToInt64(txtCPFRecebedor.Text));
-
-                if (rdbAtivo.Checked == true)
-                {
-                    atv = 0;
-                    cmd.Parameters.AddWithValue("@status", atv);
-                }
-                else if (rdbAguardando.Checked == true)
-                {
-                    atv = 1;
-                    cmd.Parameters.AddWithValue("@status", atv);
-                }
-
-                if (string.IsNullOrEmpty(txtCPFDoador.Text) || string.IsNullOrEmpty(txtCPFRecebedor.Text))
-                    atv = 0;
-                else 
-                    atv = 1;
-                    
-
-
+                cmd.Parameters.AddWithValue("@status", atv);
                 cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtRegistro.Text));
 
                 cmd.ExecuteNonQuery();
@@ -236,7 +232,7 @@ namespace ProjetoIntegradorReal
             }
 
             this.Close();
-            
+
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -272,7 +268,7 @@ namespace ProjetoIntegradorReal
                     MessageBox.Show("Contato excluido com sucesso");
 
                 }
-                    this.Close();
+                this.Close();
 
             }
         }
