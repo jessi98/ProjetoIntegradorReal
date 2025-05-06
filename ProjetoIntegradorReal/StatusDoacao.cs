@@ -140,95 +140,186 @@ namespace ProjetoIntegradorReal
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = Conexao;
 
-            string sql3 = "SELECT id_doador FROM pessoa_doador WHERE cpf_doador = @cpf";
-            MySqlCommand comando = new MySqlCommand(sql3, Conexao);
-            comando.Parameters.AddWithValue("@cpf", Convert.ToInt64(txtCPFDoador.Text));
-            Object cpf = comando.ExecuteScalar();
-
-            while (cpf == null)
+            if (rdbAguardando.Checked == true)
             {
-                DialogResult result = MessageBox.Show(" CPF do doador não encontrado! \n Deseja fazer o cadastro?", "Não encontrado", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-
-                if (result == DialogResult.Yes)
+                if (tabela == "cadastro_pedido")
                 {
-                    CadastroPessoas form = new CadastroPessoas();
-                    form.ShowDialog();
+                    if (string.IsNullOrEmpty(txtCPFDoador.Text))
+                    {
+                        MessageBox.Show("Verifique os CPFs");
+                        return;
+                    }
                 }
-                else
+                else if (tabela == "cadastro_doacao")
                 {
-                    return;
+                    if (string.IsNullOrEmpty(txtCPFRecebedor.Text))
+                    {
+                        MessageBox.Show("Verifique os CPFs");
+                        return;
+                    }
                 }
             }
 
-            string sql4 = "SELECT id_recebedor FROM pessoa_recebedor WHERE cpf_recebedor = @cpf";
-            MySqlCommand comando2 = new MySqlCommand(sql4, Conexao);
-            comando2.Parameters.AddWithValue("@cpf", Convert.ToInt64(txtCPFRecebedor.Text));
-            Object cpf2 = comando2.ExecuteScalar();
-
-            while (cpf2 == null)
+            if (rdbAtivo.Checked == true)
             {
-                DialogResult result = MessageBox.Show(" CPF do receptor não encontrado! \n Deseja fazer o cadastro?", "Não encontrado", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-
-                if (result == DialogResult.Yes)
+                if (txtCPFDoador.Text != "")
                 {
-                    CadastroPessoas form = new CadastroPessoas();
-                    form.ShowDialog();
+                    if(txtCPFRecebedor.Text != "")
+                    {
+                        MessageBox.Show("Verifique o status ou os campos de CPF");
+                        return;
+                    }
                 }
-                else
-                {
-                    return;
-                }
-
             }
 
-            if (tabela == "cadastro_pedido")
+            if (rdbAguardando.Checked == true)
             {
+                string sql3 = "SELECT id_doador FROM pessoa_doador WHERE cpf_doador = @cpf";
+                MySqlCommand comando = new MySqlCommand(sql3, Conexao);
+                comando.Parameters.AddWithValue("@cpf", Convert.ToInt64(txtCPFDoador.Text));
+                Object cpf = comando.ExecuteScalar();
 
-                cmd.Parameters.Clear();
-                cmd.CommandText =
-                    "UPDATE cadastro_pedido " +
-                    "SET registro = @registro, subcategoria_1 = @subcategoria_1, subcategoria_2 = @subcategoria2, subcategoria_3 = @subcategoria3 " +
-                    ", descricao = @descricao, doador_cpf = @doadorcpf, recebedor_cpf = @recebedorcpf, status = @status" +
-                    " WHERE registro = @id";
-                cmd.Parameters.AddWithValue("@registro", Convert.ToInt32(txtRegistro.Text));
-                cmd.Parameters.AddWithValue("@subcategoria_1", txtSub1.Text);
-                cmd.Parameters.AddWithValue("@subcategoria2", txtSub2.Text);
-                cmd.Parameters.AddWithValue("@subcategoria3", txtSub3.Text);
-                cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
-                cmd.Parameters.AddWithValue("@doadorcpf", Convert.ToInt64(txtCPFDoador.Text));
-                cmd.Parameters.AddWithValue("@recebedorcpf", Convert.ToInt64(txtCPFRecebedor.Text));
-                cmd.Parameters.AddWithValue("@status", atv);
-                cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtRegistro.Text));
+                while (cpf == null)
+                {
+                    DialogResult result = MessageBox.Show(" CPF do doador não encontrado! \n Deseja fazer o cadastro?", "Não encontrado", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                    if (result == DialogResult.Yes)
+                    {
+                        CadastroPessoas form = new CadastroPessoas();
+                        form.ShowDialog();
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+
+                string sql4 = "SELECT id_recebedor FROM pessoa_recebedor WHERE cpf_recebedor = @cpf";
+                MySqlCommand comando2 = new MySqlCommand(sql4, Conexao);
+                comando2.Parameters.AddWithValue("@cpf", Convert.ToInt64(txtCPFRecebedor.Text));
+                Object cpf2 = comando2.ExecuteScalar();
+
+                while (cpf2 == null)
+                {
+                    DialogResult result = MessageBox.Show(" CPF do receptor não encontrado! \n Deseja fazer o cadastro?", "Não encontrado", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        CadastroPessoas form = new CadastroPessoas();
+                        form.ShowDialog();
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+                }
             }
 
-            else if (tabela == "cadastro_doacao")
+            if (rdbAguardando.Checked == true)
             {
+                if (tabela == "cadastro_pedido")
+                {
 
-                cmd.Parameters.Clear();
-                cmd.CommandText =
-                    "UPDATE cadastro_doacao " +
-                    "SET registro = @registro, subcategoria_1 = @subcategoria_1, subcategoria_2 = @subcategoria2, subcategoria_3 = @subcategoria3 " +
-                    ", descricao = @descricao, doador2_cpf = @doadorcpf, recebedor_cpf = @recebedorcpf, status = @status" +
-                    " WHERE registro = @id";
-                cmd.Parameters.AddWithValue("@registro", Convert.ToInt32(txtRegistro.Text));
-                cmd.Parameters.AddWithValue("@subcategoria_1", txtSub1.Text);
-                cmd.Parameters.AddWithValue("@subcategoria2", txtSub2.Text);
-                cmd.Parameters.AddWithValue("@subcategoria3", txtSub3.Text);
-                cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
-                cmd.Parameters.AddWithValue("@doadorcpf", Convert.ToInt64(txtCPFDoador.Text));
-                cmd.Parameters.AddWithValue("@recebedorcpf", Convert.ToInt64(txtCPFRecebedor.Text));
-                cmd.Parameters.AddWithValue("@status", atv);
-                cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtRegistro.Text));
+                    cmd.Parameters.Clear();
+                    cmd.CommandText =
+                        "UPDATE cadastro_pedido " +
+                        "SET registro = @registro, subcategoria_1 = @subcategoria_1, subcategoria_2 = @subcategoria2, subcategoria_3 = @subcategoria3 " +
+                        ", descricao = @descricao, doador_cpf = @doadorcpf, recebedor_cpf = @recebedorcpf, status = @status" +
+                        " WHERE registro = @id";
+                    cmd.Parameters.AddWithValue("@registro", Convert.ToInt32(txtRegistro.Text));
+                    cmd.Parameters.AddWithValue("@subcategoria_1", txtSub1.Text);
+                    cmd.Parameters.AddWithValue("@subcategoria2", txtSub2.Text);
+                    cmd.Parameters.AddWithValue("@subcategoria3", txtSub3.Text);
+                    cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
+                    cmd.Parameters.AddWithValue("@doadorcpf", Convert.ToInt64(txtCPFDoador.Text));
+                    cmd.Parameters.AddWithValue("@recebedorcpf", Convert.ToInt64(txtCPFRecebedor.Text));
+                    cmd.Parameters.AddWithValue("@status", 1);
+                    cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtRegistro.Text));
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
+
+                else if (tabela == "cadastro_doacao")
+                {
+
+                    cmd.Parameters.Clear();
+                    cmd.CommandText =
+                        "UPDATE cadastro_doacao " +
+                        "SET registro = @registro, subcategoria_1 = @subcategoria_1, subcategoria_2 = @subcategoria2, subcategoria_3 = @subcategoria3 " +
+                        ", descricao = @descricao, doador2_cpf = @doadorcpf, recebedor_cpf = @recebedorcpf, status = @status" +
+                        " WHERE registro = @id";
+                    cmd.Parameters.AddWithValue("@registro", Convert.ToInt32(txtRegistro.Text));
+                    cmd.Parameters.AddWithValue("@subcategoria_1", txtSub1.Text);
+                    cmd.Parameters.AddWithValue("@subcategoria2", txtSub2.Text);
+                    cmd.Parameters.AddWithValue("@subcategoria3", txtSub3.Text);
+                    cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
+                    cmd.Parameters.AddWithValue("@doadorcpf", Convert.ToInt64(txtCPFDoador.Text));
+                    cmd.Parameters.AddWithValue("@recebedorcpf", Convert.ToInt64(txtCPFRecebedor.Text));
+                    cmd.Parameters.AddWithValue("@status", 1);
+                    cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtRegistro.Text));
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
+            }
+
+            if (rdbAtivo.Checked == true)
+            {
+                if (tabela == "cadastro_pedido")
+                {
+
+                    cmd.Parameters.Clear();
+                    cmd.CommandText =
+                        "UPDATE cadastro_pedido " +
+                        "SET registro = @registro, subcategoria_1 = @subcategoria_1, subcategoria_2 = @subcategoria2, subcategoria_3 = @subcategoria3 " +
+                        ", descricao = @descricao, recebedor_cpf = @recebedorcpf, status = @status, doador_cpf = @doadorcpf" +
+                        " WHERE registro = @id";
+                    cmd.Parameters.AddWithValue("@registro", Convert.ToInt32(txtRegistro.Text));
+                    cmd.Parameters.AddWithValue("@subcategoria_1", txtSub1.Text);
+                    cmd.Parameters.AddWithValue("@subcategoria2", txtSub2.Text);
+                    cmd.Parameters.AddWithValue("@subcategoria3", txtSub3.Text);
+                    cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
+                    cmd.Parameters.AddWithValue("@recebedorcpf", Convert.ToInt64(txtCPFRecebedor.Text));
+                    cmd.Parameters.AddWithValue("@doadorcpf", 0);
+                    cmd.Parameters.AddWithValue("@status", 0);
+                    cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtRegistro.Text));
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
+
+                else if (tabela == "cadastro_doacao")
+                {
+
+                    cmd.Parameters.Clear();
+                    cmd.CommandText =
+                        "UPDATE cadastro_doacao " +
+                        "SET registro = @registro, subcategoria_1 = @subcategoria_1, subcategoria_2 = @subcategoria2, subcategoria_3 = @subcategoria3 " +
+                        ", descricao = @descricao, doador2_cpf = @doadorcpf, status = @status, recebedor_cpf = @recebedorcpf" +
+                        " WHERE registro = @id";
+                    cmd.Parameters.AddWithValue("@registro", Convert.ToInt32(txtRegistro.Text));
+                    cmd.Parameters.AddWithValue("@subcategoria_1", txtSub1.Text);
+                    cmd.Parameters.AddWithValue("@subcategoria2", txtSub2.Text);
+                    cmd.Parameters.AddWithValue("@subcategoria3", txtSub3.Text);
+                    cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
+                    cmd.Parameters.AddWithValue("@doadorcpf", Convert.ToInt64(txtCPFDoador.Text));
+                    cmd.Parameters.AddWithValue("@recebedorcpf", 0);
+                    cmd.Parameters.AddWithValue("@status", 0);
+                    cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtRegistro.Text));
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
             }
 
             this.Close();
