@@ -191,10 +191,10 @@
             this.rdbRecebedor.AutoSize = true;
             this.rdbRecebedor.Location = new System.Drawing.Point(6, 52);
             this.rdbRecebedor.Name = "rdbRecebedor";
-            this.rdbRecebedor.Size = new System.Drawing.Size(90, 23);
+            this.rdbRecebedor.Size = new System.Drawing.Size(101, 23);
             this.rdbRecebedor.TabIndex = 4;
             this.rdbRecebedor.TabStop = true;
-            this.rdbRecebedor.Text = "Receptor";
+            this.rdbRecebedor.Text = "Recebedor";
             this.rdbRecebedor.UseVisualStyleBackColor = true;
             // 
             // rdbDoador
