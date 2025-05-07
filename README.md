@@ -1,6 +1,5 @@
-# 📦 Projeto Integrador Real — ReDoa
-
-<img src="https://github.com/andresilvaviana/ProjetoIntegradorReal/blob/master/imagens/LogoCompleto.png? raw=true" alt="ReDoa" width="300"/>
+## Projeto Integrador Real — ReDoa
+<img src="https://github.com/andresilvaviana/ProjetoIntegradorReal/blob/master/imagens/Captura%20de%20tela%202025-05-07%20201144.png? raw=true" alt="ReDoa" width="300"/>
 
 ## 📌 Sobre o Projeto
 
