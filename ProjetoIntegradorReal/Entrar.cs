@@ -60,6 +60,7 @@ namespace ProjetoIntegradorReal
 
             txtNome.Clear();
             txtSenha.Clear();
+            txtNome.Focus();
             return;
         }
 
