@@ -1411,6 +1411,8 @@ namespace ProjetoIntegradorReal
         {
             Atualizar();
             lstBusca.Clear();
+            cbxCategoria.SelectedIndex = -1;
+            EsconderTudo();
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
