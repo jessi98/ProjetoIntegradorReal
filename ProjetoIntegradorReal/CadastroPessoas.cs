@@ -39,7 +39,7 @@ namespace ProjetoIntegradorReal
 
             if (String.IsNullOrEmpty(txtBusca.Text))
             {
-                MessageBox.Show("Escreva um CPF!");
+                MessageBox.Show("Informe um CPF!","Campo CPF!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -54,7 +54,7 @@ namespace ProjetoIntegradorReal
 
                 if (cpf == null)
                 {
-                    DialogResult result = MessageBox.Show("CPF não encontrado, deseja adicionar uma pessoa?", "ERRO", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    DialogResult result = MessageBox.Show(" Pessoa não encontrada! \n Deseja fazer o cadastro?", "Pessoa não encontrada!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
                         MostrarTudo();
@@ -93,7 +93,7 @@ namespace ProjetoIntegradorReal
 
                 if (cpf == null)
                 {
-                    DialogResult result = MessageBox.Show("CPF não encontrado, deseja adicionar uma pessoa?", "ERRO", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    DialogResult result = MessageBox.Show(" Pessoa não encontrada! \n Deseja fazer o cadastro ? ", "Pessoa não encontrada!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
                         MostrarTudo();
@@ -123,7 +123,7 @@ namespace ProjetoIntegradorReal
 
             else
             {
-                MessageBox.Show("Selecione um tipo de cadastro");
+                MessageBox.Show("Selecione o tipo de cadastro!", "Verifique!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -288,7 +288,7 @@ namespace ProjetoIntegradorReal
 
                 else
                 {
-                    MessageBox.Show("Selecione um tipo ao cadastro");
+                    MessageBox.Show("Selecione um tipo ao cadastro", "Campo Cadastro!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (MySqlException ex)

@@ -186,7 +186,7 @@ namespace ProjetoIntegradorReal
 
                 if (cpf == null)
                 {
-                    DialogResult result = MessageBox.Show(" Pessoa não encontrada! \n Deseja fazer o cadastro?", "Não encontrado", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    DialogResult result = MessageBox.Show(" Pessoa não encontrada! \n Deseja fazer o cadastro?", "Pessoa não encontrada!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (result == DialogResult.Yes)
                     {

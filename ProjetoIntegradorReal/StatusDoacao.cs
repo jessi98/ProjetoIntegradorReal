@@ -146,7 +146,8 @@ namespace ProjetoIntegradorReal
                 {
                     if (string.IsNullOrEmpty(txtCPFDoador.Text))
                     {
-                        MessageBox.Show("Verifique os CPFs");
+                        MessageBox.Show("Verifique os CPFs", "Verifique!", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                         return;
                     }
                 }
@@ -154,7 +155,8 @@ namespace ProjetoIntegradorReal
                 {
                     if (string.IsNullOrEmpty(txtCPFRecebedor.Text))
                     {
-                        MessageBox.Show("Verifique os CPFs");
+                        MessageBox.Show("Verifique os CPFs", "Verifique!", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                         return;
                     }
                 }
@@ -166,7 +168,8 @@ namespace ProjetoIntegradorReal
                 {
                     if(txtCPFRecebedor.Text != "")
                     {
-                        MessageBox.Show("Verifique o status ou os campos de CPF");
+                        MessageBox.Show("Verifique o status ou os campos de CPF", "Verifique!", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                         return;
                     }
                 }
@@ -181,7 +184,7 @@ namespace ProjetoIntegradorReal
 
                 while (cpf == null)
                 {
-                    DialogResult result = MessageBox.Show(" CPF do doador não encontrado! \n Deseja fazer o cadastro?", "Não encontrado", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    DialogResult result = MessageBox.Show(" CPF do doador não encontrado! \n Deseja fazer o cadastro?", "Doador não encontrado!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (result == DialogResult.Yes)
                     {
@@ -201,7 +204,7 @@ namespace ProjetoIntegradorReal
 
                 while (cpf2 == null)
                 {
-                    DialogResult result = MessageBox.Show(" CPF do receptor não encontrado! \n Deseja fazer o cadastro?", "Não encontrado", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    DialogResult result = MessageBox.Show(" CPF do recebedor não encontrado! \n Deseja fazer o cadastro?", "Recebedor não encontrado!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (result == DialogResult.Yes)
                     {
@@ -238,7 +241,7 @@ namespace ProjetoIntegradorReal
                     cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtRegistro.Text));
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso",
+                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso!",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                 }
@@ -263,7 +266,7 @@ namespace ProjetoIntegradorReal
                     cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtRegistro.Text));
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso",
+                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso!",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                 }
@@ -291,7 +294,7 @@ namespace ProjetoIntegradorReal
                     cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtRegistro.Text));
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso",
+                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso!",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                 }
@@ -316,7 +319,7 @@ namespace ProjetoIntegradorReal
                     cmd.Parameters.AddWithValue("@id", Convert.ToInt32(txtRegistro.Text));
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso",
+                    MessageBox.Show("Contato Atualizado com Sucesso", "Sucesso!",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                 }
@@ -328,7 +331,7 @@ namespace ProjetoIntegradorReal
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            DialogResult conf = MessageBox.Show("Deseja excluir o contato?", "EXCLUIR!", MessageBoxButtons.YesNo);
+            DialogResult conf = MessageBox.Show("Deseja excluir o contato?", "Excluir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (conf == DialogResult.Yes)
             {
@@ -343,7 +346,7 @@ namespace ProjetoIntegradorReal
                     cmd.Parameters.AddWithValue("@registro", registro);
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Contato excluido com sucesso");
+                    MessageBox.Show("Contato excluido com sucesso!","Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (tabela == "cadastro_doacao")
                 {
@@ -356,7 +359,7 @@ namespace ProjetoIntegradorReal
                     cmd.Parameters.AddWithValue("@registro", registro);
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Contato excluido com sucesso");
+                    MessageBox.Show("Contato excluido com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 this.Close();
